@@ -7,10 +7,7 @@ function GMap(l,m)
 			zoom: 10,
 			center: new google.maps.LatLng('43.299999','5.4'),
 			mapTypeId: google.maps.MapTypeId.MAP	
-		});
-		/*TMap.marker= new google.maps.Marker({
-			position: new google.maps.LatLng('43.299999','5.4')
-		});*/		
+		});	
 		TMap.marker.setMap(TMap.map);
 	} else {
 		TMap.map = new google.maps.Map(document.getElementById('TMapPanel'),{
