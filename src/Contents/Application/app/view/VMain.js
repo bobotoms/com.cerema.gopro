@@ -38,10 +38,13 @@ App.view.define('VMain', {
 			split:true,
 			items: [
 				{
-					xtype: "button",
-					itemId: "clickme",
-					text: "Click me",
-					margin: 20
+					id: "MyGMapPanel",
+					html: '<div id="TMapPanel" style="width:100%;height:100%"></div>',
+					padding: 10,
+					height: 350,
+					width: "100%",
+					border: false,
+					split: true
 				}
 			]
 		}
