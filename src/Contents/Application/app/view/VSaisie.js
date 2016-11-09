@@ -80,19 +80,19 @@ initComponent: function()
 				xtype: "textfield",
 				fieldLabel: "Hauteur",
 				labelAlign: "top",
-				margin:{left: 5}
+				margin:{right: 5}
 			},
 			{
 				xtype: "textfield",
 				fieldLabel: "Longueur",
 				labelAlign: "top",
-				margin:{left: 5}
+				margin:{right: 5}
 			},
 			{
 				xtype: "textfield",
 				fieldLabel: "Surface",
 				labelAlign: "top",
-				margin:{left: 5}
+				margin:{right: 5}
 			}
 			]
 		}			
