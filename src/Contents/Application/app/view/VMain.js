@@ -46,7 +46,7 @@ App.view.define('VMain', {
 						xtype: "combo",
 						fieldLabel: "toto",
 						labelAlign: "top",
-						padding: 10,
+						padding: 5,
 						border: false
 					}
 					]
