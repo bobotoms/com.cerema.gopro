@@ -27,21 +27,27 @@ initComponent: function()
 		{
 			layout: "hbox",
 			width: "100%",
+			padding: 10,
+			border: false,
 			items: [
 			{
 				xtype: "combo",
-				fieldLabel: "Famille"
-			},
-			{
-				xtype: "combo"
+				fieldLabel: "Famille",
+				labelAlign: "top"
 			},
 			{
 				xtype: "combo",
-				fieldLabel: "Végétation"
+				labelAlign: "top"
+			},
+			{
+				xtype: "combo",
+				fieldLabel: "Végétation",
+				labelAlign: "top"
 			},
 			{
 				xtype: "datefield",
-				fieldLabel: "Date visite"
+				fieldLabel: "Date visite",
+				labelAlign: "top"
 			}
 			]
 		},
