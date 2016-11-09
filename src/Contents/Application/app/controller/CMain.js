@@ -8,12 +8,14 @@ function GMap(l,m)
 		zoom: 10,
 		center: new google.maps.LatLng('43.299999','5.4'),
 		mapTypeId: google.maps.MapTypeId.MAP	
-	});	
+	});
 	TMap.setMarker=function(l,m) {
 		return new google.maps.Marker({
 			position: new google.maps.LatLng(l,m),
 			animation: google.maps.Animation.DROP
-		}).setMap(TMap.map);
+		}).setMap(TMap.map).addListener('click',function() {
+			alert('x');
+		});
 	};
 };
 
