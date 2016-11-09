@@ -140,22 +140,22 @@ initComponent: function()
 					header: "x"	
 				},
 				{
-					header: "z"
+					header: ""
 				},
 				{
-					header: "a"
+					header: ""
 				},
 				{
-					header: "b"
+					header: ""
 				},
 				{
-					header: "c"
+					header: ""
 				},
 				{
-					header: "d"
+					header: ""
 				},
 				{
-					header: "e"
+					header: ""
 				}],
 				store: App.store.create({fields:["","","","","","",""],data:[]}),
 				flex: 1,
