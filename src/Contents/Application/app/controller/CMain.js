@@ -50,6 +50,9 @@ App.controller.define('CMain', {
 	{
 		if (p.itemId) {
 			Ext.Msg.alert('Status', 'Click event on '+p.itemId);
+			if (p.itemId=="mnu_saisie") {
+				App.get('VSaisie',{modal: true}).show().center();
+			}
 		};			
 	},
 	clickme_onclick: function()
