@@ -37,6 +37,7 @@ initComponent: function()
 			},
 			{
 				xtype: "combo",
+				fieldLabel: " ",
 				labelAlign: "top"
 			},
 			{
@@ -57,18 +58,33 @@ initComponent: function()
 			items: [
 			{
 				xtype: "combo",
-				fieldLabel: "Type"
-			},
-			{
-				xtype: "combo"
+				fieldLabel: "Type",
+				labelAlign: "top"
 			},
 			{
 				xtype: "combo",
-				fieldLabel: "Météo"
+				fieldLabel: " ",
+				labelAlign: "top"
 			},
 			{
-				xtype: "datefield",
-				fieldLabel: "Date visite"
+				xtype: "combo",
+				fieldLabel: "Météo",
+				labelAlign: "top"
+			},
+			{
+				xtype: "textfield",
+				fieldLabel: "Hauteur",
+				labelAlign: "top"
+			},
+			{
+				xtype: "textfield",
+				fieldLabel: "Longueur",
+				labelAlign: "top"
+			},
+			{
+				xtype: "textfield",
+				fieldLabel: "Surface",
+				labelAlign: "top"
 			}
 			]
 		}			
