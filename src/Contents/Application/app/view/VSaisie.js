@@ -8,7 +8,7 @@ initComponent: function()
 		this.title="Saisie";
 		this.layout="vbox";
 		this.border=false;
-		this.width = 700;
+		this.width = 900;
         this.height = 630;
 		this.bodyStyle="background-color: white";
         this.bbar = [
