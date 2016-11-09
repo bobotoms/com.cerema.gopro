@@ -19,6 +19,7 @@ function GMap(l,m)
 		});
 		marker.setMap(TMap.map);
 		marker.addListener('click', function() {
+			console.log(marker.getPosition());
     		TMap.click(marker);
   		});		
 		return marker;
