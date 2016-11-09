@@ -116,8 +116,28 @@ initComponent: function()
 			},
 			{
 				xtype: "grid",
-				columns: [],
-				store: App.store.create({fields:[],data:[]}),
+				columns: [{
+					header: ""	
+				},
+				{
+					header: ""
+				},
+				{
+					header: ""
+				},
+				{
+					header: ""
+				},
+				{
+					header: ""
+				},
+				{
+					header: ""
+				},
+				{
+					header: ""
+				}],
+				store: App.store.create({fields:["","","","","","",""],data:[]}),
 				flex: 1,
 				height: "100%"
 			},
