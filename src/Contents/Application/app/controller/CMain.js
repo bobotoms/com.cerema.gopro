@@ -1,6 +1,6 @@
 var TMap={};
 TMap.click=function(mkr) {
-	console.log(mkr.getPosition);
+	console.log(mkr.getPosition());
 };
 
 function GMap(l,m)
