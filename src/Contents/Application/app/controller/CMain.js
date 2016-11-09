@@ -4,7 +4,7 @@ function GMap(l,m)
 	TMap.map = new google.maps.Map(document.getElementById('TMapPanel'),{
 		zoom: 10,
 		center: new google.maps.LatLng(l, m),
-		mapTypeId: google.maps.MapTypeId.SATELLITE	
+		mapTypeId: google.maps.MapTypeId.MAP	
 	});
 	TMap.marker= new google.maps.Marker({
 		position: new google.maps.LatLng(l,m)
