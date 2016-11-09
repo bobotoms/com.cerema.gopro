@@ -5,8 +5,6 @@ TMap.click=function(mkr){
 
 function GMap(l,m)
 {
-	
-	//if ( typeof l === 'undefined' ) {
 	TMap.map = new google.maps.Map(document.getElementById('TMapPanel'),{
 		zoom: 10,
 		center: new google.maps.LatLng('43.299999','5.4'),
@@ -56,7 +54,6 @@ App.controller.define('CMain', {
 			if (p.itemId=="mnu_saisie") {
 				TMap.setMarker('43.299999','5.4');
 				TMap.setMarker('43.299999','5.5');
-				TMap.click
 				//App.view.create('VSaisie',{modal: true}).show().center();
 			}
 		};			
