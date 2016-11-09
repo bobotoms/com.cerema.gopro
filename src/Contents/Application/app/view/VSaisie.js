@@ -96,6 +96,7 @@ initComponent: function()
 				xtype: "textfield",
 				fieldLabel: "Surface",
 				labelAlign: "top",
+				flex: 1,
 				margin:{left: 5}
 			}
 			]
