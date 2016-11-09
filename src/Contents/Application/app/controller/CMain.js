@@ -9,7 +9,7 @@ function GMap(l,m)
 		center: new google.maps.LatLng('43.299999','5.4'),
 		mapTypeId: google.maps.MapTypeId.MAP	
 	});	
-	TMap.setMarker: function(l,m) {
+	TMap.setMarker=function(l,m) {
 		return new google.maps.Marker({
 			position: new google.maps.LatLng(l,m)
 		});
