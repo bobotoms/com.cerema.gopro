@@ -7,6 +7,7 @@ function GMap(l,m)
 		mapTypeId: google.maps.MapTypeId.MAP	
 	});
 	if ( typeof l === 'undefined' ) {
+		alert('x');
 		TMap.marker= new google.maps.Marker({
 			position: new google.maps.LatLng('43.299999','5.4')
 		});		
