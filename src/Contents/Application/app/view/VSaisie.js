@@ -37,13 +37,15 @@ initComponent: function()
 			},
 			{
 				xtype: "combo",
-				fieldLabel: " ",
-				labelAlign: "top"
+				fieldLabel: "Agent",
+				labelAlign: "top",
+				margin:{right: 3}
 			},
 			{
 				xtype: "combo",
 				fieldLabel: "Végétation",
-				labelAlign: "top"
+				labelAlign: "top",
+				margin:{right: 3}
 			},
 			{
 				xtype: "datefield",
@@ -59,12 +61,14 @@ initComponent: function()
 			{
 				xtype: "combo",
 				fieldLabel: "Type",
-				labelAlign: "top"
+				labelAlign: "top",
+				margin:{right: 3}
 			},
 			{
 				xtype: "combo",
-				fieldLabel: " ",
-				labelAlign: "top"
+				fieldLabel: "Agent",
+				labelAlign: "top",
+				margin:{right: 3}
 			},
 			{
 				xtype: "combo",
