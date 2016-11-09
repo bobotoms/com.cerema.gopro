@@ -106,22 +106,36 @@ App.view.define('VMain', {
 					columns: [
 					{
 						header: "Date",
-						width: 100
+						width: 100,
+						dataIndex: "dat"
 					},
 					{
 						header: "",
-						width: 50
+						width: 50,
+						dataIndex: "x"
 					},
 					{
 						header: "",
-						width: 50
+						width: 50,
+						dataIndex: "y"
 					},
 					{
 						header: "Evènement",
-						flex: 1
+						flex: 1,
+						dataIndex: "evt"
 					}						
 					],
-					store: App.store.create({fields:[],data:[]}),
+					store: App.store.create({fields:["dat","x","y","evt"],data:[{
+						dat: "17/05/2016",
+						x: "N",
+						y: "JG",
+						evt: "Réunion des inspecteurs - Visioconférence - Lyon 14h"
+					},{
+						dat: "21/05/2016",
+						x: "L",
+						y: "RH",
+						evt: "Inspection RN 122 - Jean-Claude. Faire visite détaillée du filet en présence éboulis signalé"
+					}]}),
 					width: "100%",
 					height: 100
 				}
