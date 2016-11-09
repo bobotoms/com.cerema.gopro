@@ -41,6 +41,7 @@ App.view.define('VMain', {
 				{
 					layout: "hbox",
 					width: "100%",
+					border: false,
 					items: [
 					{
 						xtype: "combo",
