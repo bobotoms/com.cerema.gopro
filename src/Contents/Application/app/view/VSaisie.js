@@ -39,18 +39,19 @@ initComponent: function()
 				xtype: "combo",
 				fieldLabel: "Agent",
 				labelAlign: "top",
-				margin:{right: 3}
+				margin:{left: 5}
 			},
 			{
 				xtype: "combo",
 				fieldLabel: "Végétation",
 				labelAlign: "top",
-				margin:{right: 3}
+				margin:{right: 5}
 			},
 			{
 				xtype: "datefield",
 				fieldLabel: "Date visite",
-				labelAlign: "top"
+				labelAlign: "top",
+				margin:{right: 5}
 			}
 			]
 		},
@@ -61,34 +62,37 @@ initComponent: function()
 			{
 				xtype: "combo",
 				fieldLabel: "Type",
-				labelAlign: "top",
-				margin:{right: 3}
+				labelAlign: "top"
 			},
 			{
 				xtype: "combo",
 				fieldLabel: "Agent",
 				labelAlign: "top",
-				margin:{right: 3}
+				margin:{left: 5}
 			},
 			{
 				xtype: "combo",
 				fieldLabel: "Météo",
-				labelAlign: "top"
+				labelAlign: "top",
+				margin:{right: 5}
 			},
 			{
 				xtype: "textfield",
 				fieldLabel: "Hauteur",
-				labelAlign: "top"
+				labelAlign: "top",
+				margin:{left: 5}
 			},
 			{
 				xtype: "textfield",
 				fieldLabel: "Longueur",
-				labelAlign: "top"
+				labelAlign: "top",
+				margin:{left: 5}
 			},
 			{
 				xtype: "textfield",
 				fieldLabel: "Surface",
-				labelAlign: "top"
+				labelAlign: "top",
+				margin:{left: 5}
 			}
 			]
 		}			
