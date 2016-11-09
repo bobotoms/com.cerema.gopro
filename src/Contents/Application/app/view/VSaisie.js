@@ -24,7 +24,48 @@ initComponent: function()
             }
         ];	
 		this.items = [
-
+		{
+			layout: "hbox",
+			width: "100%",
+			items: [
+			{
+				xtype: "combo",
+				fieldLabel: "Famille"
+			},
+			{
+				xtype: "combo"
+			},
+			{
+				xtype: "combo",
+				fieldLabel: "Végétation"
+			},
+			{
+				xtype: "datefield",
+				fieldLabel: "Date visite"
+			}
+			]
+		},
+		{
+			layout: "hbox",
+			width: "100%",
+			items: [
+			{
+				xtype: "combo",
+				fieldLabel: "Type"
+			},
+			{
+				xtype: "combo"
+			},
+			{
+				xtype: "combo",
+				fieldLabel: "Météo"
+			},
+			{
+				xtype: "datefield",
+				fieldLabel: "Date visite"
+			}
+			]
+		}			
 		];
 		this.callParent();
 	}	
