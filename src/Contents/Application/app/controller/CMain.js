@@ -54,7 +54,7 @@ App.controller.define('CMain', {
 				TMap.setMarker('43.299999','5.4');
 				TMap.setMarker('43.299999','5.5');
 				TMap.markers[0].addListener('click',function(){
-					alert('x');
+					alert(this.getPosition());
 				})
 				//App.view.create('VSaisie',{modal: true}).show().center();
 			}
