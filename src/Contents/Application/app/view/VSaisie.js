@@ -100,7 +100,14 @@ initComponent: function()
 				margin:{left: 5}
 			}
 			]
-		}			
+		},
+		{
+			xtype: "htmleditor",
+			width: "100%",
+			fieldLabel: "Synthèse de la visite",
+			labelAlign: "top",
+			height: 300
+		}
 		];
 		this.callParent();
 	}	
