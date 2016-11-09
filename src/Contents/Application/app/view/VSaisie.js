@@ -136,7 +136,7 @@ initComponent: function()
 			},
 			{
 				xtype: "grid",
-				columns: [{
+				collumns: [{
 					header: ""	
 				},
 				{
