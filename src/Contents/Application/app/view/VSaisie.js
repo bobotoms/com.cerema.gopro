@@ -96,6 +96,7 @@ initComponent: function()
 				xtype: "textfield",
 				fieldLabel: "Surface",
 				labelAlign: "top",
+				padding: 10,
 				flex: 1,
 				margin:{left: 5}
 			}
@@ -106,7 +107,7 @@ initComponent: function()
 			width: "100%",
 			fieldLabel: "Synthèse de la visite",
 			labelAlign: "top",
-			height: 300
+			height: 100
 		}
 		];
 		this.callParent();
