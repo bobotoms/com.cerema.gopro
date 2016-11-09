@@ -17,7 +17,12 @@ App.view.define('VMain', {
 			itemId: "MenuPanel",
 			menu: [
 				{
-					text: "Accueil"
+					text: "Accueil",
+					menu: [
+						{
+							text: "Carte"
+						}
+					]
 				},
 				{
 					text: "Gestion"
