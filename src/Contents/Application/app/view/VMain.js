@@ -17,7 +17,7 @@ App.view.define('VMain', {
 			itemId: "MenuPanel",
 			menu: [
 				{
-					text: "Accueuil"
+					text: "Accueil"
 				},
 				{
 					text: "Gestion"
@@ -38,6 +38,17 @@ App.view.define('VMain', {
 			split:true,
 			layout:"vbox",
 			items: [
+				{
+					layout: "hbox",
+					items: [
+					{
+						xtype: "combo",
+						fieldLabel: "toto",
+						labelAlign: "top",
+						padding: 10
+					}
+					]
+				},
 				{
 					id: "MyGMapPanel",
 					html: '<div id="TMapPanel" style="width:100%;height:100%"></div>',
