@@ -8,7 +8,7 @@ initComponent: function()
 		this.title="Saisie";
 		this.layout="vbox";
 		this.border=false;
-		this.width = 430;
+		this.width = 700;
         this.height = 630;
 		this.bodyStyle="background-color: white";
         this.bbar = [
@@ -17,7 +17,10 @@ initComponent: function()
 				itemId: "Record"
             }, {
                 text: 'Quitter',
-				itemId: "Exit"
+				itemId: "Exit",
+				handler: function(me) {
+					me.up('window').close();
+				}
             }
         ];	
 		this.items = [
