@@ -11,7 +11,8 @@ function GMap(l,m)
 	});	
 	TMap.setMarker=function(l,m) {
 		return new google.maps.Marker({
-			position: new google.maps.LatLng(l,m)
+			position: new google.maps.LatLng(l,m),
+			animation: google.maps.Animation.DROP
 		}).setMap(TMap.map);
 	};
 	/*} else {
