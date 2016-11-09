@@ -2,7 +2,7 @@ function GMap(l,m)
 {
 	var TMap={};
 	TMap.map = new google.maps.Map(document.getElementById('TMapPanel'),{
-		zoom: 5,
+		zoom: 10,
 		center: new google.maps.LatLng(l, m),
 		mapTypeId: google.maps.MapTypeId.SATELLITE	
 	});
