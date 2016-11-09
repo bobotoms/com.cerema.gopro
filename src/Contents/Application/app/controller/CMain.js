@@ -6,12 +6,17 @@ function GMap(l,m)
 		center: new google.maps.LatLng(l, m),
 		mapTypeId: google.maps.MapTypeId.MAP	
 	});
-	TMap.marker= new google.maps.Marker({
-		position: new google.maps.LatLng(l,m)
-	});		
-	TMap.marker.setMap(TMap.map);
+	
 	if (!l) {
-		TMap.marker('43.299999','5.4');
+		TMap.marker= new google.maps.Marker({
+			position: new google.maps.LatLng('43.299999','5.4')
+		});		
+		TMap.marker.setMap(TMap.map);
+	} else {
+		TMap.marker= new google.maps.Marker({
+			position: new google.maps.LatLng(l,m)
+		});		
+		TMap.marker.setMap(TMap.map);
 	}
 };
 
