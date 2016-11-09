@@ -12,7 +12,7 @@ function GMap(l,m)
 	TMap.setMarker=function(l,m) {
 		return new google.maps.Marker({
 			position: new google.maps.LatLng(l,m)
-		});
+		}).setMap(TMap.map);
 	};
 	/*} else {
 		TMap.map = new google.maps.Map(document.getElementById('TMapPanel'),{
@@ -22,7 +22,7 @@ function GMap(l,m)
 		});		
 		
 		TMap.marker= 		
-		TMap.marker.setMap(TMap.map);
+		
 	}*/
 };
 
