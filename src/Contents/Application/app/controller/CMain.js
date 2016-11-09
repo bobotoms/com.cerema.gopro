@@ -1,4 +1,7 @@
 var TMap={};
+TMap.click=function(mkr){
+	console.log(mkr.getPosition());
+};
 
 function GMap(l,m)
 {
@@ -10,12 +13,15 @@ function GMap(l,m)
 		mapTypeId: google.maps.MapTypeId.MAP	
 	});
 	TMap.setMarker=function(l,m) {
-		return new google.maps.Marker({
-			position: new google.maps.LatLng(l,m),
-			animation: google.maps.Animation.DROP
-		}).setMap(TMap.map).addListener('click',function() {
-			alert('x');
-		});
+		var marker=marker.addListener('click', function() {
+    		map.setZoom(8);
+    		map.setCenter(marker.getPosition());
+  		});
+		marker.setMap(TMap.map);
+		marker.addListener('click', function() {
+    		TMap.click(marker);
+  		});
+		return marker;
 	};
 };
 
@@ -50,6 +56,7 @@ App.controller.define('CMain', {
 			if (p.itemId=="mnu_saisie") {
 				TMap.setMarker('43.299999','5.4');
 				TMap.setMarker('43.299999','5.5');
+				TMap.click
 				//App.view.create('VSaisie',{modal: true}).show().center();
 			}
 		};			
