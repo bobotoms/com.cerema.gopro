@@ -31,7 +31,7 @@
         {
             "name": "EXTJS",
             "type": "desktop",
-            "version": "6.1.0",
+            "version": "6.2.0",
             "theme": "classic",
             "style": "classic",
             "src": [
