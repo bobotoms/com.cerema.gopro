@@ -15,16 +15,6 @@ function GMap(l,m)
 			animation: google.maps.Animation.DROP
 		}).setMap(TMap.map);
 	};
-	/*} else {
-		TMap.map = new google.maps.Map(document.getElementById('TMapPanel'),{
-			zoom: 10,
-			center: new google.maps.LatLng(l, m),
-			mapTypeId: google.maps.MapTypeId.MAP	
-		});		
-		
-		TMap.marker= 		
-		
-	}*/
 };
 
 App.controller.define('CMain', {
@@ -57,6 +47,7 @@ App.controller.define('CMain', {
 		if (p.itemId) {
 			if (p.itemId=="mnu_saisie") {
 				TMap.setMarker('43.299999','5.4');
+				TMap.setMarker('43.299999','5.5');
 				//App.view.create('VSaisie',{modal: true}).show().center();
 			}
 		};			
