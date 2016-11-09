@@ -16,6 +16,21 @@ App.view.define('VMain', {
 			xtype: "Menu",
 			itemId: "MenuPanel",
 			menu: [
+				{
+					text: "Accueuil"
+				},
+				{
+					text: "Gestion"
+				},
+				{
+					text: "Requête"
+				},
+				{
+					text: "Documentation"
+				},
+				{
+					text: "Administration"
+				}
 			]		
 		},
 		{
