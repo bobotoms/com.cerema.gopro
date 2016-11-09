@@ -103,7 +103,24 @@ App.view.define('VMain', {
 				},
 				{
 					xtype: "grid",
-					columns: [],
+					columns: [
+					{
+						header: "Date",
+						width: 100
+					},
+					{
+						header: "",
+						width: 50
+					},
+					{
+						header: "",
+						width: 50
+					},
+					{
+						header: "Evènement",
+						flex: 1
+					}						
+					],
 					store: App.store.create({fields:[],data:[]}),
 					width: "100%",
 					height: 100
