@@ -130,11 +130,6 @@ initComponent: function()
 			border: false,
 			items: [
 			{
-				html: "yes",
-				width: 200,
-				height: "100%"
-			},
-			{
 				xtype: "grid",
 				columns: [{
 					header: "",
