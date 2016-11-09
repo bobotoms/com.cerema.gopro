@@ -51,7 +51,8 @@ initComponent: function()
 				xtype: "datefield",
 				fieldLabel: "Date visite",
 				labelAlign: "top",
-				margin:{left: 5}
+				margin:{left: 5},
+				flex: 1
 			}
 			]
 		},
@@ -107,7 +108,7 @@ initComponent: function()
 			width: "100%",
 			fieldLabel: "Synthèse de la visite",
 			labelAlign: "top",
-			height: 100
+			height: 200
 		}
 		];
 		this.callParent();
