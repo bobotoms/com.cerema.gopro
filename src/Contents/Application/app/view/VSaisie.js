@@ -117,7 +117,16 @@ initComponent: function()
 						margin:{left: 5}
 					}
 					]
-				}					
+				},
+				{
+					layout: "hbox",
+					width: "100%",
+					padding: 10,
+					border: false,
+					items: [
+					
+					]
+				}
 				]
 			}
 			]
