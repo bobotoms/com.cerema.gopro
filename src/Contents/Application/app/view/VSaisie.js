@@ -81,12 +81,14 @@ initComponent: function()
 			{
 				xtype: "textfield",
 				fieldLabel: "Hauteur",
+				width: 50,
 				labelAlign: "top",
 				margin:{left: 5}
 			},
 			{
 				xtype: "textfield",
 				fieldLabel: "Longueur",
+				width: 50,
 				labelAlign: "top",
 				margin:{left: 5}
 			},
