@@ -137,29 +137,29 @@ initComponent: function()
 			{
 				xtype: "grid",
 				columns: [{
-					header: ""	
+					header: "x"	
 				},
 				{
-					header: ""
+					header: "z"
 				},
 				{
-					header: ""
+					header: "a"
 				},
 				{
-					header: ""
+					header: "b"
 				},
 				{
-					header: ""
+					header: "c"
 				},
 				{
-					header: ""
+					header: "d"
 				},
 				{
-					header: ""
+					header: "e"
 				}],
 				store: App.store.create({fields:["","","","","","",""],data:[]}),
 				flex: 1,
-				height: "100%"
+				width: "100%"
 			},
 			{
 				html: "yes",
