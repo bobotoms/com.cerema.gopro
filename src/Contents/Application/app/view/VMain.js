@@ -20,7 +20,8 @@ App.view.define('VMain', {
 					text: "Accueil",
 					menu: [
 						{
-							text: "Saisie"
+							text: "Saisie",
+							itemId: "mnu_saisie"
 						}
 					]
 				},
