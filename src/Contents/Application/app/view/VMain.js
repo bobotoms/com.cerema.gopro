@@ -135,6 +135,11 @@ App.view.define('VMain', {
 						x: "L",
 						y: "RH",
 						evt: "Inspection RN 122 - Jean-Claude. Faire visite détaillée du filet en présence éboulis signalé"
+					},{
+						dat: "25/06/2016",
+						x: "N",
+						y: "JG",
+						evt: "Rappel: faire remonter vos inscriptions pour la journée thématique"
 					}]}),
 					width: "100%",
 					height: 100
