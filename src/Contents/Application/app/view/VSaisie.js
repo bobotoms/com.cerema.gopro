@@ -124,7 +124,15 @@ initComponent: function()
 					padding: 10,
 					border: false,
 					items: [
-					
+					{
+						html: "Géolocalisation"
+					},
+					{
+						xtype: "textfield"
+					},
+					{
+						xtype: "textfield"
+					}
 					]
 				}
 				]
