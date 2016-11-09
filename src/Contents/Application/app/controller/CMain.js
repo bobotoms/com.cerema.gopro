@@ -20,6 +20,7 @@ function GMap(l,m)
 		marker.setMap(TMap.map);
 		marker.addListener('click', function() {
 			var response=marker.getPosition();
+			alert(response);
 			TMap.click(response);
     		
   		});		
