@@ -109,10 +109,16 @@ initComponent: function()
 			width: "100%",
 			items: [
 			{
-				html: "yes"
+				html: "yes",
+				width: 200
 			},
 			{
-				html: "yes"
+				html: "yes",
+				flex: 1
+			},
+			{
+				html: "yes",
+				flex: 1
 			}
 			]
 		},
