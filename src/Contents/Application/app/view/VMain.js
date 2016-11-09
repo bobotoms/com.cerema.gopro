@@ -100,7 +100,7 @@ App.view.define('VMain', {
 					columns: [],
 					store: App.store.create({fields:[],data:[]}),
 					width: "100%",
-					height: 300
+					height: 100
 				}
 			]
 		}
