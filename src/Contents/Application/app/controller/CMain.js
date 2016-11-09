@@ -6,6 +6,7 @@ function GMap(l,m)
 		center: new google.maps.LatLng(l, m),
 		mapTypeId: google.maps.MapTypeId.SATELLITE	
 	});
+	alert('x');
 	TMap.marker= new google.maps.Marker({
 		position: new google.maps.LatLng(l,m)
 	});		
