@@ -31,12 +31,14 @@ initComponent: function()
 			border: false,			
 			items: [
 			{
-				width: 250	
+				width: 200,
+				height: "100%"
 			},
 			{
 				flex: 1,
 				layout: "vbox",
 				width: "100%",
+				border: false,
 				items: [
 				{
 					layout: "hbox",
