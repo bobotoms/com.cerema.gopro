@@ -1,6 +1,6 @@
 var TMap={};
 TMap.click=function(mkr) {
-	console.log(mkr.getPosition());
+	console.log(mkr);
 };
 
 function GMap(l,m)
@@ -19,8 +19,8 @@ function GMap(l,m)
 		});
 		marker.setMap(TMap.map);
 		marker.addListener('click', function() {
-			alert(marker.getPosition());
-    		//TMap.click(marker);
+			TMap.click(marker.getPosition());
+    		
   		});		
 		return marker;
 	};
