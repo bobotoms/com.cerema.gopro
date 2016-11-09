@@ -6,7 +6,7 @@ function GMap(l,m)
 		center: new google.maps.LatLng(l, m),
 		mapTypeId: google.maps.MapTypeId.MAP	
 	});
-	if (l==undefined) {
+	if (l=='undefined') {
 		TMap.marker= new google.maps.Marker({
 			position: new google.maps.LatLng('43.299999','5.4')
 		});		
