@@ -103,6 +103,20 @@ initComponent: function()
 			]
 		},
 		{
+			layout: "hbox",
+			flex: 1,
+			padding: 10,
+			width: "100%",
+			items: [
+			{
+				html: "yes"
+			},
+			{
+				html: "yes"
+			}
+			]
+		},
+		{
 			xtype: "htmleditor",
 			width: "100%",
 			fieldLabel: "Synthèse de la visite",
