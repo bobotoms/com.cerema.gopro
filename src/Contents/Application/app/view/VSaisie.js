@@ -125,13 +125,16 @@ initComponent: function()
 					border: false,
 					items: [
 					{
-						html: "Géolocalisation"
+						html: "Géolocalisation",
+						border: false
 					},
 					{
-						xtype: "textfield"
+						xtype: "textfield",
+						width: 100
 					},
 					{
-						xtype: "textfield"
+						xtype: "textfield",
+						width: 100
 					}
 					]
 				}
