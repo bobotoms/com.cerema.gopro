@@ -1,24 +1,29 @@
+var TMap={};
+
 function GMap(l,m)
 {
-	var TMap={};
 	
-	if ( typeof l === 'undefined' ) {
-		TMap.map = new google.maps.Map(document.getElementById('TMapPanel'),{
-			zoom: 10,
-			center: new google.maps.LatLng('43.299999','5.4'),
-			mapTypeId: google.maps.MapTypeId.MAP	
-		});	
-	} else {
+	//if ( typeof l === 'undefined' ) {
+	TMap.map = new google.maps.Map(document.getElementById('TMapPanel'),{
+		zoom: 10,
+		center: new google.maps.LatLng('43.299999','5.4'),
+		mapTypeId: google.maps.MapTypeId.MAP	
+	});	
+	TMap.setMarker: function(l,m) {
+		return new google.maps.Marker({
+			position: new google.maps.LatLng(l,m)
+		});
+	};
+	/*} else {
 		TMap.map = new google.maps.Map(document.getElementById('TMapPanel'),{
 			zoom: 10,
 			center: new google.maps.LatLng(l, m),
 			mapTypeId: google.maps.MapTypeId.MAP	
 		});		
-		TMap.marker= new google.maps.Marker({
-			position: new google.maps.LatLng(l,m)
-		});		
+		
+		TMap.marker= 		
 		TMap.marker.setMap(TMap.map);
-	}
+	}*/
 };
 
 App.controller.define('CMain', {
@@ -50,7 +55,8 @@ App.controller.define('CMain', {
 	{
 		if (p.itemId) {
 			if (p.itemId=="mnu_saisie") {
-				App.view.create('VSaisie',{modal: true}).show().center();
+				TMap.setMarker('43.299999','5.4');
+				//App.view.create('VSaisie',{modal: true}).show().center();
 			}
 		};			
 	},
