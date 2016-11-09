@@ -50,7 +50,7 @@ App.controller.define('CMain', {
 	{
 		if (p.itemId) {
 			if (p.itemId=="mnu_saisie") {
-				App.get('VSaisie',{modal: true}).show().center();
+				App.view.create('VSaisie',{modal: true}).show().center();
 			}
 		};			
 	},
