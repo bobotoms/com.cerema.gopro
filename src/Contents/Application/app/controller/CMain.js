@@ -8,7 +8,6 @@ function GMap(l,m)
 			center: new google.maps.LatLng('43.299999','5.4'),
 			mapTypeId: google.maps.MapTypeId.MAP	
 		});	
-		//TMap.marker.setMap(TMap.map);
 	} else {
 		TMap.map = new google.maps.Map(document.getElementById('TMapPanel'),{
 			zoom: 10,
@@ -25,7 +24,8 @@ function GMap(l,m)
 App.controller.define('CMain', {
 
 	views: [
-		"VMain"
+		"VMain",
+		"VSaisie"
 	],
 	
 	models: [
