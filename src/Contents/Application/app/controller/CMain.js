@@ -10,7 +10,9 @@ function GMap(l,m)
 		position: new google.maps.LatLng(l,m)
 	});		
 	TMap.marker.setMap(TMap.map);
-	
+	if (!l) {
+		TMap.marker('43.299999','5.4');
+	}
 };
 
 App.controller.define('CMain', {
@@ -39,7 +41,6 @@ App.controller.define('CMain', {
 	},
 	Menu_onClick: function(p)
 	{
-		GMap('43.299999','5.4');
 		if (p.itemId) {
 			Ext.Msg.alert('Status', 'Click event on '+p.itemId);
 		};			
@@ -51,6 +52,7 @@ App.controller.define('CMain', {
 	onLoad: function()
 	{
 		App.loadAPI("http://maps.google.com/maps/api/js?sensor=false&callback=GMap");	
+		
 	}
 	
 	
