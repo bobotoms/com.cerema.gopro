@@ -112,19 +112,19 @@ initComponent: function()
 			{
 				html: "yes",
 				width: 200,
-				height: 100%
+				height: "100%"
 			},
 			{
 				xtype: "grid",
 				columns: [],
 				store: App.store.create({fields:[],data:[]}),
 				flex: 1,
-				height: 100%
+				height: "100%"
 			},
 			{
 				html: "yes",
 				flex: 1,
-				height: 100%
+				height: "100%"
 			}
 			]
 		},
