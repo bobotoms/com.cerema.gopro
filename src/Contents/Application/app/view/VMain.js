@@ -47,35 +47,40 @@ App.view.define('VMain', {
 						fieldLabel: "Maitrise d'ouvrage",
 						labelAlign: "top",
 						padding: 5,
-						border: false
+						border: false,
+						flex: 1
 					},
 					{
 						xtype: "combo",
 						fieldLabel: "Département",
 						labelAlign: "top",
 						padding: 5,
-						border: false
+						border: false,
+						flex: 1
 					},
 					{
 						xtype: "combo",
 						fieldLabel: "Axe routier",
 						labelAlign: "top",
 						padding: 5,
-						border: false
+						border: false,
+						flex: 1
 					},
 					{
 						xtype: "combo",
 						fieldLabel: "Famille d'ouvrage",
 						labelAlign: "top",
 						padding: 5,
-						border: false
+						border: false,
+						flex: 1
 					},
 					{
 						xtype: "combo",
 						fieldLabel: "Type d'ouvrage",
 						labelAlign: "top",
 						padding: 5,
-						border: false
+						border: false,
+						flex: 1
 					}						
 					]
 				},
