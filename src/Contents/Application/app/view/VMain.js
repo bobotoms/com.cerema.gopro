@@ -36,15 +36,23 @@ App.view.define('VMain', {
 		{
 			region: "center",			
 			split:true,
+			layout:"vbox"
 			items: [
 				{
 					id: "MyGMapPanel",
 					html: '<div id="TMapPanel" style="width:100%;height:100%"></div>',
-					padding: 10,
-					height: 350,
+					padding: 0,
+					flex: 1,
 					width: "100%",
 					border: false,
 					split: true
+				},
+				{
+					xtype: "grid",
+					columns: [],
+					store: App.store.create({fields:[],data:[]}),
+					width: "100%",
+					height: 300
 				}
 			]
 		}
