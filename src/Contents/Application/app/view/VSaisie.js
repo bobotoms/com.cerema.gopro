@@ -161,10 +161,10 @@ initComponent: function()
 				}],
 				store: App.store.create({fields:["","","","","","",""],data:[]}),
 				height: "100%",
-				width: "100%"
+				flex: 2
 			},
 			{
-				html: "yes",
+				html: "",
 				flex: 1,
 				height: "100%"
 			}
