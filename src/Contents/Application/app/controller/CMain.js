@@ -1,3 +1,17 @@
+function GMap(l,m)
+{
+	var TMap={};
+	TMap.map = new google.maps.Map(document.getElementById('TMapPanel'),{
+		zoom: 18,
+		center: new google.maps.LatLng(l, m),
+		mapTypeId: google.maps.MapTypeId.SATELLITE	
+	});
+	TMap.marker= new google.maps.Marker({
+		position: new google.maps.LatLng(l,m)
+	});		
+	TMap.marker.setMap(TMap.map);
+};
+
 App.controller.define('CMain', {
 
 	views: [
@@ -34,7 +48,7 @@ App.controller.define('CMain', {
 	},
 	onLoad: function()
 	{
-		// form loaded	
+		App.loadAPI("http://maps.google.com/maps/api/js?sensor=false&callback=GMap");	
 	}
 	
 	
