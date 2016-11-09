@@ -44,7 +44,7 @@ App.view.define('VMain', {
 					border: false,
 					items: [
 					{
-						xtype: "combo",
+						xtype: "boxselect",
 						fieldLabel: "Maitrise d'ouvrage",
 						labelAlign: "top",
 						padding: 5,
@@ -52,7 +52,7 @@ App.view.define('VMain', {
 						flex: 1
 					},
 					{
-						xtype: "combo",
+						xtype: "boxselect",
 						fieldLabel: "Département",
 						labelAlign: "top",
 						padding: 5,
@@ -60,7 +60,7 @@ App.view.define('VMain', {
 						flex: 1
 					},
 					{
-						xtype: "combo",
+						xtype: "boxselect",
 						fieldLabel: "Axe routier",
 						labelAlign: "top",
 						padding: 5,
@@ -68,7 +68,7 @@ App.view.define('VMain', {
 						flex: 1
 					},
 					{
-						xtype: "combo",
+						xtype: "boxselect",
 						fieldLabel: "Famille d'ouvrage",
 						labelAlign: "top",
 						padding: 5,
@@ -76,7 +76,7 @@ App.view.define('VMain', {
 						flex: 1
 					},
 					{
-						xtype: "combo",
+						xtype: "boxselect",
 						fieldLabel: "Type d'ouvrage",
 						labelAlign: "top",
 						padding: 5,
