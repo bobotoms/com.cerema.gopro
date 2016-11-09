@@ -127,7 +127,7 @@ initComponent: function()
 			flex: 1,
 			padding: 10,
 			width: "100%",
-			border: true,
+			border: false,
 			items: [
 			{
 				xtype: "grid",
