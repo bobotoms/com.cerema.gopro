@@ -1,24 +1,26 @@
 var TMap={};
-TMap.click=function(mkr){
-	console.log(mkr.getPosition());
+TMap.click=function(mkr) {
+	console.log(mkr.getPosition);
 };
 
 function GMap(l,m)
 {
+	
+	//if ( typeof l === 'undefined' ) {
 	TMap.map = new google.maps.Map(document.getElementById('TMapPanel'),{
 		zoom: 10,
 		center: new google.maps.LatLng('43.299999','5.4'),
 		mapTypeId: google.maps.MapTypeId.MAP	
 	});
 	TMap.setMarker=function(l,m) {
-		var marker=marker.addListener('click', function() {
-    		map.setZoom(8);
-    		map.setCenter(marker.getPosition());
-  		});
+		var marker=new google.maps.Marker({
+			position: new google.maps.LatLng(l,m),
+			animation: google.maps.Animation.DROP
+		});
 		marker.setMap(TMap.map);
 		marker.addListener('click', function() {
     		TMap.click(marker);
-  		});
+  		});		
 		return marker;
 	};
 };
