@@ -71,8 +71,9 @@ App.controller.define('CMain', {
 				children: response
 			};
 			var store=App.store.create({root:root,type: "tree"});
-			alert('x');
+			
 			App.get(me,'treepanel').bindStore(store);
+			alert('x');
 		})
 	},
 	add_item_click: function() {
