@@ -74,9 +74,9 @@ App.controller.define('CMain', {
 			              "\"name\": \"root\"," +
                           "\"id\":\"2\",\"name\":\"Nico\",\"leaf\":false,\"expanded\":true,\"loaded\":true," +
                           "\"children\":[{\"id\":\"3\",\"name\":\"Mitchell\",\"leaf\":true}]" +
-				          "}]}]",
-            jsonstr_decoded = Ext.JSON.decode(jsonstr),
-            var reader = store.getProxy().getReader(),
+				          "}]}]";
+            var jsonstr_decoded = Ext.JSON.decode(jsonstr);
+            var reader = store.getProxy().getReader();
           	var reader_data = reader.read(jsonstr_decoded);
             
             // The child is not loaded.. also error in data.
