@@ -68,7 +68,9 @@ App.controller.define('CMain', {
 			//console.log(response);
 
 			response.isRoot=true;
-			var json = response;
+			var json = {
+				children: response
+			};
 
             var reader = App.get(me,'treepanel').getStore().getProxy().getReader();
           	var reader_data = reader.read(json);
