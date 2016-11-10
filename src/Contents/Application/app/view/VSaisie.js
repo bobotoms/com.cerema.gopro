@@ -63,6 +63,9 @@ initComponent: function()
 						fieldLabel: "Type",
 						itemId: "type",
 						editable: false,
+						margin: {
+							left: 5 	
+						},
 						store: App.store.create({fields:[],data:[]}),
 						displayField: "nomType",
 						valueField: "idType",
