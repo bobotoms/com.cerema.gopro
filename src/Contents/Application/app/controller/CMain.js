@@ -68,15 +68,7 @@ App.controller.define('CMain', {
 			console.log(response);
 
 			
-			var json = [
-			{
-				success:true,
-				isRoot:false, 
-				name: "root",
-				text: "Eléments",
-				children: response
-			}
-			];
+			var json = response;
 
             //var jsonstr_decoded = Ext.JSON.decode(jsonstr);
             var reader = App.get(me,'treepanel').getStore().getProxy().getReader();
