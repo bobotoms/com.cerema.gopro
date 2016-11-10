@@ -35,9 +35,9 @@
 
 .bridge
 {
-	background-image: url(webapp/bridge.png);
+	background-image: url(webapp/bridge.jpg);
 	border: 1px solid black;
 	background-repeat:no-repeat;
 	background-position:center center;	
-	background-size: 250px 69px;
+	background-size: 250px 141px;
 }
