@@ -57,6 +57,7 @@ App.controller.define('CMain', {
 		
 	},
 	famille_select: function(me) {
+		App.get('VSaisie combo#type').setValue('');
 		var store=App.store.create('gopro://types?idFamille='+me.getValue());
 		App.get('VSaisie combo#type').bindStore(store);
 		App.get('VSaisie combo#type').getStore().load();
