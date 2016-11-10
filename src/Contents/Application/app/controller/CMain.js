@@ -71,7 +71,21 @@ App.controller.define('CMain', {
       
       App.get('mainform ribbon').addTab(Ext.create("Ext.ux.ribbon.Tab",{
 		  title: 'First tab',
-          closable: false
+          closable: false,
+		  layout: {
+			type: 'hbox',
+			align: 'stretch'
+			}, 
+		  items: [
+			{
+				title: 'Several buttons',
+				iconAlign: 'top',
+				// note that the items are row major
+				layout: {type: 'table', columns: 4},
+				items: [
+				]
+			]
+		]
 	  }), true);
 		
 	}
