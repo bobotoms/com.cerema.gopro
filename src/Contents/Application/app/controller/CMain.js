@@ -74,7 +74,23 @@ App.controller.define('CMain', {
 				text: "Moa",
 				children: []
 			},type: "tree"});
-			App.get(me,'treepanel').bindStore(store);
+var getData = function() {
+      var data = [{
+            id : Ext.id(),
+            dataIndex : 'status',
+            text : 'pass',
+            leaf : false
+         }, {
+            id : Ext.id(),
+            dataIndex : 'status',
+            text : 'pass',
+            leaf : false
+         }];
+      return data;
+   };			
+			var root = App.get(me,'treepanel').getStore().tree.root;
+   			root.removeAll();
+   			root.appendChild(getData());
 			//console.log(store);
 			//App.get(me,'treepanel').getStore().loadData(root);
 		})
