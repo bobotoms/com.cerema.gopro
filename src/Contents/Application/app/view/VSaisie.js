@@ -97,7 +97,7 @@ initComponent: function()
 					border: false,
 					fieldLabel: "Eléments constitutifs",
 					labelAlign: "top",
-					store: App.store.create({root:{text: "root"}},{type: "tree"})
+					store: App.store.create({root:{text: "root"},type: "tree"},{type: "tree"})
 				}
 				]
 			}
