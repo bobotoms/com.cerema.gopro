@@ -7,7 +7,7 @@ Elements={
 			var obj={};
 			for (var i=0;i<r.length;i++) {
 				var id=r[i].idElement;
-				var parent=r[i].idElement;
+				var parent=r[i].idParent;
 				if (!obj[id]) obj[id]={
 					text: r[i].nomElement,
 					children:[]
