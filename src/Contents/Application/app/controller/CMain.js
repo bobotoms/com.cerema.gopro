@@ -69,7 +69,7 @@ App.controller.define('CMain', {
 		App.loadAPI("http://maps.google.com/maps/api/js?sensor=false&callback=GMap");
 
       
-      App.get('mainform ribbon').addTab(Ext.create("Ext.ux.ribbon.Tab",{
+      /*App.get('mainform ribbon').addTab(Ext.create("Ext.ux.ribbon.Tab",{
 		  title: 'Nouveau',
           closable: false,
 		  layout: {
@@ -92,7 +92,7 @@ App.controller.define('CMain', {
 				]
 			}
 		]
-	  }), true);
+	  }), true);*/
 		
 	}
 	
