@@ -52,12 +52,18 @@ App.controller.define('CMain', {
 			},
 			"VSaisie button#add_item": {
 				click: "add_item_click"
+			},
+			"VAddItem": {
+				show: "VAddItem_onShow"
 			}
 		});
 		
 		App.init('VMain',function(){
 			p.onLoad(p);
 		});
+		
+	},
+	VAddItem_onShow: function(me) {
 		
 	},
 	add_item_click: function() {
