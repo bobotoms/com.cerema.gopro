@@ -68,11 +68,8 @@ App.controller.define('CMain', {
 
 			var json = response;
 			var json = {
-				text: "hello world",
-				children: [
-					{
-						text: "moi"
-					}
+				nombre: "test",
+				root:[
 				]
 			};
 
