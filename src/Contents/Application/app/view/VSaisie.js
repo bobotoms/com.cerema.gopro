@@ -97,7 +97,21 @@ initComponent: function()
 					border: false,
 					fieldLabel: "Eléments constitutifs",
 					labelAlign: "top",
-					store: App.store.create({root:{text: "root"},type: "tree"},{type: "tree"})
+					columns: [
+					{
+						xtype: 'treecolumn',
+						text: 'Name',
+						dataIndex: 'name',
+						width: 150,
+						sortable: true
+    				}, {
+						text: 'Description',
+						dataIndex: 'description',
+						flex: 1,
+						sortable: true
+    				}	
+					],
+					store: App.store.create({root:{text: "Eléments"},type: "tree"})
 				}
 				]
 			}
