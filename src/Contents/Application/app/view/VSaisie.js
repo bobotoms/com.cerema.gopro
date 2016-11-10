@@ -57,14 +57,7 @@ initComponent: function()
 						displayField: "nomFamille",
 						valueField: "idFamille",
 						labelAlign: "top"
-					}
-					]
-				},
-				{
-					layout: "hbox",
-					width: "100%",
-					border: false,
-					items: [
+					},
 					{
 						xtype: "combo",
 						fieldLabel: "Type",
@@ -75,6 +68,14 @@ initComponent: function()
 						valueField: "idType",
 						labelAlign: "top"
 					}
+					]
+				},
+				{
+					layout: "hbox",
+					width: "100%",
+					border: false,
+					items: [
+					
 					]
 				}
 				]
