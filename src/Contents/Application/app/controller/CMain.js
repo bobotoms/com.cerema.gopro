@@ -67,18 +67,29 @@ App.controller.define('CMain', {
 		App.Elements.getTree({},function(response){
 			console.log(response);
 
-			response.isRoot=false;
-			var json = response;
+			response.isRoot=true;
+			var json = [
+			{
+				success:true,
+				isRoot:true, 
+				name: "root",
+				text: "Eléments",
+				children: response
+			}
+			];
 
             //var jsonstr_decoded = Ext.JSON.decode(jsonstr);
             var reader = App.get(me,'treepanel').getStore().getProxy().getReader();
           	var reader_data = reader.read(json);
 
             // First read, then load it here.
-			App.get(me,'treepanel').getStore().root.removeAll();
+			//App.get(me,'treepanel').getStore().root.removeAll();
             App.get(me,'treepanel').getStore().loadData(reader_data.records,true);			
 			
-
+			//App.get(me,'treepanel').bindStore(store);
+			
+			//console.log(store);
+			//App.get(me,'treepanel').getStore().loadData(root);
 		})
 	},
 	add_item_click: function() {
