@@ -64,7 +64,7 @@ App.controller.define('CMain', {
 		
 	},
 	VAddItem_onShow: function(me) {
-		Elements.getTree({},function(response){
+		App.Elements.getTree({},function(response){
 			console.log(response);
 		})
 	},
