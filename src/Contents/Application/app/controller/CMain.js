@@ -83,7 +83,7 @@ App.controller.define('CMain', {
           	var reader_data = reader.read(json);
 
             // First read, then load it here.
-			App.get(me,'treepanel').getStore().root.removeAll();
+			//App.get(me,'treepanel').getStore().root.removeAll();
             App.get(me,'treepanel').getStore().loadData(reader_data.records,true);			
 			
 			//App.get(me,'treepanel').bindStore(store);
