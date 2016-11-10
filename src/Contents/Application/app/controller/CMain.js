@@ -65,7 +65,7 @@ App.controller.define('CMain', {
 	},
 	VAddItem_onShow: function(me) {
 		App.Elements.getTree({},function(response){
-			console.log(response);
+			//console.log(response);
 
 			response.isRoot=true;
 			var json = [
