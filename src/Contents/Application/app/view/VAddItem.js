@@ -20,7 +20,24 @@ App.view.define('VAddItem',{
 			border: false,
 			flex: 1,
 			rootVisible: true,
-			store: Ext.data.TreeStore({root:{}})
+			store: Ext.create('Ext.data.TreeStore', {
+            	fields : [
+					{
+                        name : 'dataIndex',
+                        type : 'string'
+                    }, {
+                        name : 'text',
+                        type : 'string'
+                    }, {
+                        name : 'iconCls',
+                        type : 'string'
+                    }, {
+                        name : 'leaf',
+                        type : 'boolean',
+                        defaultValue : false
+                    }
+				]
+        	})
 		},
 		{
 			width: 100,
