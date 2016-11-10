@@ -26,7 +26,8 @@ App.controller.define('CMain', {
 
 	views: [
 		"VMain",
-		"VSaisie"
+		"VSaisie",
+		"VAddItem"
 	],
 	
 	models: [
