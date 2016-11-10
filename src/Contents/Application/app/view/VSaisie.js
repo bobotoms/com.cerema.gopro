@@ -106,8 +106,6 @@ App.view.define('VSaisie', {
 					width: "100%",
 					height: 200,
 					border: true,
-					fieldLabel: "Eléments constitutifs",
-					labelAlign: "top",
 					rootVisible: false,
 					tbar:[
 					'->',
