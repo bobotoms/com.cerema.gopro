@@ -69,7 +69,7 @@ App.controller.define('CMain', {
 		App.loadAPI("http://maps.google.com/maps/api/js?sensor=false&callback=GMap");
 
       	var tab1=Ext.create("Ext.ux.ribbon.Tab", {
-			title: 'Nouveau',
+			title: 'Accueil',
         	closable: false,
 			layout: {
 				type: 'hbox',
@@ -85,7 +85,7 @@ App.controller.define('CMain', {
 				},
 				items: [{
 						text: 'Nouveau',
-						icon: "images/32/document_plain_new.png",
+						iconCls: "new",
 						scale: 'large',
 						iconAlign: 'top',
 						rowspan: 3
