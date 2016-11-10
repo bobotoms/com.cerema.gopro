@@ -82,7 +82,13 @@ App.controller.define('CMain', {
 				iconAlign: 'top',
 				// note that the items are row major
 				layout: {type: 'table', columns: 4},
-				items: [
+				items: [{
+						text: '1. Large Button',
+						icon: "images/32/document_plain_new.png",
+						scale: 'large',
+						iconAlign: 'top',
+						rowspan: 3
+					},
 				]
 			}
 		]
