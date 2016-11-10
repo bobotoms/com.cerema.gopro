@@ -22,6 +22,13 @@ App.view.define('VAddItem',{
 			rootVisible: true,
 			useArrows: true,
 			expanded: true,
+			columns: [{
+                xtype: 'treecolumn',
+                text: 'Col1',
+                flex: 1,
+                sortable: true,
+                dataIndex: 'nombre'
+            }],
 			store: Ext.create('Ext.data.TreeStore',{})
 		},
 		{
