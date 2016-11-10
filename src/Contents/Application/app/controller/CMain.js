@@ -66,7 +66,11 @@ App.controller.define('CMain', {
 	VAddItem_onShow: function(me) {
 		App.Elements.getTree({},function(response){
 			console.log(response);
-			var store=App.store.create({root:response,type: "tree"});
+			var root={
+				text: "root",
+				children: response
+			};
+			var store=App.store.create({root:root,type: "tree"});
 			App.get(me,'treepanel').bindStore(store);
 		})
 	},
