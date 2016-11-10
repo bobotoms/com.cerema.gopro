@@ -68,7 +68,9 @@ App.controller.define('CMain', {
 			console.log(response);
 			var root={
 				text: "root",
-				children: response
+				children: [{
+					text: "toto"
+				}]
 			};
 			var store=App.store.create({root:root,type: "tree"});
 			App.get(me,'treepanel').bindStore(store);
