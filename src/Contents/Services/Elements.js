@@ -10,7 +10,7 @@ Elements={
 				var parent=r[i].idParent;
 				if (!obj[id]) obj[id]={
 					id: i,
-					name: "c"+i
+					name: "c"+i,
 					text: r[i].nomElement,
 					leaf: true
 				};
