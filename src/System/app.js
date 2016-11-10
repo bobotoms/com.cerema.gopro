@@ -16,7 +16,8 @@ App = {
 							leaf: false
 						});
 					};
-					res.end(JSON.stringify(ff,null,4));	
+					console.log(ff);
+					res.end(JSON.stringify(ff));	
 				});
 			} else {
 				
