@@ -42,6 +42,12 @@ App.controller.define('CMain', {
 			},
 			"button#clickme": {
 				click: "clickme_onclick"
+			},
+			"mainform combo#famille": {
+				select: "famille_select"
+			},
+			"mainform combo#type": {
+				
 			}
 		});
 		
@@ -49,6 +55,11 @@ App.controller.define('CMain', {
 			p.onLoad(p);
 		});
 		
+	},
+	famille_select: function(me) {
+		var store=App.store.create('gopro://types?idFamille='+me.getValue());
+		App.get('mainform combo#type').bindStore(store);
+		store.onLoad();
 	},
 	showSaisie: function() {
 		App.view.create('VSaisie',{modal: true}).show().center();	
