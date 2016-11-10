@@ -69,7 +69,7 @@ App.controller.define('CMain', {
 			var json = response;
 			var json = [{
 				nombre: "test",
-				Root:[
+				children:[
 					{
 						nombre: "eeeeeee"
 					}
