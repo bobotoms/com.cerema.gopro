@@ -34,7 +34,8 @@ App.view.define('VSaisie', {
 				border: true,
 				padding: 10,
 				height: 200,
-				width: 250
+				width: 250,
+				baseCls: "bridge"
 			},
 			{
 				padding: 10,
