@@ -11,7 +11,7 @@ App = {
 				{
 					ff.push({
 						text: o[i].nomElement,
-						id: 'Kets'+i,
+						id: 'K'+i,
 						leaf: false
 					});
 				};
