@@ -91,9 +91,11 @@ initComponent: function()
 					labelAlign: "top"
 				},
 				{
+					html: "Eléments",
+					padding: 10
+				},
+				{
 					xtype: "treepanel",
-					fieldLabel: "Eléments",
-					labelAlign: "left",
 					width: "100%",
 					height: 280,
 					border: false,
