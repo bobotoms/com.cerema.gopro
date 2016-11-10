@@ -73,6 +73,7 @@ App.controller.define('CMain', {
 				success:true,
 				isRoot:true, 
 				name: "root",
+				text: "Eléments",
 				children: response
 			}
 			];
