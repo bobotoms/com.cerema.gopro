@@ -64,27 +64,16 @@ App.controller.define('CMain', {
 		
 	},
 	VAddItem_onShow: function(me) {
-		/*App.Elements.getTree({},function(response){
+		App.Elements.getTree({},function(response){
 
 			var json = response;
 			var json = [
 			{
-				nombre: "test",
-				children:[
-					{
-						nombre: "eeeeeee"
-					}
-				]
+				text: "test"
 			},
 			{
-				nombre: "aaaa",
-				children:[
-					{
-						nombre: "fff"
-					}
-				]
-			}
-			
+				text: "test 2"
+			}			
 			];
 
             var reader = App.get(me,'treepanel').getStore().getProxy().getReader();
@@ -92,7 +81,7 @@ App.controller.define('CMain', {
 
             App.get(me,'treepanel').getStore().loadData(reader_data.records,true);			
 			
-		})*/
+		})
 	},
 	add_item_click: function() {
 		App.view.create('VAddItem',{modal: true}).show().center();	
