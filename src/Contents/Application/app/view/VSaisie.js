@@ -91,14 +91,14 @@ initComponent: function()
 					labelAlign: "top"
 				},
 				{
-					html: "Eléments",
+					html: "Eléments:",
 					border: false
 				},
 				{
 					xtype: "treepanel",
 					width: "100%",
 					height: 280,
-					border: false,
+					border: true,
 					fieldLabel: "Eléments constitutifs",
 					labelAlign: "top",
 					rootVisible: false,
