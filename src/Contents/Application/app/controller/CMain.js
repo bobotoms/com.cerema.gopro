@@ -67,13 +67,12 @@ App.controller.define('CMain', {
 		App.Elements.getTree({},function(response){
 			console.log(response);
 			var root={
-				text: "root",
-				children: response
+				text: "Moa",
+				children: []
 			};
 			var store=App.store.create({root:root,type: "tree"});
-			console.log(store);
-			App.get(me,'treepanel').getStore().loadData(root);
-			alert('x');
+			//console.log(store);
+			//App.get(me,'treepanel').getStore().loadData(root);
 		})
 	},
 	add_item_click: function() {
