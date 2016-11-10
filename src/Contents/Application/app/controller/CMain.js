@@ -34,7 +34,8 @@ App.controller.define('CMain', {
 	
 	init: function()
 	{
-
+		var p=this;
+		
 		this.control({
 			"menu>menuitem": {
 				click: "Menu_onClick"
@@ -45,7 +46,7 @@ App.controller.define('CMain', {
 		});
 		
 		App.init('VMain',function(){
-			this.onLoad(this);
+			p.onLoad(this);
 		});
 		
 	},
