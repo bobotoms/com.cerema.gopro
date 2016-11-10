@@ -69,7 +69,12 @@ App.controller.define('CMain', {
 			var json = response;
 			var json = [
 			{
-				text: "test"
+				text: "test",
+				children: [
+					{
+						text: "toto"
+					}
+				]
 			},
 			{
 				text: "test 2"
