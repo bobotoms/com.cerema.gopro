@@ -3,7 +3,7 @@ App.view.define('VSaisie', {
     extend: 'Ext.window.Window',
 	alias: "widget.VSaisie",
 
-initComponent: function()
+	initComponent: function()
 	{
 		this.title="Saisie";
 		this.layout="vbox";
