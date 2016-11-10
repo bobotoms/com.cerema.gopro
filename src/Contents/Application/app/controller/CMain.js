@@ -70,6 +70,7 @@ App.controller.define('CMain', {
 			var json = [
 			{
 				text: "test",
+				leaf: false,
 				children: [
 					{
 						text: "toto"
@@ -77,7 +78,8 @@ App.controller.define('CMain', {
 				]
 			},
 			{
-				text: "test 2"
+				text: "test 2",
+				leaf: false
 			}			
 			];
 
