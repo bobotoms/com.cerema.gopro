@@ -80,9 +80,6 @@ App.controller.define('CMain', {
             //var jsonstr_decoded = Ext.JSON.decode(jsonstr);
             var reader = App.get(me,'treepanel').getStore().getProxy().getReader();
           	var reader_data = reader.read(json);
-            
-            // The child is not loaded.. also error in data.
-            console.log(reader_data);
 
             // First read, then load it here.
 			App.get(me,'treepanel').getStore().root.removeAll();
