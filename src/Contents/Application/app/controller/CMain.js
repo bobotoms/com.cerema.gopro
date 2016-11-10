@@ -68,16 +68,24 @@ App.controller.define('CMain', {
 			console.log(response);
 
 			
-			var jsonstr = "[{\"success\":true," +
-                          "\"isRoot\":true," + 
-                          "\"children\":[{" +
-			              "\"name\": \"root\"," +
-                          "\"id\":\"2\",\"text\":\"Nico\",\"leaf\":false,\"expanded\":true,\"loaded\":true," +
-                          "\"children\":[{\"id\":\"3\",\"text\":\"Mitchell\",\"leaf\":true}]" +
+			var json = [
+			{
+				success:true,
+				isRoot:true, 
+				children:[
+					name: "root",
+					text: "Nico",
+					leaf: true
+				]
+			}
+			];
+			              "name\": \"root\"," +
+                          "id\":\"2\",\"text\":\"Nico\",\"leaf\":false,\"expanded\":true,\"loaded\":true," +
+                          "children\":[{\"id\":\"3\",\"text\":\"Mitchell\",\"leaf\":true}]" +
 				          "}]}]";
-            var jsonstr_decoded = Ext.JSON.decode(jsonstr);
+            //var jsonstr_decoded = Ext.JSON.decode(jsonstr);
             var reader = App.get(me,'treepanel').getStore().getProxy().getReader();
-          	var reader_data = reader.read(jsonstr_decoded);
+          	var reader_data = reader.read(json);
             
             // The child is not loaded.. also error in data.
             console.log(reader_data);
