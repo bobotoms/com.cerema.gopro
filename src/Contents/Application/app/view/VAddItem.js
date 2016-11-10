@@ -17,7 +17,7 @@ App.view.define('VAddItem',{
 		{
 			xtype: "treepanel",
 			height: "100%",
-			border: true,
+			border: false,
 			labelAlign: "top",
 			flex: 1,
 			rootVisible: true,
@@ -31,7 +31,8 @@ App.view.define('VAddItem',{
 		{
 			html: "yes",
 			flex: 1,
-			height: "100%"
+			height: "100%",
+			border: false
 		}
 		];
 		this.callParent();
