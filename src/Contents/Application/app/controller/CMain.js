@@ -77,10 +77,10 @@ App.controller.define('CMain', {
 				]
 			},
 			{
-				nombre: "test",
+				nombre: "aaaa",
 				children:[
 					{
-						nombre: "eeeeeee"
+						nombre: "fff"
 					}
 				]
 			}
