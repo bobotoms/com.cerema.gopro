@@ -68,14 +68,12 @@ App.controller.define('CMain', {
 
 			var json = response;
 			var json = {
-				root: {
-					text: "hello world",
-					children: [
-						{
-							text: "moi"
-						}
-					]
-				}
+				text: "hello world",
+				children: [
+					{
+						text: "moi"
+					}
+				]
 			};
 
             var reader = App.get(me,'treepanel').getStore().getProxy().getReader();
