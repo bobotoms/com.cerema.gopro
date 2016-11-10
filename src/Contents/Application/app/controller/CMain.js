@@ -70,7 +70,7 @@ App.controller.define('CMain', {
 
       
       App.get('mainform ribbon').addTab(Ext.create("Ext.ux.ribbon.Tab",{
-		  title: 'First tab',
+		  title: 'Nouveau',
           closable: false,
 		  layout: {
 			type: 'hbox',
@@ -78,12 +78,12 @@ App.controller.define('CMain', {
 			}, 
 		  items: [
 			{
-				title: 'Several buttons',
+				title: 'Ouvrages',
 				iconAlign: 'top',
 				// note that the items are row major
 				layout: {type: 'table', columns: 4},
 				items: [{
-						text: '1. Large Button',
+						text: 'Nouveau',
 						icon: "images/32/document_plain_new.png",
 						scale: 'large',
 						iconAlign: 'top',
