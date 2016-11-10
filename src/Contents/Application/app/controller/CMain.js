@@ -67,7 +67,7 @@ App.controller.define('CMain', {
 		App.Elements.getTree({},function(response){
 			//console.log(response);
 
-			response.isRoot=true;
+			response.isRoot=false;
 			var json = [
 			{
 				root: {
