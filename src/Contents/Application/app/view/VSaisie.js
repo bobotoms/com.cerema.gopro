@@ -45,6 +45,8 @@ initComponent: function()
 				items: [
 				{
 					layout: "hbox",
+					width: "100%",
+					border: false,
 					items: [
 					{
 						xtype: "combo",
