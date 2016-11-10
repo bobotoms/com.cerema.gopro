@@ -69,7 +69,9 @@ App.controller.define('CMain', {
 			var json = response;
 			var json = [
 			{
-				text: "hello"
+				root: {
+					text: "hello"
+				}
 			}
 			];
 
