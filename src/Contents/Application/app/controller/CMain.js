@@ -44,8 +44,13 @@ App.controller.define('CMain', {
 			}
 		});
 		
-		App.init('VMain',this.onLoad);
+		App.init('VMain',function(){
+			this.onLoad(this);
+		});
 		
+	},
+	showSaisie: function() {
+		App.view.create('VSaisie',{modal: true}).show().center();	
 	},
 	Menu_onClick: function(p)
 	{
@@ -56,7 +61,7 @@ App.controller.define('CMain', {
 				TMap.markers[0].addListener('click',function(){
 					alert(this.getPosition());
 				})*/
-				App.view.create('VSaisie',{modal: true}).show().center();
+				
 			}
 		};			
 	},
@@ -64,7 +69,7 @@ App.controller.define('CMain', {
 	{
 		Ext.Msg.alert('Omneedia','hello world!');
 	},
-	onLoad: function()
+	onLoad: function(p)
 	{
 		App.loadAPI("http://maps.google.com/maps/api/js?sensor=false&callback=GMap");
 
@@ -88,7 +93,8 @@ App.controller.define('CMain', {
 						iconCls: "new",
 						scale: 'large',
 						iconAlign: 'top',
-						rowspan: 3
+						rowspan: 3,
+						handler: p.showSaisie
 					}
 				]
 			}
