@@ -67,14 +67,14 @@ App.controller.define('CMain', {
 		App.Elements.getTree({},function(response){
 
 			var json = response;
-			var json = {
+			var json = [{
 				nombre: "test",
 				Root:[
 					{
 						nombre: "eeeeeee"
 					}
 				]
-			};
+			}];
 
             var reader = App.get(me,'treepanel').getStore().getProxy().getReader();
           	var reader_data = reader.read(json);
