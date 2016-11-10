@@ -68,15 +68,14 @@ App.controller.define('CMain', {
 	{
 		App.loadAPI("http://maps.google.com/maps/api/js?sensor=false&callback=GMap");
 
-      
-      /*App.get('mainform ribbon').addTab(Ext.create("Ext.ux.ribbon.Tab",{
-		  title: 'Nouveau',
-          closable: false,
-		  layout: {
-			type: 'hbox',
-			align: 'stretch'
+      	var tab1=Ext.create("Ext.ux.ribbon.Tab",{
+			title: 'Nouveau',
+        	closable: false,
+			layout: {
+				type: 'hbox',
+				align: 'stretch'
 			}, 
-		  items: [
+		  	items: [
 			{
 				title: 'Ouvrages',
 				iconAlign: 'top',
@@ -91,8 +90,10 @@ App.controller.define('CMain', {
 					},
 				]
 			}
-		]
-	  }), true);*/
+			]
+	  	};
+			
+		App.get('mainform ribbon').addTab(tab1), true);
 		
 	}
 	
