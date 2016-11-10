@@ -51,7 +51,13 @@ App.view.define('VMain', {
 						type: 'hbox',
 						align: 'stretch'
 					}, 
-		  			items: [
+		  			items: [{
+						text: 'Nouveau',
+						icon: "images/32/document_plain_new.png",
+						scale: 'large',
+						iconAlign: 'top',
+						rowspan: 3
+					}
 					]
 				}
             ]
