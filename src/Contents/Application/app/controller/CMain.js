@@ -75,7 +75,7 @@ App.controller.define('CMain', {
 				children: []
 			},type: "tree"});
 			var store=Ext.data.TreeStore({root:{
-				item: "Moa",
+				text: "Moa",
 				children: response
 			}});
 			
