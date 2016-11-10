@@ -66,16 +66,26 @@ App.controller.define('CMain', {
 	VAddItem_onShow: function(me) {
 		App.Elements.getTree({},function(response){
 			console.log(response);
-			var root={
-				text: "Moa",
-				children: []
-			};
-			var store=Ext.data.TreeStore({root:{
-				text: "Moa",
-				children: []
-			}});
+
 			
-			App.get(me,'treepanel').bindStore(store);
+			var jsonstr = "[{\"success\":true," +
+                          "\"isRoot\":true," + 
+                          "\"children\":[{" +
+			              "\"name\": \"root\"," +
+                          "\"id\":\"2\",\"name\":\"Nico\",\"leaf\":false,\"expanded\":true,\"loaded\":true," +
+                          "\"children\":[{\"id\":\"3\",\"name\":\"Mitchell\",\"leaf\":true}]" +
+				          "}]}]",
+            jsonstr_decoded = Ext.JSON.decode(jsonstr),
+            var reader = store.getProxy().getReader(),
+          	var reader_data = reader.read(jsonstr_decoded);
+            
+            // The child is not loaded.. also error in data.
+            console.log(reader_data);
+
+            // First read, then load it here.
+            App.get(me,'treepanel').loadData(reader_data.records,true);			
+			
+			//App.get(me,'treepanel').bindStore(store);
 			
 			//console.log(store);
 			//App.get(me,'treepanel').getStore().loadData(root);
