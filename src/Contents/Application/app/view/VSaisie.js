@@ -32,6 +32,7 @@ initComponent: function()
 			items: [
 			{
 				border: true,
+				padding: 10,
 				height: "100%",
 				width: 200
 			},
