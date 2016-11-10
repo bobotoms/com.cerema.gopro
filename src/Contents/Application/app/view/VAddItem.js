@@ -20,7 +20,7 @@ App.view.define('VAddItem',{
 			border: false,
 			flex: 1,
 			rootVisible: true,
-			store: Ext.data.TreeStore({root:{text:"hello"}})
+			store: Ext.data.TreeStore({root:{}})
 		},
 		{
 			width: 100,
