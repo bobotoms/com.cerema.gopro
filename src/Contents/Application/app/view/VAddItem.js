@@ -19,7 +19,16 @@ App.view.define('VAddItem',{
 			height: "100%",
 			border: false,
 			flex: 1,
-			rootVisible: true
+			rootVisible: true,
+			columns: [
+				{
+					xtype: 'treecolumn',
+					text: 'Eléments',
+					dataIndex: 'item',
+					width: 150,
+					sortable: true
+				}
+			]
 		},
 		{
 			width: 100,
