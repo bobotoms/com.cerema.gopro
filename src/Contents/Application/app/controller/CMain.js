@@ -49,6 +49,9 @@ App.controller.define('CMain', {
 			},
 			"VSaisie combo#type": {
 				
+			},
+			"VSaisie button#add_item": {
+				click: "add_item_click"
 			}
 		});
 		
@@ -56,6 +59,9 @@ App.controller.define('CMain', {
 			p.onLoad(p);
 		});
 		
+	},
+	add_item_click: function() {
+		App.view.create('VAddItem',{modal: true}).show().center();	
 	},
 	famille_select: function(me) {
 		App.get('VSaisie combo#type').setValue('');
