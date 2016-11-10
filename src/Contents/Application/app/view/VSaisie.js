@@ -93,7 +93,7 @@ initComponent: function()
 				{
 					xtype: "treepanel",
 					fieldLabel: "Eléments",
-					labelAlign: "top",
+					labelAlign: "left",
 					width: "100%",
 					height: 280,
 					border: false,
@@ -127,18 +127,7 @@ initComponent: function()
 						sortable: true
     				}	
 					],
-					store: App.store.create({
-						root:{
-							r1: "Eléments",
-							children:[
-								{
-									item:"test",
-									description: "xxx",
-									values: "12"
-								}
-							]
-						},
-						type: "tree"})
+					store: App.store.create({root:{},type: "tree"})
 				}
 				]
 			}
