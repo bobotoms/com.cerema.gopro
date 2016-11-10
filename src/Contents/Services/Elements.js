@@ -9,6 +9,7 @@ Elements={
 				var id=r[i].idElement;
 				var parent=r[i].idParent;
 				if (!obj[id]) obj[id]={
+					id: "c"+i,
 					text: r[i].nomElement,
 					children:[]
 				};
