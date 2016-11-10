@@ -28,6 +28,7 @@ initComponent: function()
 			layout: "hbox",
 			width: "100%",
 			height: 150,
+			border: false,
 			items: [
 			{
 				border: true,
@@ -37,6 +38,7 @@ initComponent: function()
 			{
 				padding: 10,
 				layout: "vbox",
+				border: false,
 				flex: 1,
 				height: "100%",
 				items: [
