@@ -43,6 +43,17 @@ App.view.define('VMain', {
 			region: 'north',
 			xtype: "ribbon",
 			items: [
+				{
+					xtype: "ribbon_tab",
+					title: 'Nouveau',
+          			closable: false,
+		  			layout: {
+						type: 'hbox',
+						align: 'stretch'
+					}, 
+		  			items: [
+					]
+				}
             ]
 		},
 		{
