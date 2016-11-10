@@ -21,7 +21,7 @@ App.view.define('VAddItem',{
 			labelAlign: "top",
 			flex: 1,
 			rootVisible: true,
-			store: App.store.create({root:{text:"hello"},type: "tree"})
+			store: App.store.create({},type: "tree"})
 		},
 		{
 			width: 100,
