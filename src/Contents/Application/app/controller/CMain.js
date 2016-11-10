@@ -70,6 +70,9 @@ App.controller.define('CMain', {
 			var json = {
 				nombre: "test",
 				root:[
+					{
+						nombre: "eeeeeee"
+					}
 				]
 			};
 
