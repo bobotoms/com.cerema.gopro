@@ -71,7 +71,7 @@ App.controller.define('CMain', {
 			var json = [
 			{
 				success:true,
-				isRoot:false, 
+				isRoot:true, 
 				children: response
 			}
 			];
