@@ -42,42 +42,8 @@ App.view.define('VMain', {
 		{
 			region: 'north',
 			xtype: "ribbon",
-			height: 300,
 			items: [
-			{
-            title : 'Home',
-				ribbon : [{
-					title : 'Clipboard',
-					cfg : {
-						columns : 2,
-						defaults : {
-							width : 60
-						}
-					},
-					items : [{
-						text : 'Paste',
-						iconCls : "paste-icon",
-						rowspan : 3,
-						width : 50,
-						height : 70
-					},{
-						text : 'Edit',
-						iconCls : 'pencil-icon',
-						scale : 'small',
-						iconAlign : 'left'
-					},{
-						text : 'Copy',
-						scale : 'small',
-						iconCls : 'copy-icon',
-						iconAlign : 'left'
-					},{
-						text    : "Cut",
-						iconCls : "cut-icon",
-						scale : 'small',
-						iconAlign : 'left'
-					}]
-				}]
-			}]
+            ]
 		},
 		{
 			region: "center",			
