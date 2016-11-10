@@ -58,7 +58,9 @@
     "api": [
         "MyService"
     ],
-    "db": [],
+    "db": [
+        "gopro"
+    ],
     "packages": [],
     "icon": {
         "background": "#FFFFFF",
