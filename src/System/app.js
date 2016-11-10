@@ -25,7 +25,7 @@ App = {
 					{
 						ff.push({
 							text: o[i].nomElement,
-							id: 'K'+i,
+							id: 'L'+i,
 							leaf: false
 						});
 					};
