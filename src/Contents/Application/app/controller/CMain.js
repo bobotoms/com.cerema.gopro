@@ -66,6 +66,8 @@ App.controller.define('CMain', {
 	VAddItem_onShow: function(me) {
 		App.Elements.getTree({},function(response){
 			console.log(response);
+			var store=App.store.create({root:response,type: "tree"});
+			App.get(me,'treepanel').bindStore(store);
 		})
 	},
 	add_item_click: function() {
