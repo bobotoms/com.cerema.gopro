@@ -92,7 +92,7 @@ initComponent: function()
 				},
 				{
 					html: "Eléments",
-					padding: 10
+					border: false
 				},
 				{
 					xtype: "treepanel",
