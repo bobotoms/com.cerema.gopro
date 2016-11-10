@@ -63,7 +63,7 @@ initComponent: function()
 						fieldLabel: "Type",
 						itemId: "type",
 						editable: false,
-						store: App.store.create('gopro://types'),
+						store: App.store.create({fields:[],data:[]}),
 						displayField: "nomType",
 						valueField: "idType",
 						labelAlign: "top"
