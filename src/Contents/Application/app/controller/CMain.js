@@ -73,7 +73,7 @@ App.controller.define('CMain', {
 			var store=App.store.create({root:{
 				text: "Moa",
 				children: []
-			},type: "tree"});
+			}},{type: "tree"});
 var getData = function() {
       var data = [{
             id : Ext.id(),
