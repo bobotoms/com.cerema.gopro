@@ -71,12 +71,7 @@ App.controller.define('CMain', {
          extend: 'Ext.ux.ribbon.Tab',
          alias: 'widget.uiribbontab',
          title: 'First tab',
-         closable: false,
-         layout: {
-             type: 'hbox',
-             align: 'stretch'
-         }, 
-			items: [  ]
+         closable: false
          });
       
       App.get('mainform ribbon').addTab(Ext.widget('uiribbontab'), true);
