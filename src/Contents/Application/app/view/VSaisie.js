@@ -89,6 +89,15 @@ initComponent: function()
 					border: false,
 					fieldLabel: "Commentaires",
 					labelAlign: "top"
+				},
+				{
+					xtype: "treepanel",
+					width: "100%",
+					height: 280,
+					border: false,
+					fieldLabel: "Eléments constitutifs",
+					labelAlign: "top",
+					store: App.store.create("",{type: "tree"})
 				}
 				]
 			}
