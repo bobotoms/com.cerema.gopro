@@ -72,10 +72,12 @@ App.controller.define('CMain', {
 			{
 				success:true,
 				isRoot:true, 
-				children:[
+				children: [
+				{
 					name: "root",
 					text: "Nico",
 					leaf: true
+				}
 				]
 			}
 			];
