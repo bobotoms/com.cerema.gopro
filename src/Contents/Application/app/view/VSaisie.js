@@ -118,7 +118,7 @@ initComponent: function()
 						sortable: true
     				}	
 					],
-					store: App.store.create({root:{text: "Eléments"},type: "tree"})
+					store: App.store.create({root:{text: "Eléments",children:[{text:"toto"}]},type: "tree"})
 				}
 				]
 			}
