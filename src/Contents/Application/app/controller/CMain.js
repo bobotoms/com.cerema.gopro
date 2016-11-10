@@ -74,6 +74,10 @@ App.controller.define('CMain', {
 				item: "Moa",
 				children: []
 			},type: "tree"});
+			var store=Ext.data.TreeStore({root:{
+				item: "Moa",
+				children: []
+			});
 			
 			App.get(me,'treepanel').bindStore(store);
 			
