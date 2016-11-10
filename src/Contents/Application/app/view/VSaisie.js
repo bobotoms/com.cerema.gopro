@@ -75,6 +75,9 @@ initComponent: function()
 					{
 						xtype: "textfield",
 						flex: 1,
+						margin: {
+							left: 5 	
+						},
 						fieldLabel: "Titre",
 						labelAlign: "top"						
 					}
