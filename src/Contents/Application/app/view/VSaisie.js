@@ -27,14 +27,14 @@ initComponent: function()
 		{
 			layout: "hbox",
 			width: "100%",
-			height: 250,
+			height: 200,
 			border: false,
 			items: [
 			{
 				border: true,
 				padding: 10,
 				height: "100%",
-				width: 300
+				width: 250
 			},
 			{
 				padding: 10,
