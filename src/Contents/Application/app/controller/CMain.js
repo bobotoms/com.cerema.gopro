@@ -72,6 +72,7 @@ App.controller.define('CMain', {
 			{
 				success:true,
 				isRoot:true, 
+				name: "root",
 				children: response
 			}
 			];
