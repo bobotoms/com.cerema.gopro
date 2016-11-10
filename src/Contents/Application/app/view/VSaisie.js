@@ -84,11 +84,11 @@ initComponent: function()
 					]
 				},
 				{
-					layout: "hbox",
+					xtype: "textfield",
 					width: "100%",
 					border: false,
-					items: [
-					]
+					fieldLabel: "Commentaires",
+					labelAlign: "top"
 				}
 				]
 			}
