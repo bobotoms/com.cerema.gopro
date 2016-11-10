@@ -103,7 +103,7 @@ initComponent: function()
 					{
 						xtype: 'treecolumn',
 						text: 'Eléments',
-						dataIndex: 'r1',
+						dataIndex: 'item',
 						width: 150,
 						sortable: true
     				}, {
@@ -113,7 +113,7 @@ initComponent: function()
 						sortable: true
     				}, {
 						text: 'Valeurs',
-						dataIndex: 'description',
+						dataIndex: 'values',
 						flex: 1,
 						width: 150,
 						sortable: true
@@ -123,7 +123,11 @@ initComponent: function()
 						root:{
 							r1: "Eléments",
 							children:[
-								{text:"toto"}
+								{
+									item:"test",
+									description: "xxx",
+									values: "12"
+								}
 							]
 						},
 						type: "tree"})
