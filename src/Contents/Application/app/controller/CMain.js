@@ -72,8 +72,7 @@ App.controller.define('CMain', {
 			};
 			var store=App.store.create({root:root,type: "tree"});
 			console.log(store);
-			App.get(me,'treepanel').bindStore(store);
-			App.get(me,'treepanel').getStore().load();
+			App.get(me,'treepanel').getStore().loadData(root);
 			alert('x');
 		})
 	},
