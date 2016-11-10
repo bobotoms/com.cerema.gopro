@@ -70,8 +70,8 @@ App.controller.define('CMain', {
 				text: "Moa",
 				children: []
 			};
-			var store=App.store.create({item:{
-				text: "Moa",
+			var store=App.store.create({root:{
+				item: "Moa",
 				children: []
 			},type: "tree"});
 			
