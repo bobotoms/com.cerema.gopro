@@ -68,7 +68,7 @@ App.controller.define('CMain', {
 	{
 		App.loadAPI("http://maps.google.com/maps/api/js?sensor=false&callback=GMap");
 
-      	var tab1=Ext.create("Ext.ux.ribbon.Tab",{
+      	var tab1=Ext.create("Ext.ux.ribbon.Tab", {
 			title: 'Nouveau',
         	closable: false,
 			layout: {
@@ -79,21 +79,23 @@ App.controller.define('CMain', {
 			{
 				title: 'Ouvrages',
 				iconAlign: 'top',
-				// note that the items are row major
-				layout: {type: 'table', columns: 4},
+				layout: {
+					type: 'table', 
+					columns: 4
+				},
 				items: [{
 						text: 'Nouveau',
 						icon: "images/32/document_plain_new.png",
 						scale: 'large',
 						iconAlign: 'top',
 						rowspan: 3
-					},
+					}
 				]
 			}
 			]
 	  	});
 			
-		App.get('mainform ribbon').addTab(tab1), true);
+		App.get('mainform ribbon').addTab(tab1, true);
 		
 	}
 	
