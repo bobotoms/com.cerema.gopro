@@ -102,8 +102,7 @@ initComponent: function()
 					columns: [
 					{
 						xtype: 'treecolumn',
-						text: 'Name',
-						dataIndex: 'name',
+						text: 'Eléments',
 						width: 150,
 						sortable: true
     				}, {
