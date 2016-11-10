@@ -100,6 +100,13 @@ initComponent: function()
 					fieldLabel: "Eléments constitutifs",
 					labelAlign: "top",
 					rootVisible: false,
+					tbar:[
+					'->',
+					{
+						text: "Ajouter",
+						itemId: "add_item"
+					}
+					],
 					columns: [
 					{
 						xtype: 'treecolumn',
