@@ -105,8 +105,7 @@ initComponent: function()
 						text: 'Name',
 						dataIndex: 'name',
 						width: 150,
-						sortable: true,
-						store: App.store.create({root:{text: "Eléments"},type: "tree"})
+						sortable: true
     				}, {
 						text: 'Description',
 						dataIndex: 'description',
@@ -119,7 +118,8 @@ initComponent: function()
 						width: 150,
 						sortable: true
     				}	
-					]
+					],
+					store: App.store.create({root:{text: "Eléments"},type: "tree"})
 				}
 				]
 			}
