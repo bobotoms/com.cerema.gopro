@@ -48,49 +48,7 @@ App.view.define('VMain', {
 					layout: "hbox",
 					width: "100%",
 					border: false,
-					items: [
-					{
-						xtype: "combo",
-						multiselect: true,
-						fieldLabel: "Maitrise d'ouvrage",
-						labelAlign: "top",
-						padding: 5,
-						border: false,
-						flex: 1
-					},
-					{
-						xtype: "combo",
-						fieldLabel: "Département",
-						labelAlign: "top",
-						padding: 5,
-						border: false,
-						flex: 1
-					},
-					{
-						xtype: "combo",
-						fieldLabel: "Axe routier",
-						labelAlign: "top",
-						padding: 5,
-						border: false,
-						flex: 1
-					},
-					{
-						xtype: "combo",
-						fieldLabel: "Famille d'ouvrage",
-						labelAlign: "top",
-						padding: 5,
-						border: false,
-						flex: 1
-					},
-					{
-						xtype: "combo",
-						fieldLabel: "Type d'ouvrage",
-						labelAlign: "top",
-						padding: 5,
-						border: false,
-						flex: 1
-					}						
-					]
+					xtype: "ribbon"
 				},
 				{
 					id: "MyGMapPanel",
