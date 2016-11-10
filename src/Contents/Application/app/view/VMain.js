@@ -40,16 +40,14 @@ App.view.define('VMain', {
 			]		
 		},
 		{
+			region: 'north',
+			xtype: "ribbon"
+		},
+		{
 			region: "center",			
 			split:true,
 			layout:"vbox",
 			items: [
-				{
-					layout: "hbox",
-					width: "100%",
-					border: false,
-					xtype: "ribbon"
-				},
 				{
 					id: "MyGMapPanel",
 					html: '<div id="TMapPanel" style="width:100%;height:100%"></div>',
