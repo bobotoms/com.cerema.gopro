@@ -43,61 +43,40 @@ App.view.define('VMain', {
 			region: 'north',
 			xtype: "ribbon",
 			items: [
-{
-        title: 'Data',
-        items: [{
-            text: 'List of All\nEmployees',
-            iconCls: 'icon-ribbon-address32',
-            scale: 'large',
-            iconAlign: 'top',
-            action: 'list'
-        }]
-    }, {
-        title: 'New',
-        columns: 3,
-        items: [{
-            text: 'New Employee',
-            scale: 'large',
-            iconAlign: 'top',
-            iconCls: 'icon-ribbon-contact32',
-            action: 'newemployee'
-        }, {
-            text: 'New Department',
-            scale: 'large',
-            iconAlign: 'top',
-            iconCls: 'icon-ribbon-inbox32'
-        }, {
-            text: 'Archived Documents',
-            scale: 'large',
-            iconAlign: 'top',
-            iconCls: 'icon-ribbon-docs32'
-        }]
-    }, {
-        title: 'Action',
-        defaults: {
-            scale: 'large',
-            iconAlign: 'top'
-        },
-        items: [{
-            text: 'Delete',
-            action: 'delete',
-            iconCls: 'icon-ribbon-deletecontact32'
-        }, {
-            text: 'Refresh All',
-            iconCls: 'icon-ribbon-refresh32'
-        }]
-    }, {
-        title: 'Reports',
-        defaults: {
-            scale: 'large',
-            iconAlign: 'top'
-        },
-        items: [{
-            text: 'Available Reports',
-            iconCls: 'icon-ribbon-report32'
-        }]
-    }				
-			]
+			{
+            title : 'Home',
+				ribbon : [{
+					title : 'Clipboard',
+					cfg : {
+						columns : 2,
+						defaults : {
+							width : 60
+						}
+					},
+					items : [{
+						text : 'Paste',
+						iconCls : "paste-icon",
+						rowspan : 3,
+						width : 50,
+						height : 70
+					},{
+						text : 'Edit',
+						iconCls : 'pencil-icon',
+						scale : 'small',
+						iconAlign : 'left'
+					},{
+						text : 'Copy',
+						scale : 'small',
+						iconCls : 'copy-icon',
+						iconAlign : 'left'
+					},{
+						text    : "Cut",
+						iconCls : "cut-icon",
+						scale : 'small',
+						iconAlign : 'left'
+					}]
+				}]
+			}]
 		},
 		{
 			region: "center",			
