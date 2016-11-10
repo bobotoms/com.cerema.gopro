@@ -32,7 +32,10 @@ App.view.define('VSaisie', {
 			items: [
 			{
 				border: true,
-				padding: 10,
+				margin: {
+					left: 10,
+					top: 10
+				},
 				height: 200,
 				width: 250,
 				baseCls: "bridge"
