@@ -63,6 +63,7 @@ initComponent: function()
 						fieldLabel: "Type",
 						itemId: "type",
 						editable: false,
+						width: 150,
 						margin: {
 							left: 5 	
 						},
