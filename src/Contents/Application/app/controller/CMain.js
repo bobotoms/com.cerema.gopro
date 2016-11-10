@@ -88,7 +88,7 @@ var getData = function() {
          }];
       return data;
    };			
-			var root = App.get(me,'treepanel').getStore().tree;
+			var root = App.get(me,'treepanel').getStore();
 			console.log(root);
    			root.removeAll();
    			root.appendChild(getData());
