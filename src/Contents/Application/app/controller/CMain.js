@@ -72,8 +72,8 @@ App.controller.define('CMain', {
 					text: "toto"
 				}]
 			};
-			var store=App.store.create({root:root,type: "tree"});
-			App.get(me,'treepanel').bindStore(store);
+			/*var store=App.store.create({root:root,type: "tree"});
+			App.get(me,'treepanel').bindStore(store);*/
 		})
 	},
 	add_item_click: function() {
