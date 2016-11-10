@@ -84,7 +84,7 @@ App.controller.define('CMain', {
 				layout: {type: 'table', columns: 4},
 				items: [
 				]
-			]
+			}
 		]
 	  }), true);
 		
