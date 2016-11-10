@@ -11,9 +11,15 @@ Elements={
 				if (!obj[id]) obj[id]={
 					id: "c"+i,
 					text: r[i].nomElement,
-					children:[]
+					leaf: true
 				};
-				if (parent==1) root.push(obj[id]); else obj[parent].children.push(obj[id]);
+				if (parent==1) root.push(obj[id]); else {
+					if (!obj[parent].children) {
+						obj[parent].children=[];
+						obj[parent].leaf=false;
+					};
+					obj[parent].children.push(obj[id]);
+				}
 			}
 			cb(root);
 		});
