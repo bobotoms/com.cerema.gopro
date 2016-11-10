@@ -103,6 +103,7 @@ initComponent: function()
 					{
 						xtype: 'treecolumn',
 						text: 'Eléments',
+						dataIndex: 'r1',
 						width: 150,
 						sortable: true
     				}, {
@@ -118,7 +119,14 @@ initComponent: function()
 						sortable: true
     				}	
 					],
-					store: App.store.create({root:{text: "Eléments",children:[{text:"toto"}]},type: "tree"})
+					store: App.store.create({
+						root:{
+							r1: "Eléments",
+							children:[
+								{text:"toto"}
+							]
+						},
+						type: "tree"})
 				}
 				]
 			}
