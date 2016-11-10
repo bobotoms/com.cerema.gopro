@@ -19,7 +19,18 @@ App = {
 					res.end(JSON.stringify(ff));	
 				});
 			} else {
-				
+				var sql="SELECT idElement,idParent,elements.idType,elements.nomElement,modif FROM elements join types_elements on elements.idType=types_elements.idType where idParent="+req.body.node.split('K')[1];
+				db.query("gopro",sql,function(e,o){
+					for (var i=0;i<o.length;i++)
+					{
+						ff.push({
+							text: o[i].nomElement,
+							id: 'K'+i,
+							leaf: false
+						});
+					};
+					res.end(JSON.stringify(ff));	
+				});
 			}
 		});
 	}
