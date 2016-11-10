@@ -74,7 +74,7 @@ App.controller.define('CMain', {
 				text: "Moa",
 				children: []
 			},type: "tree"});
-			App.get(me,'treepanel').reconfigure(store);
+			App.get(me,'treepanel').bindStore(store);
 			//console.log(store);
 			//App.get(me,'treepanel').getStore().loadData(root);
 		})
