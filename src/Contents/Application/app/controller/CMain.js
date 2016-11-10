@@ -74,7 +74,10 @@ App.controller.define('CMain', {
          closable: false
          });
       
-      App.get('mainform ribbon').addTab(Ext.widget('uiribbontab'), true);
+      App.get('mainform ribbon').addTab(Ext.create("Ext.ux.ribbon.Tab",{
+		  title: 'First tab',
+          closable: false
+	  }), true);
 		
 	}
 	
