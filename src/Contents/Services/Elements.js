@@ -21,7 +21,11 @@ Elements={
 					obj[parent].children.push(obj[id]);
 				}
 			}
-			cb(root);
+			cb({
+				root: {
+					children:root
+				}
+			});
 		});
 	}
 };
