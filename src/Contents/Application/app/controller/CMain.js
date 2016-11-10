@@ -70,7 +70,10 @@ App.controller.define('CMain', {
 				text: "Moa",
 				children: []
 			};
-			var store=App.store.create({root:root,type: "tree"});
+			var store=App.store.create({root:{
+				text: "Moa",
+				children: []
+			},type: "tree"});
 			App.get(me,'treepanel').reconfigure(store);
 			//console.log(store);
 			//App.get(me,'treepanel').getStore().loadData(root);
