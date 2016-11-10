@@ -76,7 +76,7 @@ App.controller.define('CMain', {
                           "\"children\":[{\"id\":\"3\",\"name\":\"Mitchell\",\"leaf\":true}]" +
 				          "}]}]";
             var jsonstr_decoded = Ext.JSON.decode(jsonstr);
-            var reader = store.getProxy().getReader();
+            var reader = App.get(me,'treepanel').getStore()..getProxy().getReader();
           	var reader_data = reader.read(jsonstr_decoded);
             
             // The child is not loaded.. also error in data.
