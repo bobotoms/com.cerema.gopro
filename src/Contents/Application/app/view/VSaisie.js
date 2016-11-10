@@ -27,7 +27,7 @@ initComponent: function()
 		{
 			layout: "hbox",
 			width: "100%",
-			height: 200,
+			height: 400,
 			border: false,
 			items: [
 			{
