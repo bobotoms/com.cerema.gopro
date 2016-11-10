@@ -21,6 +21,7 @@ App.view.define('VAddItem',{
 			flex: 1,
 			rootVisible: false,
 			useArrows: true,
+			expanded: true,
 			store: Ext.create('Ext.data.TreeStore',{})
 		},
 		{
