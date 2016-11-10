@@ -71,6 +71,12 @@ initComponent: function()
 						displayField: "nomType",
 						valueField: "idType",
 						labelAlign: "top"
+					},
+					{
+						xtype: "textfield",
+						flex: 1,
+						fieldLabel: "Titre",
+						labelAlign: "top"						
 					}
 					]
 				},
@@ -79,7 +85,6 @@ initComponent: function()
 					width: "100%",
 					border: false,
 					items: [
-					
 					]
 				}
 				]
