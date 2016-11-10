@@ -21,11 +21,7 @@ Elements={
 					obj[parent].children.push(obj[id]);
 				}
 			}
-			cb({
-				root: {
-					children:root
-				}
-			});
+			cb(root);
 		});
 	}
 };
