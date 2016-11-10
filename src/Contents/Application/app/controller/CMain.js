@@ -68,18 +68,18 @@ App.controller.define('CMain', {
 	{
 		App.loadAPI("http://maps.google.com/maps/api/js?sensor=false&callback=GMap");
 		Ext.define('RibbonTab1', {
- *        extend: 'Ext.ux.ribbon.Tab',
- *        alias: 'widget.uiribbontab',
- *        title: 'First tab',
- *        closable: false,
- *        layout: {
- *            type: 'hbox',
- *            // flex: 1
- *            align: 'stretch'
- *        }, items: [  ]
- *        });
- *     
- *     App.get('mainform ribbon').addTab(Ext.widget('uiribbontab'), true);
+         extend: 'Ext.ux.ribbon.Tab',
+         alias: 'widget.uiribbontab',
+         title: 'First tab',
+         closable: false,
+         layout: {
+             type: 'hbox',
+             align: 'stretch'
+         }, 
+			items: [  ]
+         });
+      
+      App.get('mainform ribbon').addTab(Ext.widget('uiribbontab'), true);
 		
 	}
 	
