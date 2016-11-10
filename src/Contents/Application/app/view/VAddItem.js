@@ -25,7 +25,7 @@ App.view.define('VAddItem',{
 					xtype: 'treecolumn',
 					text: 'Eléments',
 					dataIndex: 'item',
-					width: 150,
+					flex: 1,
 					sortable: true
 				}
 			]
