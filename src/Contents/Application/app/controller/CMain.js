@@ -68,17 +68,20 @@ App.controller.define('CMain', {
 
 			var json = response;
 			var json = [
-			{
-				root: {
-					text: "hello"
-				}
+			{	
+				text: "hello",
+				children: [
+					{
+						text: "heeeee"
+					}
+				]
 			}
 			];
 
             var reader = App.get(me,'treepanel').getStore().getProxy().getReader();
           	var reader_data = reader.read(json);
 
-            App.get(me,'treepanel').getStore().loadData(reader_data.records,false);			
+            App.get(me,'treepanel').getStore().loadData(reader_data.records,true);			
 			
 		})
 	},
