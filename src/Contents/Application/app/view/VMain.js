@@ -41,7 +41,7 @@ App.view.define('VMain', {
 		},
 		{
 			region: 'north',
-			xtype: "ribbon"
+			xtype: "uiribbonbar"
 		},
 		{
 			region: "center",			
