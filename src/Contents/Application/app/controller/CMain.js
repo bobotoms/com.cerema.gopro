@@ -66,13 +66,8 @@ App.controller.define('CMain', {
 	VAddItem_onShow: function(me) {
 		App.Elements.getTree({},function(response){
 
-			console.log(response);
-			response.isRoot=true;
-			var json = {
-				root: [{
-					children: response
-				}]
-			};
+			//response.isRoot=true;
+			var json = response;
 
             var reader = App.get(me,'treepanel').getStore().getProxy().getReader();
           	var reader_data = reader.read(json);
