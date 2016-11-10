@@ -64,7 +64,9 @@ App.controller.define('CMain', {
 		
 	},
 	VAddItem_onShow: function(me) {
-		
+		Elements.getTree({},function(response){
+			console.log(response);
+		})
 	},
 	add_item_click: function() {
 		App.view.create('VAddItem',{modal: true}).show().center();	
