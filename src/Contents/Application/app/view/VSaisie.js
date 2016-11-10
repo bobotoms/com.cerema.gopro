@@ -58,6 +58,22 @@ initComponent: function()
 						labelAlign: "top"
 					}
 					]
+				},
+				{
+					layout: "hbox",
+					width: "100%",
+					border: false,
+					items: [
+					{
+						xtype: "combo",
+						fieldLabel: "Type",
+						editable: false,
+						store: App.store.create('gopro://types'),
+						displayField: "nomType",
+						valueField: "idType",
+						labelAlign: "top"
+					}
+					]
 				}
 				]
 			}
