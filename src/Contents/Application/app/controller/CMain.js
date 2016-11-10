@@ -67,19 +67,16 @@ App.controller.define('CMain', {
 		App.Elements.getTree({},function(response){
 
 			var json = response;
-			var json = [
-			{	
-				text: "hello",
-				children: [
-					{
-						text: "heeeee"
-					}
-				]
-			},
-			{
-				text: "bonjour"
-			}
-			];
+			var json = {
+				root: {
+					text: "hello world",
+					children: [
+						{
+							text: "moi"
+						}
+					]
+				}
+			};
 
             var reader = App.get(me,'treepanel').getStore().getProxy().getReader();
           	var reader_data = reader.read(json);
