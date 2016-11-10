@@ -100,7 +100,7 @@ initComponent: function()
 				{
 					xtype: "treepanel",
 					width: "100%",
-					height: 280,
+					height: 270,
 					border: true,
 					fieldLabel: "Eléments constitutifs",
 					labelAlign: "top",
