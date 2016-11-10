@@ -70,12 +70,10 @@ App.controller.define('CMain', {
 			response.isRoot=true;
 			var json = [
 			{
-				success:true,
-				isRoot:true, 
-				name: "root",
-				expanded: true,
-				text: "Eléments",
-				children: response
+				root: {
+					text: "hello",
+					children: response
+				}
 			}
 			];
 
