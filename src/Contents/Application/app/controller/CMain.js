@@ -46,7 +46,7 @@ App.controller.define('CMain', {
 		});
 		
 		App.init('VMain',function(){
-			p.onLoad(this);
+			p.onLoad(p);
 		});
 		
 	},
