@@ -15,7 +15,7 @@ App.view.define('VAddItem',{
         ];	
 		this.items = [
 		{
-			xtype: "tree",
+			xtype: "treepanel",
 			height: "100%",
 			border: false,
 			flex: 1,
