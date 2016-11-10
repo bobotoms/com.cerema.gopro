@@ -75,6 +75,9 @@ App.controller.define('CMain', {
 						text: "heeeee"
 					}
 				]
+			},
+			{
+				text: "bonjour"
 			}
 			];
 
