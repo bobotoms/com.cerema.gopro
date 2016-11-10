@@ -16,13 +16,21 @@ App.view.define('VAddItem',{
 		this.items = [
 		{
 			xtype: "treepanel",
-			width: "100%",
+			height: "100%",
 			height: 200,
 			border: true,
 			labelAlign: "top",
+			flex: 1,
 			rootVisible: true,
 			store: App.store.create({root:{},type: "tree"})
-		}		
+		},
+		{
+			width: 100
+		},
+		{
+			html: "yes",
+			flex: 1
+		}
 		];
 		this.callParent();
 	}
