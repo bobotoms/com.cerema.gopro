@@ -71,14 +71,11 @@ App.controller.define('CMain', {
 			var json = [
 			{
 				success:true,
-				isRoot:true, 
+				isRoot:false, 
 				children: response
 			}
 			];
-			              "name\": \"root\"," +
-                          "id\":\"2\",\"text\":\"Nico\",\"leaf\":false,\"expanded\":true,\"loaded\":true," +
-                          "children\":[{\"id\":\"3\",\"text\":\"Mitchell\",\"leaf\":true}]" +
-				          "}]}]";
+
             //var jsonstr_decoded = Ext.JSON.decode(jsonstr);
             var reader = App.get(me,'treepanel').getStore().getProxy().getReader();
           	var reader_data = reader.read(json);
