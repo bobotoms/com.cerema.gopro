@@ -41,7 +41,19 @@ App.view.define('VMain', {
 		},
 		{
 			region: 'north',
-			xtype: "uiribbonbar"
+			xtype: "ribbon",
+			items: [
+			{
+        title: 'Data',
+        items: [{
+            text: 'List of All\nEmployees',
+            iconCls: 'icon-ribbon-address32',
+            scale: 'large',
+            iconAlign: 'top',
+            action: 'list'
+        }]
+    }
+			]
 		},
 		{
 			region: "center",			
