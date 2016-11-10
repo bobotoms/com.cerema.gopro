@@ -19,7 +19,7 @@ App.view.define('VAddItem',{
 			height: "100%",
 			border: false,
 			flex: 1,
-			rootVisible: true,
+			rootVisible: false,
 			store: Ext.create('Ext.data.TreeStore',{})
 		},
 		{
