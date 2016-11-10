@@ -99,7 +99,7 @@ initComponent: function()
 					border: false,
 					fieldLabel: "Eléments constitutifs",
 					labelAlign: "top",
-					showRoot: false,
+					rootVisible: false,
 					columns: [
 					{
 						xtype: 'treecolumn',
