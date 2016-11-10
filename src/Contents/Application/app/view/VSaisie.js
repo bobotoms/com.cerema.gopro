@@ -33,7 +33,7 @@ App.view.define('VSaisie', {
 			{
 				border: true,
 				padding: 10,
-				height: "100%",
+				height: 200,
 				width: 250
 			},
 			{
