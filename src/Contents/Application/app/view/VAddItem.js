@@ -22,7 +22,17 @@ App.view.define('VAddItem',{
 			rootVisible: false,
 			useArrows: true,
 			store: Ext.create('Ext.data.TreeStore', {
-				autoLoad: false
+				autoLoad: false,
+				proxy: {
+					type: 'ajax',
+					url: '/evt',
+					actionMethods: {
+						read: 'POST'
+					},
+					reader: {
+						type: 'json'
+					}					
+				}
 			})
 		},
 		{
