@@ -105,15 +105,20 @@ initComponent: function()
 						text: 'Name',
 						dataIndex: 'name',
 						width: 150,
-						sortable: true
+						sortable: true,
+						store: App.store.create({root:{text: "Eléments"},type: "tree"})
     				}, {
 						text: 'Description',
 						dataIndex: 'description',
 						flex: 1,
 						sortable: true
+    				}, {
+						text: 'Valeurs',
+						dataIndex: 'description',
+						flex: 1,
+						sortable: true
     				}	
-					],
-					store: App.store.create({root:{text: "Eléments"},type: "tree"})
+					]
 				}
 				]
 			}
