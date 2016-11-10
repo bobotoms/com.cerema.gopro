@@ -42,6 +42,7 @@ App.view.define('VMain', {
 		{
 			region: 'north',
 			xtype: "ribbon",
+			height: 300,
 			items: [
 			{
             title : 'Home',
