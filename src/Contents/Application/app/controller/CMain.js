@@ -60,6 +60,7 @@ App.controller.define('CMain', {
 		var store=App.store.create('gopro://types?idFamille='+me.getValue());
 		App.get('VSaisie combo#type').bindStore(store);
 		App.get('VSaisie combo#type').getStore().onLoad();
+		alert('x');
 	},
 	showSaisie: function() {
 		App.view.create('VSaisie',{modal: true}).show().center();	
