@@ -5,7 +5,7 @@ App.view.define('VAddItem',{
 	initComponent: function()
 	{
 		this.title="Catalogue";
-		this.layout="vbox";
+		this.layout="hbox";
 		this.border=false;
 		this.width = 700;
         this.height = 430;
@@ -14,7 +14,15 @@ App.view.define('VAddItem',{
             
         ];	
 		this.items = [
-		
+		{
+			xtype: "treepanel",
+			width: "100%",
+			height: 200,
+			border: true,
+			labelAlign: "top",
+			rootVisible: true,
+			store: App.store.create({root:{},type: "tree"})
+		}		
 		];
 		this.callParent();
 	}
