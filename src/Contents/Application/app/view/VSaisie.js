@@ -51,7 +51,7 @@ initComponent: function()
 					{
 						xtype: "combo",
 						fieldLabel: "Famille",
-						store: App.store.create('gopro://familles'),
+						store: App.store.create('gopro://familles',{autoLoad:true}),
 						displayField: "id",
 						valueField: "nomFamille",
 						labelAlign: "top"
