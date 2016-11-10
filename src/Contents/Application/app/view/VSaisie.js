@@ -92,6 +92,8 @@ initComponent: function()
 				},
 				{
 					xtype: "treepanel",
+					fieldLabel: "Eléments",
+					labelAlign: "top"
 					width: "100%",
 					height: 280,
 					border: false,
