@@ -116,6 +116,7 @@ initComponent: function()
 						text: 'Valeurs',
 						dataIndex: 'description',
 						flex: 1,
+						width: 150,
 						sortable: true
     				}	
 					]
