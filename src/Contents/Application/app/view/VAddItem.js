@@ -48,7 +48,6 @@ App.view.define('VAddItem',{
 				border: false
 			},
 			{
-				border: false,
 				xtype: "button",
 				text: ">>",
 				itemId: "AddItem",
@@ -61,7 +60,6 @@ App.view.define('VAddItem',{
 				}
 			},
 			{
-				border: false,
 				xtype: "button",
 				text: "<<",
 				itemId: "RemoveItem",
