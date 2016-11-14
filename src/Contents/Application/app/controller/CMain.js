@@ -79,7 +79,7 @@ App.controller.define('CMain', {
 		
 	},
 	VAddItem_onShow: function(me) {
-		App.Elements.getTree({},function(response){
+		/*App.Elements.getTree({},function(response){
 
 			/*var json = response;
 			var json = [
@@ -103,7 +103,7 @@ App.controller.define('CMain', {
 
             App.get(me,'treepanel').getStore().loadData(reader_data.records,true);		*/	
 			
-		})
+		})*/
 	},
 	add_item_click: function() {
 		App.view.create('VAddItem',{modal: true}).show().center();	
