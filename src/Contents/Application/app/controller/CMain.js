@@ -55,12 +55,27 @@ App.controller.define('CMain', {
 			},
 			"VAddItem": {
 				show: "VAddItem_onShow"
+			},
+			"VAddItem button#AddItem": {
+				click: "AddItem_click"
+			},
+			"VAddItem button#RemoveItem": {
+				click: "RemoveItem_click"
 			}
 		});
 		
 		App.init('VMain',function(){
 			p.onLoad(p);
 		});
+		
+	},
+	AddItem_click: function(me) {
+		var tree = me.up('treepanel');
+        var selModel = tree.getSelectionModel();
+        var node = selModel.getLastSelected();
+		console.log(node);
+	},
+	RemoveItem_click: function(me) {
 		
 	},
 	VAddItem_onShow: function(me) {
