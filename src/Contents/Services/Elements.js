@@ -4,6 +4,8 @@ Elements={
 		var db=Elements.using('db');
 
 		db.query("gopro",sql,function(e,r){
+			console.log(e);
+			console.log(r);
 			var root=[];
 			var obj={};
 			for (var i=0;i<r.length;i++) {
