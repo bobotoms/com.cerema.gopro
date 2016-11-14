@@ -22,6 +22,13 @@ App.view.define('VAddItem',{
 			rootVisible: false,
 			useArrows: true,
 			itemId: "T0",
+			viewConfig: {
+                plugins: {
+                   ptype: 'treeviewdragdrop',
+                   enableDrag: true,
+                   enableDrop: false
+                }
+            },			
 			store: Ext.create('Ext.data.TreeStore', {
 				autoLoad: false,
 				proxy: {
