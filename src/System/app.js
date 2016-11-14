@@ -8,7 +8,7 @@ App = {
 			console.log(req.body);
 			if (req.body.node=="root") {
 				var sql="SELECT idElement,parent,new_elements.idType_element,new_elements.nomElement,modif FROM new_elements join types_elements on new_elements.idType_element=types_elements.idType where new_elements.idType="+req.body.type+" order by parent";
-				console.log(sql);
+				
 				var db=Elements.using('db');
 				db.query("gopro",sql,function(e,r){
 					var root=[];
@@ -29,7 +29,8 @@ App = {
 							};
 							obj[parent].children.push(obj[id]);
 						}
-					}
+					};
+					console.log(root);
 					res.end(JSON.stringify(root));
 				});				
 			}
