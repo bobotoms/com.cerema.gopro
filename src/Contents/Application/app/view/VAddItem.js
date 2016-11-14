@@ -21,6 +21,7 @@ App.view.define('VAddItem',{
 			flex: 1,
 			rootVisible: false,
 			useArrows: true,
+			itemId: "T0",
 			store: Ext.create('Ext.data.TreeStore', {
 				autoLoad: true,
 				proxy: {
@@ -81,6 +82,7 @@ App.view.define('VAddItem',{
 			xtype: "treepanel",
 			height: "100%",
 			border: false,
+			itemId: "T1",
 			flex: 1,
 			rootVisible: false,
 			useArrows: true,
