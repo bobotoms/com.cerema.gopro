@@ -79,6 +79,7 @@ App.controller.define('CMain', {
 		
 	},
 	VAddItem_onShow: function(me) {
+		alert(me.type_item)
 		/*App.Elements.getTree({},function(response){
 
 			/*var json = response;
