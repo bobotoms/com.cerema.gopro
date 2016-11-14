@@ -101,7 +101,7 @@ App.controller.define('CMain', {
             var reader = App.get(me,'treepanel').getStore().getProxy().getReader();
           	var reader_data = reader.read(json);
 
-            App.get(me,'treepanel').getStore().loadData(reader_data.records,true);		*/	
+            App.get(me,'treepanel').getStore().loadData(reader_data.records,true);	
 			
 		})*/
 	},
