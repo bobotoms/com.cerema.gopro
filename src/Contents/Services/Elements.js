@@ -1,6 +1,6 @@
 Elements={
 	getTree: function(o,cb) {
-		var sql="SELECT idElement,parent,new_elements.idType_element,new_elements.nomElement,modif FROM new_elements join types_elements on new_elements.idType_element=types_elements.idType where parent=0 and idType=1";
+		var sql="SELECT idElement,parent,new_elements.idType_element,new_elements.nomElement,modif FROM new_elements join types_elements on new_elements.idType_element=types_elements.idType where parent=0 and new_elements.idType=1";
 		var db=Elements.using('db');
 
 		db.query("gopro",sql,function(e,r){
