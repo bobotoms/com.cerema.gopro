@@ -82,6 +82,9 @@ App.controller.define('CMain', {
 		//alert(me.type_item);
 		App.get(me,'treepanel#T0').getStore().getProxy().extraParams.type=me.type_item;
 		App.get(me,'treepanel#T0').getStore().load();
+		App.get(me,'treepanel#T0').getStore().on('load',function(){
+			App.get(me,'treepanel#T0').refresh();
+		});
 		/*App.Elements.getTree({},function(response){
 
 			/*var json = response;
