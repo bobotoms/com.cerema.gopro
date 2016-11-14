@@ -51,6 +51,7 @@ App.view.define('VAddItem',{
 				xtype: "button",
 				text: ">>",
 				width: "100%",
+				height: 100,
 				padding: 10
 			},
 			{
@@ -58,6 +59,7 @@ App.view.define('VAddItem',{
 				xtype: "button",
 				text: "<<",
 				width: "100%",
+				height: 100,
 				padding: 10
 			},
 			{
