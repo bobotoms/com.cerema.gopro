@@ -13,7 +13,7 @@ App = {
 					var obj={};
 					for (var i=0;i<r.length;i++) {
 						var id=r[i].idElement;
-						var parent=r[i].idParent;
+						var parent=r[i].parent;
 						if (!obj[id]) obj[id]={
 							id: i,
 							name: "c"+i,
