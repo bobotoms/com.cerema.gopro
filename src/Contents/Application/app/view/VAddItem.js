@@ -39,7 +39,28 @@ App.view.define('VAddItem',{
 			width: 100,
 			height: "100%",
 			bodyStyle: "background-color:#EEEEEE",
-			border: false
+			border: false,
+			layout: "vbox",
+			items: [
+			{
+				flex: 1,
+				border: false
+			},
+			{
+				border: false,
+				xtype: "button",
+				text: ">>"
+			},
+			{
+				border: false,
+				xtype: "button",
+				text: "<<"
+			},
+			{
+				flex: 1,
+				border: false
+			}
+			]
 		},
 		{
 			xtype: "treepanel",
