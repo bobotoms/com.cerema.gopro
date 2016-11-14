@@ -6,7 +6,6 @@ Elements={
 		db.query("gopro",sql,function(e,r){
 			var root=[];
 			var obj={};
-			console.log(r);
 			for (var i=0;i<r.length;i++) {
 				var id=r[i].idElement;
 				var parent=r[i].niveau;
