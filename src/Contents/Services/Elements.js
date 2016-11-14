@@ -17,7 +17,7 @@ Elements={
 					text: r[i].nomElement,
 					leaf: true
 				};
-				if (parent==1) root.push(obj[id]); else {
+				if (parent==0) root.push(obj[id]); else {
 					if (!obj[parent].children) {
 						obj[parent].children=[];
 						obj[parent].leaf=false;
