@@ -23,7 +23,7 @@ App.view.define('VAddItem',{
 			useArrows: true,
 			itemId: "T0",
 			plugins: {
-				ptype: 'gridviewdragdrop',
+				ptype: 'treeviewdragdrop',
 				enableDrag: true,
 				enableDrop: false,
 				ddGroup: 'selDD',
