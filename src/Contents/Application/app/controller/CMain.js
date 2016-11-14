@@ -79,7 +79,9 @@ App.controller.define('CMain', {
 		
 	},
 	VAddItem_onShow: function(me) {
-		alert(me.type_item)
+		//alert(me.type_item);
+		App.get(me.up('window'),'treepanel#T0').getStore().getProxy().extraParams.type=me.type_item;
+		App.get(me.up('window'),'treepanel#T0').getStore().load();
 		/*App.Elements.getTree({},function(response){
 
 			/*var json = response;
