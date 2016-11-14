@@ -90,7 +90,20 @@ App.view.define('VAddItem',{
 			rootVisible: false,
 			useArrows: true,
 			height: "100%",
-			border: false
+			border: false,
+			store: Ext.create('Ext.data.TreeStore', {
+				autoLoad: false,
+				proxy: {
+					type: 'ajax',
+					url: '/evt',
+					actionMethods: {
+						read: 'POST'
+					},
+					reader: {
+						type: 'json'
+					}					
+				}
+			})
 		}
 		];
 		this.callParent();
