@@ -41,6 +41,7 @@ App.view.define('VAddItem',{
 			bodyStyle: "background-color:#EEEEEE",
 			border: false,
 			layout: "vbox",
+			padding: 10,
 			items: [
 			{
 				flex: 1,
@@ -49,12 +50,14 @@ App.view.define('VAddItem',{
 			{
 				border: false,
 				xtype: "button",
-				text: ">>"
+				text: ">>",
+				width: "100%"
 			},
 			{
 				border: false,
 				xtype: "button",
-				text: "<<"
+				text: "<<",
+				width: "100%"
 			},
 			{
 				flex: 1,
