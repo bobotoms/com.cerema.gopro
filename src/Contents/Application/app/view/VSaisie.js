@@ -84,6 +84,7 @@ App.view.define('VSaisie', {
 						},
 						fieldLabel: "Département",
 						store: App.store.create("gopro://departements"),
+						editable: false,
 						displayField: "nomDepartement",
 						valueField: "idDepartement",
 						labelAlign: "top"						
