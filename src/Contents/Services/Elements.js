@@ -17,13 +17,13 @@ Elements={
 					text: r[i].nomElement,
 					leaf: true
 				};
-				if (parent==0) root.push(obj[id]); else {
+				if (parent==0) root.push(obj[id]); /*else {
 					if (!obj[parent].children) {
 						obj[parent].children=[];
 						obj[parent].leaf=false;
 					};
 					obj[parent].children.push(obj[id]);
-				}
+				}*/
 			}
 			cb(root);
 		});
