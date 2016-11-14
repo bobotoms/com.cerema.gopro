@@ -105,8 +105,8 @@ App.controller.define('CMain', {
 			
 		})*/
 	},
-	add_item_click: function() {
-		App.view.create('VAddItem',{modal: true}).show().center();	
+	add_item_click: function(me) {
+		App.view.create('VAddItem',{modal: true,type_item: App.get(me.up('window'),'combo#type').getValue()}).show().center();	
 	},
 	famille_select: function(me) {
 		App.get('VSaisie combo#type').setValue('');
