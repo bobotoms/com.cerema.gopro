@@ -70,7 +70,7 @@ App.controller.define('CMain', {
 		
 	},
 	AddItem_click: function(me) {
-		var tree = me.up('treepanel');
+		var tree = App.get(me.up('window'),"treepanel#T0");
         var selModel = tree.getSelectionModel();
         var node = selModel.getLastSelected();
 		console.log(node);
