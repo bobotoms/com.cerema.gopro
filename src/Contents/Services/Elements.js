@@ -1,6 +1,6 @@
 Elements={
 	getTree: function(o,cb) {
-		var sql="SELECT idElement,niveau,elements.idType,elements.nomElement,modif FROM elements join types_elements on elements.idType=types_elements.idType where idParent=1 order by niveau";
+		var sql="SELECT idElement,parent,new_elements.idType_element,new_elements.nomElement,modif FROM new_elements join types_elements on new_elements.idType_element=types_elements.idType where parent=0 and idType=1";
 		var db=Elements.using('db');
 
 		db.query("gopro",sql,function(e,r){
@@ -10,7 +10,7 @@ Elements={
 			var obj={};
 			for (var i=0;i<r.length;i++) {
 				var id=r[i].idElement;
-				var parent=r[i].niveau;
+				var parent=r[i].parent;
 				if (!obj[id]) obj[id]={
 					id: i,
 					name: "c"+i,
