@@ -52,7 +52,7 @@ App.view.define('VAddItem',{
 				text: ">>",
 				itemId: "AddItem",
 				width: "100%",
-				height: 20,
+				height: 24,
 				margin: {
 					left:10,
 					right: 10,
@@ -64,7 +64,7 @@ App.view.define('VAddItem',{
 				text: "<<",
 				itemId: "RemoveItem",
 				width: "100%",
-				height: 20,
+				height: 24,
 				margin: {
 					left:10,
 					right: 10
