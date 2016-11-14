@@ -36,7 +36,7 @@ App.view.define('VAddItem',{
 			})
 		},
 		{
-			width: 100,
+			width: 70,
 			height: "100%",
 			bodyStyle: "background-color:#EEEEEE",
 			border: false,
@@ -64,7 +64,6 @@ App.view.define('VAddItem',{
 				text: "<<",
 				width: "100%",
 				height: 20,
-				padding: 10,
 				margin: {
 					left:10,
 					right: 10
