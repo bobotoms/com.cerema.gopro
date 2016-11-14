@@ -42,8 +42,12 @@ App.view.define('VAddItem',{
 			border: false
 		},
 		{
-			html: "yes",
+			xtype: "treepanel",
+			height: "100%",
+			border: false,
 			flex: 1,
+			rootVisible: false,
+			useArrows: true,
 			height: "100%",
 			border: false
 		}
