@@ -77,12 +77,15 @@ App.view.define('VSaisie', {
 						labelAlign: "top"
 					},
 					{
-						xtype: "textfield",
+						xtype: "combo",
 						flex: 1,
 						margin: {
 							left: 5 	
 						},
-						fieldLabel: "Titre",
+						fieldLabel: "Département",
+						store: App.store.create("gopro://departements"),
+						displayField: "nomDepartement",
+						valueField: "idDepartement",
 						labelAlign: "top"						
 					}
 					]
@@ -91,7 +94,7 @@ App.view.define('VSaisie', {
 					xtype: "textfield",
 					width: "100%",
 					border: false,
-					fieldLabel: "Commentaires",
+					fieldLabel: "Nom de l'ouvrage",
 					labelAlign: "top"
 				},
 				{
