@@ -34,7 +34,7 @@ Elements={
 			};
 			var i=1;
 			var objs=[];
-			if (!O[itemId].leaf) O[itemId].text="<b>"+O[itemId].text+"</b>";
+			if (!obj[itemId].leaf) O[itemId].text="<b>"+O[itemId].text+"</b>";
 			console.log(obj[itemId]);
 			while (itemId!=0) {
 				objs.push(O[itemId]);
