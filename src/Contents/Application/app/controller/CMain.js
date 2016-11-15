@@ -75,16 +75,6 @@ App.controller.define('CMain', {
         var node = selModel.getLastSelected();
 		App.Elements.getSelect(node.data.id,me.up('window').type_item,function(r){
 			console.log(r);
-			var store = Ext.create('Ext.data.TreeStore', {
-				autoLoad: true,
-				proxy: {
-					type: 'memory',
-					data: r,
-					reader: {
-						type: 'json',
-					}
-				}
-			});
 			/*for (var i=0;i<r.length;i++) {
 				var xnode=App.get(me.up('window'),"treepanel#T1").getStore().getNodeById(r[i].id);
 				if (!xnode) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]);
