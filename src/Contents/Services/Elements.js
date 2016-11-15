@@ -50,15 +50,17 @@ Elements={
 					delete objs[i].parent;
 				};
 			};
+			var lastparent={};
 			for (var i=objs.length-1;i>=0;i--) {
 				if (Obj==-1) Obj=objs[i]; 
 				else {
 					if (!objs[i+1].children) objs[i-1].children=[];
 					objs[i+1].children.push(objs[i]);
+					lastparent=objs[i+1];
 				};			
 
 			};
-			cb(Obj);
+			cb(Obj,lastparent);
 		});		
 	}
 };
