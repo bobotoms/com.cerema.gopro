@@ -79,7 +79,7 @@ App = {
 				var Obj=[];
 				for (var i=objs.length-1;i>=0;i--) {
 					console.log(i);
-					if (objs[i+1]) {
+					if (objs[i-1]) {
 						objs[i].leaf=true;
 					} else {
 						objs[i].leaf=false;
