@@ -73,38 +73,17 @@ App.controller.define('CMain', {
 		var tree = App.get(me.up('window'),"treepanel#T0");
         var selModel = tree.getSelectionModel();
         var node = selModel.getLastSelected(); 
-		console.log(node);
-		/*console.log(App.get(me.up('window'),"treepanel#T1").getRootNode());
-		App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(node.parentNode);*/
 		App.Elements.getSelect(node.data.id,me.up('window').type_item,function(r){
-			console.log(r);
-			for (var i=0;i<r.length;i++) {
-				console.log(r[i].id);
-				
+			for (var i=0;i<r.length;i++) {		
 				var xnode=App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById('c'+r[i].parent);			
-				console.log(xnode);
-				
 				if (!xnode) {
-					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].id)) {
-						
-						App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]); 
-																											
-					}
+					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].id)) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]); 
 				} else {
-					console.log(xnode);
-					//alert('c'+r[i].parent);
-					//alert(xnode.id);
-					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].id)) {
-						alert('->'+xnode.id);
-						xnode.appendChild(r[i]);
-					}
+					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].id)) xnode.appendChild(r[i]);
 				};
 				App.get(me.up('window'),"treepanel#T1").expandAll();
-				//delete xnode;
 			}
 		});
-		
-		
 	},
 	RemoveItem_click: function(me) {
 		
