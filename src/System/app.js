@@ -82,12 +82,12 @@ App = {
 					if (objs[i-1]) {
 						objs[i].leaf=false;
 						objs[i].children=[];
-						objs[i].pa
+						delete objs[i].parent;
 					} else {
 						objs[i].leaf=true;
+						delete objs[i].parent;
 					};
 
-					
 					if (objs[i].parent==0) Obj.push(objs[i]); else {
 						if (objs[i-1].children) objs[i-1].children.push(objs[i]);
 					}
