@@ -89,7 +89,7 @@ App = {
 					};
 				};
 				for (var i=objs.length-1;i>=0;i--) {
-					if (objs[i].parent==0) Obj=objs[i]; 
+					if (i=objs.length-1) Obj=objs[i]; 
 					else {
 						//Obj.children=objs[i];
 					};
