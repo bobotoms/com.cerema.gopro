@@ -91,7 +91,7 @@ App = {
 				for (var i=objs.length-1;i>=0;i--) {
 					if (objs[i].parent==0) Obj=objs[i]; 
 					else {
-						if (objs[i-1].)
+						if (objs[i-1].chil)
 						objs[i-1].children.push(objs[i]);
 					};
 					
