@@ -82,16 +82,16 @@ App = {
 					if (objs[i-1]) {
 						objs[i].leaf=false;
 						objs[i].children=[];
-						delete objs[i].parent;
+						//delete objs[i].parent;
 					} else {
 						objs[i].leaf=true;
 						delete objs[i].parent;
 					};
 				};
 				for (var i=objs.length-1;i>=0;i--) {
-					if (i=objs.length-1) Obj=objs[i]; 
+					if (objs[i].parent==0) Obj=objs[i]; 
 					else {
-						//Obj.children=objs[i];
+						//Obj.children.push(objs[i]);
 					};
 					
 					/*if (parent==0) root.push(obj[objs[i].id]); else {
