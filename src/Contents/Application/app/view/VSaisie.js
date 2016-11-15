@@ -32,13 +32,19 @@ App.view.define('VSaisie', {
 			items: [
 			{
 				border: true,
-				margin: {
-					left: 10,
-					top: 10
-				},
-				height: 200,
-				width: 250,
-				baseCls: "bridge"
+				layout: "vbox",
+				items: [
+				{
+					border: true,
+					margin: {
+						left: 10,
+						top: 10
+					},
+					height: 200,
+					width: 250,
+					baseCls: "bridge"
+				}					
+				]
 			},
 			{
 				padding: 10,
