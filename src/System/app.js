@@ -77,7 +77,7 @@ App = {
 					itemId=O[itemId].parent;
 				};
 				var Obj=[];
-				for (var i=objs.length;i=0;i--) {
+				for (var i=objs.length;i>0;i--) {
 					console.log(i);
 					if (objs[i+1]) {
 						objs[i].leaf=false;
