@@ -97,7 +97,8 @@ App.view.define('VAddItem',{
                 plugins: {
                    ptype: 'treeviewdragdrop',
                    enableDrag: false,
-                   enableDrop: true
+                   enableDrop: true,
+				   appendOnly: false
                 }
             },			
 			store: Ext.create('Ext.data.TreeStore', {
