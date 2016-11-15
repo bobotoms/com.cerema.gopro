@@ -43,11 +43,11 @@ Elements={
 				if (objs[i-1]) {
 					objs[i].leaf=false;
 					objs[i].children=[];
-					delete objs[i].parent;
+					//delete objs[i].parent;
 				} else {
 					objs[i].leaf=true;
 					objs[i].id=Elements.using('shortid').generate();
-					delete objs[i].parent;
+					//delete objs[i].parent;
 				};
 			};
 			//var lastparent={};
