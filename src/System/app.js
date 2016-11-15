@@ -94,7 +94,7 @@ App = {
 					if (objs[i].parent==0) Obj.push(objs[i]); else {
 						//console.log(i);
 						//console.log(objs[i-1]);
-						objs[i-1].children.push(objs[i]);
+						Obj[i-1].children.push(objs[i]);
 					}
 					
 					/*if (parent==0) root.push(obj[objs[i].id]); else {
