@@ -95,7 +95,7 @@ App.controller.define('CMain', {
 					alert(r[i].parentId);
 					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i])) {
 						alert(xnode.id);
-						App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].parentId).appendChild(r[i]);
+						xnode.appendChild(r[i]);
 					}
 				};
 				App.get(me.up('window'),"treepanel#T1").expandAll();
