@@ -208,6 +208,7 @@ App.controller.define('CMain', {
 	  	});
 			
 		App.get('mainform ribbon').addTab(tab1, true);
+		App.get('mainform ribbon').addTab(tab2, true);
 		
 	}
 	
