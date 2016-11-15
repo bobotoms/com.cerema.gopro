@@ -81,17 +81,19 @@ App.controller.define('CMain', {
 			for (var i=0;i<r.length;i++) {
 				console.log(r[i].id);
 				if (i>0) {
-					var xnode=App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i-1].id);
+					var xnode=App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].parent);
 					//alert(r[i-1].id);
 				};
 				console.log(xnode);
 				if (!xnode) {
 					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].id)) { 	App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]); 
-																											alert('x');
+																											//alert('x');
 					}
 				} else {
 					console.log(xnode);
-					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i])) xnode.appendChild(r[i]);
+					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i])) {
+						xnode.appendChild(r[i]);
+					}
 				};
 				App.get(me.up('window'),"treepanel#T1").expandAll();
 				delete xnode;
