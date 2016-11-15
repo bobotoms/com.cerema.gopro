@@ -76,7 +76,7 @@ App = {
 					objs.push(O[itemId]);
 					itemId=O[itemId].parent;
 				};
-				for (var i=objs.length;i<=0;i--) {
+				for (var i=objs.length;i>0;i--) {
 					var obj=objs[i];
 					obj.leaf=true;
 					var parent=obj.parent;
