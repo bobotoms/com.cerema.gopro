@@ -76,17 +76,17 @@ App = {
 					objs.push(O[itemId]);
 					itemId=O[itemId].parent;
 				};
-				for (var i=objs.length;i>0;i--) {
+				for (var i=objs.length;i=0;i--) {
 					var obj=objs[i];
 					obj.leaf=true;
 					var parent=obj.parent;
 					delete obj.parent;
-					if (parent==0) Root.push(obj); else {
+					if (parent==0) root.push(obj[id]); else {
 						if (!obj[parent].children) {
 							obj[parent].children=[];
 							obj[parent].leaf=false;
 						};
-						obj[parent].children.push(obj);
+						obj[parent].children.push(obj[id]);
 					}					
 					
 				};
