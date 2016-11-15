@@ -76,13 +76,15 @@ App = {
 					objs.push(O[itemId]);
 					itemId=O[itemId].parent;
 				};
-				
+				var Obj=[];
 				for (var i=objs.length;i=0;i--) {
+					
 					if (objs[i+1]) {
 						objs[i].leaf=false;
 					} else {
 						objs[i].leaf=true;
 					};
+					Obj.push(objs[i]);
 					/*if (parent==0) root.push(obj[objs[i].id]); else {
 						if (!obj[parent].children) {
 							obj[parent].children=[];
@@ -92,7 +94,7 @@ App = {
 					}	*/				
 					
 				};
-				res.end(JSON.stringify(objs,null,4));
+				res.end(JSON.stringify(Obj,null,4));
 			});
 		});		
 	}
