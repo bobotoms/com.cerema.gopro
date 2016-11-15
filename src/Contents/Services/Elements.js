@@ -39,7 +39,7 @@ Elements={
 				itemId=O[itemId].parent;
 			};
 			var Obj=-1;
-			for (var i=objs.length;i>=0;i--) {
+			for (var i=objs.length-1;i>=0;i--) {
 				if (objs[i-1]) {
 					objs[i].leaf=false;
 					objs[i].children=[];
