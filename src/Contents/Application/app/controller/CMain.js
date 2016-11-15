@@ -72,7 +72,7 @@ App.controller.define('CMain', {
 	AddItem_click: function(me) {
 		var tree = App.get(me.up('window'),"treepanel#T0");
         var selModel = tree.getSelectionModel();
-        var node = selModel.getLastSelected();
+        var node = selModel.getLastSelected(); 
 		console.log(node);
 		/*console.log(App.get(me.up('window'),"treepanel#T1").getRootNode());
 		App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(node.parentNode);*/
@@ -81,7 +81,7 @@ App.controller.define('CMain', {
 			for (var i=0;i<r.length;i++) {
 				console.log(App.get(me.up('window'),"treepanel#T1").getRootNode().store);
 				console.log(r[i].id);
-				var xnode=App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].id);
+				var xnode=App.get(me.up('window'),"treepanel#T1").getRootNode().findChild("id",r[i].id,true);
 				if (!xnode) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]);
 			}
 			/*var xnode=App.get(me.up('window'),"treepanel#T1").getStore().getNodeById(pp.data.id);
