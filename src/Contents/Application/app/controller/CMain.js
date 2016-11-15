@@ -74,6 +74,11 @@ App.controller.define('CMain', {
         var selModel = tree.getSelectionModel();
         var node = selModel.getLastSelected();
 		console.log(node);
+		App.get(me.up('window'),"treepanel#T1").appendChild({
+        	id: 'c4',
+        	text: 'Child 4',
+        	leaf: true
+		});
 	},
 	RemoveItem_click: function(me) {
 		
