@@ -138,7 +138,13 @@ App.view.define('VSaisie', {
 						sortable: true
     				}	
 					],
-					store: App.store.create({root:{},type: "tree"})
+					store: App.store.create({fields:["item","description","values"],data:[{
+						item: {
+							text: "essai"
+						},
+						description: "ma description",
+						values: "mes values"
+					}],type: "tree"})
 				}
 				]
 			}
