@@ -129,7 +129,10 @@ App.view.define('VSaisie', {
 						text: 'Description',
 						dataIndex: 'description',
 						flex: 1,
-						sortable: true
+						sortable: true,
+						editor: {
+							xtype: "textfield"
+						}
     				}, {
 						text: 'Valeurs',
 						dataIndex: 'values',
