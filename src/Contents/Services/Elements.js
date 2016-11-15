@@ -3,7 +3,6 @@ Elements={
 		var db=Elements.using('db');
 		var ff=[];	
 		var O={};
-		var idd=Elements.using('shortid');
 		var sql="SELECT idElement,parent,new_elements.idType_element,new_elements.nomElement,modif FROM new_elements join types_elements on new_elements.idType_element=types_elements.idType where new_elements.idType="+idType+" order by parent";
 		var db=Elements.using('db');
 		db.query("gopro",sql,function(e,r){
@@ -47,7 +46,7 @@ Elements={
 					delete objs[i].parent;
 				} else {
 					objs[i].leaf=true;
-					objs[i].id=
+					objs[i].id=Elements.using('shortid').generate();
 					delete objs[i].parent;
 				};
 			};
