@@ -189,6 +189,22 @@ App.controller.define('CMain', {
 						iconAlign: 'top',
 						rowspan: 3,
 						handler: p.showSaisie
+					},
+					{
+						text: 'Carte',
+						iconCls: "new",
+						scale: 'large',
+						iconAlign: 'top',
+						rowspan: 3,
+						handler: p.showSaisie
+					},
+					{
+						text: 'Grille',
+						iconCls: "new",
+						scale: 'large',
+						iconAlign: 'top',
+						rowspan: 3,
+						handler: p.showSaisie
 					}
 				]
 			}
