@@ -80,6 +80,7 @@ App.controller.define('CMain', {
 			console.log(r);
 			for (var i=0;i<r.length;i++) {
 				console.log(App.get(me.up('window'),"treepanel#T1").getRootNode().store);
+				console.log(r[i].id);
 				var xnode=App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].id);
 				if (!xnode) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]);
 			}
