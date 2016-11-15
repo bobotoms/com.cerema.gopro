@@ -78,7 +78,7 @@ App = {
 				};
 				var Obj=[];
 				for (var i=objs.length;i=0;i--) {
-					
+					console.log(i);
 					if (objs[i+1]) {
 						objs[i].leaf=false;
 					} else {
@@ -86,7 +86,6 @@ App = {
 					};
 					
 					Obj.push(objs[i]);
-					Obj.push('1');
 					
 					/*if (parent==0) root.push(obj[objs[i].id]); else {
 						if (!obj[parent].children) {
