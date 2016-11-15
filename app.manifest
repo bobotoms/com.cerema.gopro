@@ -1,6 +1,6 @@
 {
     "namespace": "com.cerema.gopro",
-    "git": "",
+    "git": "https://github.com/CEREMA/com.cerema.gopro.git",
     "title": "GOPRO",
     "description": "Suivi des visites des ouvrages",
     "platform": "desktop",
