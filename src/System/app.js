@@ -84,7 +84,10 @@ App = {
 					} else {
 						objs[i].leaf=true;
 					};
+					
 					Obj.push(objs[i]);
+					Obj.push('1');
+					
 					/*if (parent==0) root.push(obj[objs[i].id]); else {
 						if (!obj[parent].children) {
 							obj[parent].children=[];
