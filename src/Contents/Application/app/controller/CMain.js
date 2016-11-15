@@ -82,10 +82,11 @@ App.controller.define('CMain', {
 				console.log(r[i].id);
 				if (i>0) {
 					var xnode=App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i-1].id);
-					alert(r[i-1].id);
+					//alert(r[i-1].id);
 				};
 				console.log(xnode);
 				if (!xnode) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]); else {
+					console.log(xnode);
 					xnode.appendChild(r[i]);
 				};
 				App.get(me.up('window'),"treepanel#T1").expandAll();
