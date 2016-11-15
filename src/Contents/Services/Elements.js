@@ -41,28 +41,21 @@ Elements={
 			var Obj=-1;
 			for (var i=objs.length-1;i>=0;i--) {
 				if (objs[i-1]) {
+					objs[i].kleaf=objs[i].leaf;
 					objs[i].leaf=false;
 					objs[i].children=[];
 					objs[i].id="c"+objs[i].id;
 					//delete objs[i].parent;
 				} else {
+					objs[i].kleaf=objs[i].leaf;
 					objs[i].leaf=true;
 					objs[i].id=Elements.using('shortid').generate();
 					//delete objs[i].parent;
 				};
 			};
 			var Obj=[];
-			for (var i=objs.length-1;i>=0;i--) {
-				Obj.push(objs[i]); 
-				/*else {
-					if (!Obj.children) Obj.children=[];
-					Obj.children.push(objs[i]);
-					//if (!objs[i+1].children) objs[i-1].children=[];
-					//objs[i+1].children.push(objs[i]);
-
-				};*/			
-
-			};
+			
+			for (var i=objs.length-1;i>=0;i--) Obj.push(objs[i]); 
 			
 			cb(Obj);
 			
