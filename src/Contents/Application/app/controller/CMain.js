@@ -92,7 +92,7 @@ App.controller.define('CMain', {
 					}
 				} else {
 					console.log(xnode);
-					alert(r[i]);
+					alert(r[i].id);
 					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i])) {
 						alert(xnode.id);
 						xnode.appendChild(r[i]);
