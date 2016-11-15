@@ -92,9 +92,9 @@ App.controller.define('CMain', {
 					}
 				} else {
 					console.log(xnode);
-					alert('c'+r[i].parent);
-					alert(xnode.id);
-					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i])) {
+					//alert('c'+r[i].parent);
+					//alert(xnode.id);
+					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].id)) {
 						alert('->'+xnode.id);
 						xnode.appendChild(r[i]);
 					}
