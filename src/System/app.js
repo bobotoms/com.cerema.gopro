@@ -92,8 +92,8 @@ App = {
 					if (objs[i].parent==0) Obj=objs[i]; 
 					else {
 						console.log(objs[i+1]);
-						if (!objs[i-1].children) objs[i-1].children=[];
-						objs[i-1].children.push(objs[i]);
+						if (!objs[i+1].children) objs[i-1].children=[];
+						objs[i+1].children.push(objs[i]);
 					};
 					
 					/*if (parent==0) root.push(obj[objs[i].id]); else {
