@@ -44,6 +44,7 @@ App = {
 			var db=Elements.using('db');
 			db.query("gopro",sql,function(e,r){
 				var root=[];
+				var Root=[];
 				var obj={};
 				for (var i=0;i<r.length;i++) {
 					var id=r[i].idElement;
@@ -75,7 +76,21 @@ App = {
 					objs.push(O[itemId]);
 					itemId=O[itemId].parent;
 				};
-				res.end(JSON.stringify(objs,null,4));
+				for (var i=objs.length;i=0;i--) {
+					var obj=objs[i];
+					obj.leaf=true;
+					var parent=obj.parent;
+					delete obj.parent;
+					if (parent==0) Root.push(obj); else {
+						if (!obj[parent].children) {
+							obj[parent].children=[];
+							obj[parent].leaf=false;
+						};
+						obj[parent].children.push(obj);
+					}					
+					
+				};
+				res.end(JSON.stringify(Root,null,4));
 			});
 		});		
 	}
