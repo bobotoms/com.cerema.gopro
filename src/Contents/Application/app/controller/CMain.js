@@ -86,8 +86,9 @@ App.controller.define('CMain', {
 				};
 				console.log(xnode);
 				if (!xnode) {
-					alert('0');
-					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].id)) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]); 
+					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].id)) { 	App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]); 
+																											alert('x');
+					}
 				} else {
 					console.log(xnode);
 					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i])) xnode.appendChild(r[i]);
