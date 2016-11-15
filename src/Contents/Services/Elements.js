@@ -35,6 +35,7 @@ Elements={
 			var i=1;
 			var objs=[];
 			if (O[itemId].leaf) O[itemId].text="<b>"+O[itemId].text+"</b>";
+			console.log(O[itemId].text);
 			while (itemId!=0) {
 				objs.push(O[itemId]);
 				itemId=O[itemId].parent;
