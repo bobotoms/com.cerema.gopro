@@ -50,13 +50,13 @@ App = {
 					var id=r[i].idElement;
 					var parent=r[i].parent;
 					if (!obj[id]) obj[id]={
-						id: "c"+i,
+						id: i,
 						name: "c"+i,
 						text: r[i].nomElement,
 						leaf: true
 					};
 					O[id]={
-						id: "c"+i,
+						id: i,
 						name: "c"+i,
 						text: r[i].nomElement,
 						parent: parent
@@ -76,21 +76,22 @@ App = {
 					objs.push(O[itemId]);
 					itemId=O[itemId].parent;
 				};
+				var obj={};
 				for (var i=objs.length;i=0;i--) {
-					var obj=objs[i];
-					obj.leaf=true;
-					var parent=obj.parent;
-					delete obj.parent;
-					if (parent==0) root.push(obj[id]); else {
+					var obj[objs[i].id]=objs[i];
+					obj[objs[i].id].leaf=true;
+					var parent=obj[objs[i].id].parent;
+					delete obj[objs[i].id].parent;
+					if (parent==0) root.push(obj[objs[i].id]); else {
 						if (!obj[parent].children) {
 							obj[parent].children=[];
 							obj[parent].leaf=false;
 						};
-						obj[parent].children.push(obj[id]);
+						obj[parent].children.push(obj[objs[i].id]);
 					}					
 					
 				};
-				res.end(JSON.stringify(Root,null,4));
+				res.end(JSON.stringify(obj,null,4));
 			});
 		});		
 	}
