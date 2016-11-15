@@ -29,7 +29,7 @@ Elements={
 		});
 
 	},
-	getSelect: function(o,cb) {
+	getSelect: function(itemId,cb) {
 		var db=Elements.using('db');
 		var ff=[];	
 		var O={};
@@ -62,7 +62,6 @@ Elements={
 					obj[parent].children.push(obj[id]);
 				}
 			};
-			var itemId=o;
 			var i=1;
 			var objs=[];
 			while (itemId!=0) {
