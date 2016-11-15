@@ -74,6 +74,7 @@ App.controller.define('CMain', {
         var selModel = tree.getSelectionModel();
         var node = selModel.getLastSelected();
 		console.log(node);
+		console.log(App.get(me.up('window'),"treepanel#T1").getRootNode());
 		App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(node.parentNode);
 		/*App.Elements.getSelect(node.data.id,me.up('window').type_item,function(r){
 			console.log(r);
