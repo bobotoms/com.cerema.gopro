@@ -102,17 +102,7 @@ App.view.define('VAddItem',{
                 }
             },			
 			store: Ext.create('Ext.data.TreeStore', {
-				autoLoad: false,
-				proxy: {
-					type: 'ajax',
-					url: '/evt',
-					actionMethods: {
-						read: 'POST'
-					},
-					reader: {
-						type: 'json'
-					}					
-				}
+				
 			})
 		}
 		];
