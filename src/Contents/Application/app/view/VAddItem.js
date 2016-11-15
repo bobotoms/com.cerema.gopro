@@ -11,7 +11,11 @@ App.view.define('VAddItem',{
         this.height = 430;
 		this.bodyStyle="background-color: white";
         this.bbar = [
-            
+			'->',
+            {
+				text: "Valider",
+				itemId: "validate"
+			}
         ];	
 		this.items = [
 		{
