@@ -82,6 +82,7 @@ App = {
 					if (objs[i-1]) {
 						objs[i].leaf=false;
 						objs[i].children=[];
+						objs[i].pa
 					} else {
 						objs[i].leaf=true;
 					};
