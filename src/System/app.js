@@ -76,22 +76,23 @@ App = {
 					objs.push(O[itemId]);
 					itemId=O[itemId].parent;
 				};
-				var obj={};
+				
 				for (var i=objs.length;i=0;i--) {
-					obj[objs[i].id]=objs[i];
-					obj[objs[i].id].leaf=true;
-					var parent=obj[objs[i].id].parent;
-					delete obj[objs[i].id].parent;
-					if (parent==0) root.push(obj[objs[i].id]); else {
+					if (objs[i+1]) {
+						objs[i].leaf=false;
+					} else {
+						objs[i].leaf=true;
+					};
+					/*if (parent==0) root.push(obj[objs[i].id]); else {
 						if (!obj[parent].children) {
 							obj[parent].children=[];
 							obj[parent].leaf=false;
 						};
 						obj[parent].children.push(obj[objs[i].id]);
-					}					
+					}	*/				
 					
 				};
-				res.end(JSON.stringify(obj,null,4));
+				res.end(JSON.stringify(objs,null,4));
 			});
 		});		
 	}
