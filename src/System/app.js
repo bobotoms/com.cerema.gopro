@@ -69,8 +69,14 @@ App = {
 							obj[parent].children.push(obj[id]);
 						}
 					};
-					
-					res.end(JSON.stringify(O,null,4));
+					var itemId=19;
+					var i=1;
+					var objs=[];
+					while (itemId!=0) {
+						objs.push(O[itemId]);
+						itemId=O[itemId].parent;
+					};
+					res.end(JSON.stringify(objs,null,4));
 				});				
 			//}
 		});		
