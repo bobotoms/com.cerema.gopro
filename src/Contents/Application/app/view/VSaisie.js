@@ -51,7 +51,7 @@ App.view.define('VSaisie', {
 					margin: {
 						left: 10,
 						top: 10,
-						right: 10
+						right: 15
 					}
 				},
 				{
@@ -60,7 +60,7 @@ App.view.define('VSaisie', {
 					margin: {
 						left: 10,
 						top: 10,
-						right: 10
+						right: 15
 					}
 				}
 				]
