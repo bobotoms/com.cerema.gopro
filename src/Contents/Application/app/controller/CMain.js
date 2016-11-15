@@ -74,10 +74,10 @@ App.controller.define('CMain', {
         var selModel = tree.getSelectionModel();
         var node = selModel.getLastSelected();
 		App.Elements.getSelect(node.data.id,function(r){
-			console.log(r);
+			App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r);
+			App.get(me.up('window'),"treepanel#T1").expandAll();
 		});
-		App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(node);
-		App.get(me.up('window'),"treepanel#T1").expandAll();
+		
 	},
 	RemoveItem_click: function(me) {
 		
