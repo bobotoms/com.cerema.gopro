@@ -61,6 +61,9 @@ App.controller.define('CMain', {
 			},
 			"VAddItem button#RemoveItem": {
 				click: "RemoveItem_click"
+			},
+			"VAddItem button#validate": {
+				click: "validate_catalog"
 			}
 		});
 		
@@ -68,6 +71,13 @@ App.controller.define('CMain', {
 			p.onLoad(p);
 		});
 		
+	},
+	validate_catalog: function(me) {
+		var CStore=App.get(me.up('window'),"treepanel#T1").getStore();
+		var Root={
+			
+		};
+		var store=App.store.create({root:Root,type: "tree"});
 	},
 	AddItem_click: function(me) {
 		var tree = App.get(me.up('window'),"treepanel#T0");
