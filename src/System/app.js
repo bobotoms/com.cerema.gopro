@@ -78,7 +78,7 @@ App = {
 				};
 				var obj={};
 				for (var i=objs.length;i=0;i--) {
-					var obj[objs[i].id]=objs[i];
+					obj[objs[i].id]=objs[i];
 					obj[objs[i].id].leaf=true;
 					var parent=obj[objs[i].id].parent;
 					delete obj[objs[i].id].parent;
