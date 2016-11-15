@@ -139,7 +139,7 @@ App.view.define('VSaisie', {
     				}	
 					],
 					store: App.store.create({fields:["item","description","values"],data:[{
-						item: {
+						root: {
 							text: ".",
 							children: [
 								{
