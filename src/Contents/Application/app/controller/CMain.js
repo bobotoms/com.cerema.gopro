@@ -79,7 +79,7 @@ App.controller.define('CMain', {
 		App.Elements.getSelect(node.data.id,me.up('window').type_item,function(r){
 			console.log(r);
 			for (var i=0;i<r.length;i++) {
-				var xnode=App.get(me.up('window'),"treepanel#T1").getStore().getNodeById(r[i].id);
+				var xnode=App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].id);
 				if (!xnode) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]);
 			}
 			/*var xnode=App.get(me.up('window'),"treepanel#T1").getStore().getNodeById(pp.data.id);
