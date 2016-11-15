@@ -142,7 +142,14 @@ App.view.define('VSaisie', {
 									item: "new",
 									description: "ma description",
 									values: "mes values",
-						leaf: true
+						leaf: false,
+						children:[
+							{
+								item: "new",
+									description: "ma description",
+									values: "mes values",leaf: true
+							}
+						]
 						
 					}],type: "tree"})
 				}
