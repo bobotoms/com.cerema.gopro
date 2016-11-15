@@ -39,6 +39,7 @@ App = {
 			res.header("Content-Type", "application/json; charset=utf-8");
 			var db=App.using('db');
 			var ff=[];	
+			var O={};
 			//if (req.body.node=="root") {
 				var sql="SELECT idElement,parent,new_elements.idType_element,new_elements.nomElement,modif FROM new_elements join types_elements on new_elements.idType_element=types_elements.idType where new_elements.idType=1 order by parent";
 				var db=Elements.using('db');
@@ -49,10 +50,16 @@ App = {
 						var id=r[i].idElement;
 						var parent=r[i].parent;
 						if (!obj[id]) obj[id]={
-							id: i,
+							id: "c"+i,
 							name: "c"+i,
 							text: r[i].nomElement,
 							leaf: true
+						};
+						O[id]={
+							id: "c"+i,
+							name: "c"+i,
+							text: r[i].nomElement,
+							parent: parent
 						};
 						if (parent==0) root.push(obj[id]); else {
 							if (!obj[parent].children) {
@@ -63,7 +70,7 @@ App = {
 						}
 					};
 					
-					res.end(JSON.stringify(obj,null,4));
+					res.end(JSON.stringify(O,null,4));
 				});				
 			//}
 		});		
