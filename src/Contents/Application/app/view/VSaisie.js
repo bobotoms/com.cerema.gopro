@@ -141,7 +141,8 @@ App.view.define('VSaisie', {
 					store: App.store.create({fields:["item","description","values"],data:[{
 									item: "new",
 									description: "ma description",
-									values: "mes values"
+									values: "mes values",
+						leaf: true
 						
 					}],type: "tree"})
 				}
