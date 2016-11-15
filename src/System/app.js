@@ -79,11 +79,15 @@ App = {
 				var Obj=[];
 				for (var i=objs.length;i>0;i--) {
 					console.log(i);
+					try {
 					if (objs[i+1]) {
 						objs[i].leaf=false;
 					} else {
 						objs[i].leaf=true;
 					};
+					} catch (e) {
+						objs[i].leaf=true;
+					}
 					
 					Obj.push(objs[i]);
 					
