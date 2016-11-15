@@ -29,11 +29,11 @@ Elements={
 		});
 
 	},
-	getSelect: function(itemId,cb) {
+	getSelect: function(itemId,idType,cb) {
 		var db=Elements.using('db');
 		var ff=[];	
 		var O={};
-		var sql="SELECT idElement,parent,new_elements.idType_element,new_elements.nomElement,modif FROM new_elements join types_elements on new_elements.idType_element=types_elements.idType where new_elements.idType=1 order by parent";
+		var sql="SELECT idElement,parent,new_elements.idType_element,new_elements.nomElement,modif FROM new_elements join types_elements on new_elements.idType_element=types_elements.idType where new_elements.idType="+idType+" order by parent";
 		var db=Elements.using('db');
 		db.query("gopro",sql,function(e,r){
 			var root=[];
