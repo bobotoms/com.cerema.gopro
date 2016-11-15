@@ -33,6 +33,7 @@ App.view.define('VSaisie', {
 			{
 				border: true,
 				layout: "vbox",
+				border: false,
 				items: [
 				{
 					border: true,
@@ -43,7 +44,23 @@ App.view.define('VSaisie', {
 					height: 200,
 					width: 250,
 					baseCls: "bridge"
-				}					
+				},
+				{
+					xtype: "textfield",
+					fieldLabel: "Latitude",
+					margin: {
+						left: 10,
+						top: 10
+					}
+				},
+				{
+					xtype: "textfield",
+					fieldLabel: "Longitude",
+					margin: {
+						left: 10,
+						top: 10
+					}
+				}
 				]
 			},
 			{
