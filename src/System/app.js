@@ -39,7 +39,7 @@ App = {
 			res.header("Content-Type", "application/json; charset=utf-8");
 			var db=App.using('db');
 			var ff=[];	
-			if (req.body.node=="root") {
+			//if (req.body.node=="root") {
 				var sql="SELECT idElement,parent,new_elements.idType_element,new_elements.nomElement,modif FROM new_elements join types_elements on new_elements.idType_element=types_elements.idType where new_elements.idType=1 order by parent";
 				var db=Elements.using('db');
 				db.query("gopro",sql,function(e,r){
@@ -65,7 +65,7 @@ App = {
 					
 					res.end(JSON.stringify(obj,null,4));
 				});				
-			}
+			//}
 		});		
 	}
 };
