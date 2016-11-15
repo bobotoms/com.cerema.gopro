@@ -81,6 +81,7 @@ App = {
 					console.log(i);
 					if (objs[i-1]) {
 						objs[i].leaf=false;
+						objs[i].children=[];
 					} else {
 						objs[i].leaf=true;
 					};
