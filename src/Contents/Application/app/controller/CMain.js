@@ -73,12 +73,13 @@ App.controller.define('CMain', {
 		var tree = App.get(me.up('window'),"treepanel#T0");
         var selModel = tree.getSelectionModel();
         var node = selModel.getLastSelected();
-		App.Elements.getSelect(node.data.id,me.up('window').type_item,function(r){
+		console.log(node)
+		/*App.Elements.getSelect(node.data.id,me.up('window').type_item,function(r){
 			console.log(r);
 			/*for (var i=0;i<r.length;i++) {
 				var xnode=App.get(me.up('window'),"treepanel#T1").getStore().getNodeById(r[i].id);
 				if (!xnode) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]);
-			}*/
+			}
 			//var xnode=App.get(me.up('window'),"treepanel#T1").getStore().getNodeById(pp.data.id);
 			//console.log(xnode);
 			App.get(me.up('window'),"treepanel#T1").getStore().loadData(r);
@@ -87,7 +88,7 @@ App.controller.define('CMain', {
 			});
 			
 			App.get(me.up('window'),"treepanel#T1").expandAll();
-		});
+		});*/
 		
 	},
 	RemoveItem_click: function(me) {
