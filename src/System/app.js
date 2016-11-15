@@ -91,7 +91,9 @@ App = {
 					console.log(objs);
 				//Obj.push(objs[i]);
 				for (var i=objs.length-1;i>=0;i--) {
-					if (objs[i].parent==0) Obj.push(objs[i]); else {
+					if (objs[i].parent==0) Obj.push(objs[i]); 
+					
+					{
 						//console.log(i);
 						//console.log(objs[i-1]);
 						Obj[i-1].children.push(objs[i]);
