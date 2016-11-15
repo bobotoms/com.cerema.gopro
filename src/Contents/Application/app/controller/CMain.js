@@ -74,8 +74,9 @@ App.controller.define('CMain', {
         var selModel = tree.getSelectionModel();
         var node = selModel.getLastSelected(); 
 		App.Elements.getSelect(node.data.id,me.up('window').type_item,function(r){
-			console.log(r);
-			for (var i=0;i<r.length;i++) {		
+			
+			for (var i=0;i<r.length;i++) {	
+				console.log(r[i].leaf);
 				var xnode=App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById('c'+r[i].parent);			
 				if (!xnode) {
 					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].id)) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]); 
