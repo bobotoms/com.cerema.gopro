@@ -92,6 +92,7 @@ App.controller.define('CMain', {
 			//var xnode=App.get(me.up('window'),"treepanel#T1").getStore().getNodeById(pp.data.id);
 			//console.log(xnode);
 			App.get(me.up('window'),"treepanel#T1").bindStore(store);
+			alert(App.get(me.up('window'),"treepanel#T1").getStore().getNodeById(r[0].id));
 			App.get(me.up('window'),"treepanel#T1").expandAll();
 		});
 		
