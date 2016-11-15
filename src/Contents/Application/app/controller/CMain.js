@@ -79,7 +79,7 @@ App.controller.define('CMain', {
         	text: 'Child 4',
         	leaf: true
 		});
-		App.get(me.up('window'),"treepanel#T1").getRootNode().expandChildren(true);
+		App.get(me.up('window'),"treepanel#T1").expandAll();
 	},
 	RemoveItem_click: function(me) {
 		
