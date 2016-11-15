@@ -76,7 +76,7 @@ App = {
 					objs.push(O[itemId]);
 					itemId=O[itemId].parent;
 				};
-				var Obj={};
+				var Obj=-1;
 				for (var i=objs.length-1;i>=0;i--) {
 					console.log(i);
 					if (objs[i-1]) {
@@ -89,20 +89,12 @@ App = {
 					};
 				};
 				for (var i=objs.length-1;i>=0;i--) {
-					if (objs[i].parent==0) Obj=objs[i]; 
+					if (Obj==-1) Obj=objs[i]; 
 					else {
 						console.log(objs[i+1]);
 						if (!objs[i+1].children) objs[i-1].children=[];
 						objs[i+1].children.push(objs[i]);
-					};
-					
-					/*if (parent==0) root.push(obj[objs[i].id]); else {
-						if (!obj[parent].children) {
-							obj[parent].children=[];
-							obj[parent].leaf=false;
-						};
-						obj[parent].children.push(obj[objs[i].id]);
-					}	*/				
+					};			
 					
 				};
 				res.end(JSON.stringify(Obj,null,4));
