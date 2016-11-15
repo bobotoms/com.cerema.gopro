@@ -81,6 +81,7 @@ App.controller.define('CMain', {
 			for (var i=0;i<r.length;i++) {
 				console.log(r[i].id);
 				if (i>0) {
+					alert(r[i].parent);
 					var xnode=App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].parent);
 					//alert(r[i-1].id);
 				};
