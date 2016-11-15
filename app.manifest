@@ -64,7 +64,9 @@
     "db": [
         "gopro"
     ],
-    "packages": [],
+    "packages": [
+        "shortid"
+    ],
     "icon": {
         "background": "#FFFFFF",
         "file": "app.png"
