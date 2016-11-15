@@ -85,7 +85,9 @@ App.controller.define('CMain', {
 					alert(r[i-1].id);
 				};
 				console.log(xnode);
-				if (!xnode) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]); else xnode.appendChild(r[i]);
+				if (!xnode) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]); else {
+					xnode.appendChild(r[i]);
+				};
 				App.get(me.up('window'),"treepanel#T1").expandAll();
 				delete xnode;
 			}
