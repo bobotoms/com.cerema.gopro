@@ -75,10 +75,11 @@ App.controller.define('CMain', {
         var node = selModel.getLastSelected();
 		App.Elements.getSelect(node.data.id,me.up('window').type_item,function(r){
 			console.log(r);
-			
+			var xnode=App.get(me.up('window'),"treepanel#T1").getStore().getNodeById(r[0].id);
+			if (!xnode) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[0]);
 			//var xnode=App.get(me.up('window'),"treepanel#T1").getStore().getNodeById(pp.data.id);
 			//console.log(xnode);
-			App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r);
+			
 			App.get(me.up('window'),"treepanel#T1").expandAll();
 		});
 		
