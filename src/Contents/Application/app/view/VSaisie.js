@@ -50,8 +50,7 @@ App.view.define('VSaisie', {
 					fieldLabel: "Latitude",
 					margin: {
 						left: 10,
-						top: 10,
-						right: 15
+						top: 10
 					}
 				},
 				{
@@ -59,8 +58,7 @@ App.view.define('VSaisie', {
 					fieldLabel: "Longitude",
 					margin: {
 						left: 10,
-						top: 10,
-						right: 15
+						top: 10
 					}
 				}
 				]
