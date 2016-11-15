@@ -86,6 +86,7 @@ App.controller.define('CMain', {
 				};
 				console.log(xnode);
 				if (!xnode) {
+					alert('0');
 					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].id)) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]); 
 				} else {
 					console.log(xnode);
@@ -94,14 +95,6 @@ App.controller.define('CMain', {
 				App.get(me.up('window'),"treepanel#T1").expandAll();
 				delete xnode;
 			}
-			/*var xnode=App.get(me.up('window'),"treepanel#T1").getStore().getNodeById(pp.data.id);
-			//console.log(xnode);
-			App.get(me.up('window'),"treepanel#T1").getStore().loadData(r);
-			App.get(me.up('window'),"treepanel#T1").getStore().on('load',function(){
-			alert(App.get(me.up('window'),"treepanel#T1").getStore().getNodeById(r[0].id));	
-			});*/
-			
-			
 		});
 		
 		
