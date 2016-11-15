@@ -13,14 +13,14 @@ Elements={
 				var id=r[i].idElement;
 				var parent=r[i].parent;
 				if (!obj[id]) obj[id]={
-					id: i,
-					name: "c"+i,
+					id: id,
+					name: "c"+id,
 					text: r[i].nomElement,
 					leaf: true
 				};
 				O[id]={
-					id: i,
-					name: "c"+i,
+					id: id,
+					name: "c"+id,
 					text: r[i].nomElement,
 					parent: parent
 				};
