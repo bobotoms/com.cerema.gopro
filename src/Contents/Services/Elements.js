@@ -50,16 +50,16 @@ Elements={
 					//delete objs[i].parent;
 				};
 			};
-
+			var Obj=[];
 			for (var i=objs.length-1;i>=0;i--) {
-				if (Obj==-1) Obj=objs[i]; 
-				else {
+				Obj.push(objs[i]); 
+				/*else {
 					if (!Obj.children) Obj.children=[];
 					Obj.children.push(objs[i]);
 					//if (!objs[i+1].children) objs[i-1].children=[];
 					//objs[i+1].children.push(objs[i]);
 
-				};			
+				};*/			
 
 			};
 			
