@@ -87,8 +87,10 @@ App = {
 						objs[i].leaf=true;
 						delete objs[i].parent;
 					};
+				};
 					console.log(objs);
-Obj.push(objs[i]);
+				//Obj.push(objs[i]);
+				for (var i=objs.length-1;i>=0;i--) {
 					if (objs[i].parent==0) Obj.push(objs[i]); else {
 						console.log(i);
 						console.log(objs[i-1]);
