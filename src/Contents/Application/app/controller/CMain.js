@@ -168,7 +168,7 @@ App.controller.define('CMain', {
 		App.loadAPI("http://maps.google.com/maps/api/js?sensor=false&callback=GMap");
 
       	var tab1=Ext.create("Ext.ux.ribbon.Tab", {
-			title: 'Accueil',
+			title: 'Général',
         	closable: false,
 			layout: {
 				type: 'hbox',
@@ -192,6 +192,18 @@ App.controller.define('CMain', {
 					}
 				]
 			}
+			]
+	  	});
+
+		var tab2=Ext.create("Ext.ux.ribbon.Tab", {
+			title: 'Visites',
+        	closable: false,
+			layout: {
+				type: 'hbox',
+				align: 'stretch'
+			}, 
+		  	items: [
+			
 			]
 	  	});
 			
