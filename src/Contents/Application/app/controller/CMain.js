@@ -84,7 +84,7 @@ App.controller.define('CMain', {
 				console.log(xnode);
 				if (!xnode) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]);
 				App.get(me.up('window'),"treepanel#T1").expandAll();
-				delete xnode;
+				xnode=null;
 			}
 			/*var xnode=App.get(me.up('window'),"treepanel#T1").getStore().getNodeById(pp.data.id);
 			//console.log(xnode);
