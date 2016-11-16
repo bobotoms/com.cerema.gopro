@@ -195,7 +195,10 @@ App.controller.define('CMain', {
 		App.get("mainform grid#gridO").show();		
 	},
 	showSettingsCharacteristics: function(p) {
-		App.view.create("Settings.VCharacteristics",{modal: true}).show().center();	
+		App.get("mainform panel#map").hide();
+		App.get("mainform grid#gridO").hide();
+		App.get("mainform panel#setup_characteristics").show();
+		//App.view.create("Settings.VCharacteristics",{modal: true}).show().center();	
 	},
 	onLoad: function(p)
 	{
