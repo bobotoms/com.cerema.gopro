@@ -169,8 +169,26 @@ App.view.define('VSaisie', {
 							store: App.store.create({fields:["text","description","values"],data:[],type: "tree"})
 						},
 						{
-							flex: 1,
-							html: "hyes"
+							xtype: 'propertygrid',
+							width: 400,
+							layout: 'fit',
+							source: {
+								ali: 3
+							},
+							sourceConfig: {
+								ali: {
+									displayName: 'ali',
+									editor: {
+										xtype: 'combobox',
+										store: store,
+										displayField: 'name',
+										valueField: 'id'
+									},
+									renderer: function(v){
+										return store.findRecord("id", v).get("name");
+									}
+								}
+							}
 						}
 					]
 				}
