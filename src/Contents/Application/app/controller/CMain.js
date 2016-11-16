@@ -103,7 +103,7 @@ App.controller.define('CMain', {
 		App.get(me.up('panel'),'treepanel#T0').getRootNode().removeAll();
 		App.get(me.up('panel'),'treepanel#T0').getStore().getProxy().extraParams.type=store.data.idType;
 		App.get(me.up('panel'),'treepanel#T0').getStore().load();
-		App.get(me.up('windpanelow'),'treepanel#T0').getStore().on('load',function(){
+		App.get(me.up('panel'),'treepanel#T0').getStore().on('load',function(){
 			App.get(me.up('panel'),'treepanel#T0').expandAll();
 		});		
 	},
