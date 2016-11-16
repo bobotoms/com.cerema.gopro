@@ -27,7 +27,8 @@ App.controller.define('CMain', {
 	views: [
 		"VMain",
 		"VSaisie",
-		"VAddItem"
+		"VAddItem",
+		"Settings.VCharacteristics"
 	],
 	
 	models: [
