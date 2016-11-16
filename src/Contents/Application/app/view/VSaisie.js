@@ -185,7 +185,7 @@ App.view.define('VSaisie', {
 							},
 							sourceConfig: {
 								ali: {
-									displayName: 'ali',
+									displayName: 'Matière',
 									editor: {
 										xtype: 'combobox',
 										store: App.store.create({fields:[],data:[]}),
@@ -195,7 +195,13 @@ App.view.define('VSaisie', {
 									renderer: function(v){
 										return 1;
 									}
-								}
+								},
+								alxi: {
+									displayName: 'Type',
+									editor: {
+										xtype: 'textfield'
+									}
+								}								
 							}
 						}
 					]
