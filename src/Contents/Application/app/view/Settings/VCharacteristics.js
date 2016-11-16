@@ -7,7 +7,7 @@ App.view.define('Settings.VCharacteristics',{
 		this.title="Caractéristiques";
 		this.layout="hbox";
 		this.border=false;
-		this.width = 700;
+		this.width = 770;
         this.height = 430;
 		this.bodyStyle="background-color: white";
 		this.tbar=[
@@ -45,6 +45,7 @@ App.view.define('Settings.VCharacteristics',{
 		{
 			xtype: "treepanel",
 			height: "100%",
+			title: "Catalogue",
 			border: false,
 			flex: 1,
 			rootVisible: false,
@@ -78,6 +79,12 @@ App.view.define('Settings.VCharacteristics',{
 		},
 		{
 			xtype: "grid",
+			tbar: [
+			'->',
+			{
+				text: "Ajouter"
+			}
+			],
 			columns: [
 				{
 					text: "Nom"
@@ -96,7 +103,7 @@ App.view.define('Settings.VCharacteristics',{
 			height: "100%",
 			border: false,
 			itemId: "T1",
-			title: "Catalogue",
+			title: "Caractéristiques",
 			flex: 1,
 			height: "100%",
 			border: false
