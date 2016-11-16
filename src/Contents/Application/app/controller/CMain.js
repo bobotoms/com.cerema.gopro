@@ -163,6 +163,16 @@ App.controller.define('CMain', {
 	{
 		Ext.Msg.alert('Omneedia','hello world!');
 	},
+	showMap: function(p)
+	{
+		App.get(p.up('window'),"grid").hide();
+		App.get(p.up('window'),"map").show();
+	},
+	showGrid: function(p)
+	{
+		App.get(p.up('window'),"map").hide();
+		App.get(p.up('window'),"grid").show();		
+	},
 	onLoad: function(p)
 	{
 		App.loadAPI("http://maps.google.com/maps/api/js?sensor=false&callback=GMap");
@@ -196,7 +206,7 @@ App.controller.define('CMain', {
 						scale: 'large',
 						iconAlign: 'top',
 						rowspan: 3,
-						handler: p.showSaisie
+						handler: p.showMap
 					},
 					{
 						text: 'Liste',
@@ -204,7 +214,7 @@ App.controller.define('CMain', {
 						scale: 'large',
 						iconAlign: 'top',
 						rowspan: 3,
-						handler: p.showSaisie
+						handler: p.showGrid
 					}
 				]
 			}
