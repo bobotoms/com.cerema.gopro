@@ -74,9 +74,7 @@ App.controller.define('CMain', {
 	},
 	validate_catalog: function(me) {
 		var CStore=App.get(me.up('window'),"treepanel#T1").getStore();
-		var Root={
-			
-		};
+		console.log(CStore.data);
 		App.get('VSaisie treepanel').getStore().loadData(CStore.data);
 		var store=App.store.create({root:Root,type: "tree"});
 	},
