@@ -87,7 +87,7 @@ App.controller.define('CMain', {
 	},
 	treeT0_click: function(me,store) {
 		var store=App.store.create('gopro://caracteristiques?idType='+store.data.type_element);
-		App.get(me.up('window'),'grid#T1').bindStore(store);
+		App.get(me.up('panel'),'grid#T1').bindStore(store);
 		store.load();
 		//console.log();
 	},
