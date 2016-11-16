@@ -77,7 +77,6 @@ App.controller.define('CMain', {
   			var result = node.copy(),
       		len = node.childNodes ? node.childNodes.length : 0,
       		i;
-  			// Move child nodes across to the copy if required
   			for (i = 0; i < len; i++) result.appendChild(clone(node.childNodes[i]));
   			return result;
 		};
