@@ -125,6 +125,7 @@ App.view.define('VMain', {
 				},
 				{
 					xtype: "VCharacteristics",
+					itemId: "setup_characteristics",
 					hidden: true
 				}
 			]
