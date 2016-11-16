@@ -169,8 +169,14 @@ App.view.define('VSaisie', {
 							store: App.store.create({fields:["text","description","values"],data:[],type: "tree"})
 						},
 						{
+							border: false,
+							width: 2
+						}
+						{
 							xtype: 'propertygrid',
 							flex: 1,
+							border: false,
+							labelAlign: "top",
 							height: "100%",
 							layout: 'fit',
 							source: {
