@@ -199,7 +199,7 @@ App.controller.define('CMain', {
 						handler: p.showSaisie
 					},
 					{
-						text: 'Grille',
+						text: 'Liste',
 						iconCls: "new",
 						scale: 'large',
 						iconAlign: 'top',
