@@ -81,6 +81,11 @@ App.controller.define('CMain', {
 	},
 	charact_cbotype_select: function(me,store) {
 		console.log(store);	
+		App.get(me.up('window'),'treepanel#T0').getStore().getProxy().extraParams.type=store.data.idType;
+		App.get(me.up('window'),'treepanel#T0').getStore().load();
+		App.get(me.up('window'),'treepanel#T0').getStore().on('load',function(){
+			App.get(me.up('window'),'treepanel#T0').expandAll();
+		});		
 	},
 	treeSaisie_beforeedit: function(ed, obj, eo) {
 		// si c'est un container, on n'édite pas !
