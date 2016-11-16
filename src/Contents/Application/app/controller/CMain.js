@@ -72,7 +72,6 @@ App.controller.define('CMain', {
 			"VCharacteristics combo#cboType": {
 				select: "charact_cbotype_select"
 			},
-			,
 			"VCharacteristics combo#cboFamille": {
 				select: "charact_cboFamille_select"
 			}
