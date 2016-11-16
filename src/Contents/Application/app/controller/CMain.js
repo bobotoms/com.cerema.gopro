@@ -86,8 +86,8 @@ App.controller.define('CMain', {
 		
 	},
 	treeT0_click: function(me,store) {
-		alert('x');
-		console.log(store);
+		alert(store.data.id);
+		//console.log();
 	},
 	charact_cboFamille_select: function(me) {
 		App.get(me.up('window'),'combo#cboType').setValue('');
