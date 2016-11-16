@@ -10,6 +10,13 @@ App.view.define('Settings.VCharacteristics',{
 		this.width = 700;
         this.height = 430;
 		this.bodyStyle="background-color: white";
+		this.tbar=[
+		{
+			xtype: "combo",
+			fieldLabel: "Type",
+			padding: 10
+		}	
+		];
         this.bbar = [
 			'->',
             {
@@ -18,10 +25,6 @@ App.view.define('Settings.VCharacteristics',{
 			}
         ];	
 		this.items = [
-		{
-			xtype: "combo",
-			fieldLabel: "Type"
-		},
 		{
 			xtype: "treepanel",
 			height: "100%",
