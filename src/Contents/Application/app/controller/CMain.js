@@ -200,7 +200,7 @@ App.controller.define('CMain', {
 					},
 					{
 						text: 'Liste',
-						iconCls: "new",
+						iconCls: "list_ico",
 						scale: 'large',
 						iconAlign: 'top',
 						rowspan: 3,
