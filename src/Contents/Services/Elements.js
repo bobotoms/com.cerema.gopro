@@ -1,8 +1,8 @@
 Elements={
-	getAllByType: function(type,cb) {
+	getAllByType: function(o,cb) {
 		var db=Elements.using('db');
 		var ff=[];	
-			var sql="SELECT idElement,parent,elements.idType_element,elements.nomElement,modif FROM elements join types_elements on elements.idType_element=types_elements.idType where elements.idType="+type+" order by parent";
+			var sql="SELECT idElement,parent,elements.idType_element,elements.nomElement,modif FROM elements join types_elements on elements.idType_element=types_elements.idType where elements.idType="+o.type+" order by parent";
 
 			var db=Elements.using('db');
 			db.query("gopro",sql,function(e,r){
