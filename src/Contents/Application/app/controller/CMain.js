@@ -53,6 +53,9 @@ App.controller.define('CMain', {
 			"VSaisie button#add_item": {
 				click: "add_item_click"
 			},
+			"VSaisie treepanel": {
+				beforeedit: "treeSaisie_beforeedit"	
+			},
 			"VAddItem": {
 				show: "VAddItem_onShow"
 			},
@@ -71,6 +74,9 @@ App.controller.define('CMain', {
 			p.onLoad(p);
 		});
 		
+	},
+	treeSaisie_beforeedit: function(ed, obj, eo) {
+		console.log(obj.record);
 	},
 	validate_catalog: function(me) {
 		var clone = function(node) {
