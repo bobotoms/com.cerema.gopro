@@ -191,16 +191,16 @@ App.controller.define('CMain', {
 	},
 	showMap: function(p)
 	{
-		this.hideForms();
+		p.hideForms();
 		App.get("mainform panel#map").show();
 	},
 	showGrid: function(p)
 	{
-		this.hideForms();
+		p.hideForms();
 		App.get("mainform grid#gridO").show();		
 	},
 	showSettingsCharacteristics: function(p) {
-		this.hideForms();
+		p.hideForms();
 		App.get("mainform panel#setup_characteristics").show();
 		//App.view.create("Settings.VCharacteristics",{modal: true}).show().center();	
 	},
