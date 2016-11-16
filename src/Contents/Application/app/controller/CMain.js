@@ -251,7 +251,7 @@ App.controller.define('CMain', {
 				},
 				items: [{
 						text: 'Caractéristiques',
-						iconCls: "new",
+						iconCls: "characteristics",
 						scale: 'large',
 						iconAlign: 'top',
 						rowspan: 3,
