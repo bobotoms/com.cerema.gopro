@@ -71,6 +71,10 @@ App.controller.define('CMain', {
 			},
 			"VCharacteristics combo#cboType": {
 				select: "charact_cbotype_select"
+			},
+			,
+			"VCharacteristics combo#cboFamille": {
+				select: "charact_cboFamille_select"
 			}
 		});
 		
@@ -81,7 +85,6 @@ App.controller.define('CMain', {
 	},
 	charact_cboFamille_select: function(me) {
 		App.get(me.up('window'),'combo#cboType').setValue('');
-		alert(me.getValue());
 		var store=App.store.create('gopro://types{nomType+,idType}?idFamille='+me.getValue());
 		App.get(me.up('window'),'combo#cboType').bindStore(store);
 		App.get(me.up('window'),'combo#cboType').getStore().load();
