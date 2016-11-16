@@ -16,9 +16,9 @@ App.view.define('Settings.VCharacteristics',{
 			fieldLabel: "Type",
 			padding: 5,
 			labelAlign: "top",
-			displayField: "idType",
-			valueField: "nomType",
-			store: App.store.create('gopro://types',{autoLoad: true})
+			displayField: "nomType",
+			valueField: "idType",
+			store: App.store.create('gopro://types{nomType+,idType}',{autoLoad: true})
 		}	
 		];
         this.bbar = [
