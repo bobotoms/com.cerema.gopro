@@ -15,7 +15,7 @@ Elements={
 						id: id,
 						name: "c"+id,
 						text: r[i].nomElement,
-						type_element: idType_element,
+						type_element: r[i].idType_element,
 						leaf: true
 					};
 					if (parent==0) root.push(obj[id]); else {
