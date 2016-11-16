@@ -192,7 +192,7 @@ App.controller.define('CMain', {
 					},
 					{
 						text: 'Carte',
-						iconCls: "new",
+						iconCls: "map_ico",
 						scale: 'large',
 						iconAlign: 'top',
 						rowspan: 3,
