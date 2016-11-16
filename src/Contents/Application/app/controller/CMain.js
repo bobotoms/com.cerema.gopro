@@ -184,19 +184,23 @@ App.controller.define('CMain', {
 	{
 		Ext.Msg.alert('Omneedia','hello world!');
 	},
+	hideForms: function()
+	{
+		var form=App.get('mainform');
+		for (var i=0;i<form.items.length;i++) form.items[i].remove();
+	},
 	showMap: function(p)
 	{
-		App.get("mainform grid#gridO").hide();
+		this.hideForms();
 		App.get("mainform panel#map").show();
 	},
 	showGrid: function(p)
 	{
-		App.get("mainform panel#map").hide();
+		this.hideForms();
 		App.get("mainform grid#gridO").show();		
 	},
 	showSettingsCharacteristics: function(p) {
-		App.get("mainform panel#map").hide();
-		App.get("mainform grid#gridO").hide();
+		this.hideForms();
 		App.get("mainform panel#setup_characteristics").show();
 		//App.view.create("Settings.VCharacteristics",{modal: true}).show().center();	
 	},
