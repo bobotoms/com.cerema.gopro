@@ -79,7 +79,7 @@ App.controller.define('CMain', {
 		});
 		
 	},
-	charact_cboFamille_select: function(me,store) {
+	charact_cboFamille_select: function(me) {
 		App.get(me.up('window'),'combo#cboType').setValue('');
 		alert(me.getValue());
 		var store=App.store.create('gopro://types{nomType+,idType}?idFamille='+me.getValue());
