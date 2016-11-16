@@ -139,7 +139,7 @@ App.view.define('VSaisie', {
 							xtype: "treepanel",
 							flex: 2,
 							height: 200,
-							border: true,
+							border: false,
 							rootVisible: false,
 							tbar:[
 							'->',
@@ -153,7 +153,7 @@ App.view.define('VSaisie', {
 								xtype: 'treecolumn',
 								text: 'Eléments',
 								dataIndex: 'text',
-								width: 150,
+								width: 250,
 								sortable: true
 							}, {
 								text: 'Description',
