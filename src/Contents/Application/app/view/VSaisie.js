@@ -170,7 +170,7 @@ App.view.define('VSaisie', {
 						},
 						{
 							xtype: 'propertygrid',
-							width: 400,
+							flex: 1,
 							layout: 'fit',
 							source: {
 								ali: 3
