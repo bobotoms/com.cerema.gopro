@@ -46,6 +46,8 @@ App.view.define('VMain', {
 		{
 			region: "south",
 			title: "Actualités",
+			height: 200,
+			layout: "fit",
 			items: [
 				{
 					xtype: "grid",
