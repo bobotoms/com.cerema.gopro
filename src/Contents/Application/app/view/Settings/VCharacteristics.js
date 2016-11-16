@@ -48,7 +48,6 @@ App.view.define('Settings.VCharacteristics',{
 			border: true,
 			height: "100%",
 			title: "Catalogue",
-			border: false,
 			flex: 1,
 			rootVisible: false,
 			useArrows: true,
@@ -116,7 +115,6 @@ App.view.define('Settings.VCharacteristics',{
 				}
 			],
 			store: App.store.create({fields:[],data:[]}),
-			border: false,
 			itemId: "T1",
 			title: "Caractéristiques",
 			flex: 1,
