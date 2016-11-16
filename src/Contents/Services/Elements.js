@@ -3,7 +3,7 @@ Elements={
 		var db=Elements.using('db');
 		var ff=[];	
 			var sql="SELECT idElement,parent,elements.idType_element,elements.nomElement,modif FROM elements join types_elements on elements.idType_element=types_elements.idType where elements.idType="+o.type+" order by parent";
-
+			console.log(sql);
 			var db=Elements.using('db');
 			db.query("gopro",sql,function(e,r){
 				var root=[];
