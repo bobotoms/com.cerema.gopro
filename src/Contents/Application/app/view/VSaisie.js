@@ -169,7 +169,7 @@ App.view.define('VSaisie', {
 							store: App.store.create({fields:["text","description","values"],data:[],type: "tree"})
 						},
 						{
-							border: false,
+							border: true,
 							width: 2
 						}
 						{
