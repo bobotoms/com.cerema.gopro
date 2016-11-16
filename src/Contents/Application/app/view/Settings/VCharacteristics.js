@@ -79,16 +79,39 @@ App.view.define('Settings.VCharacteristics',{
 			],
 			columns: [
 				{
-					text: "Nom"
+					text: "Nom",
+					dataIndex: "nomCaracteristique"
 				},
 				{
-					text: "Type"
+					text: "Type",
+					dataIndex: "typeCaracteristique",
+					editor: {
+						xtype: "combo",
+						displayField: "value",
+						valueField: "value",
+						store: App.store.create({fields:["value"],data:[
+						{
+							value: "BOOL"
+						},
+						{
+							value: "STRING"
+						},
+						{
+							value: "NUMBER"
+						},
+						{
+							value: "SELECT"
+						}
+						]})
+					}
 				},
 				{
-					text: "Valeurs"
+					text: "Valeurs",
+					dataIndex: "valeursCaracteristique"
 				},
 				{
-					text: "Unité"
+					text: "Unité",
+					dataIndex: "uniteCaracteristique"
 				}
 			],
 			store: App.store.create({fields:[],data:[]}),
