@@ -68,6 +68,9 @@ App.controller.define('CMain', {
 			},
 			"VAddItem button#validate": {
 				click: "validate_catalog"
+			},
+			"VCharacteristics combo#cboType": {
+				select: "charact_cbotype_select"
 			}
 		});
 		
@@ -75,6 +78,9 @@ App.controller.define('CMain', {
 			p.onLoad(p);
 		});
 		
+	},
+	charact_cbotype_select: function(me,store) {
+		console.log(store);	
 	},
 	treeSaisie_beforeedit: function(ed, obj, eo) {
 		// si c'est un container, on n'édite pas !
