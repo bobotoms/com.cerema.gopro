@@ -33,19 +33,7 @@ App.view.define('VAddItem',{
                    enableDrop: false
                 }
             },			
-			store: Ext.create('Ext.data.TreeStore', {
-				autoLoad: false,
-				proxy: {
-					type: 'ajax',
-					url: '/evt',
-					actionMethods: {
-						read: 'POST'
-					},
-					reader: {
-						type: 'json'
-					}					
-				}
-			})
+			store: App.store.create({fields:"",data:[],type:"tree"})
 		},
 		{
 			width: 70,
