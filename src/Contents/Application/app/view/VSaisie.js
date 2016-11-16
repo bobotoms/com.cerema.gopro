@@ -194,7 +194,7 @@ App.view.define('VSaisie', {
 										valueField: 'name'
 									},
 									renderer: function(v){
-										//return 1;
+										return v;
 									}
 								},
 								alxi: {
