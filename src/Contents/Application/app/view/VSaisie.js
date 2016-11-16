@@ -180,7 +180,7 @@ App.view.define('VSaisie', {
 									displayName: 'ali',
 									editor: {
 										xtype: 'combobox',
-										store: store,
+										store: App.store.create({fields:[],data:[]}),
 										displayField: 'name',
 										valueField: 'id'
 									},
