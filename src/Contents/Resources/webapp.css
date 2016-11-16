@@ -41,3 +41,8 @@
 	background-position:center center;	
 	background-size: 250px 141px;
 }
+
+.map_ico
+{
+	background-image: url(webapp/map_32.png)
+}
