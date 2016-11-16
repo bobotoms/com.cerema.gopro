@@ -30,7 +30,7 @@ App.view.define('Settings.VCharacteristics',{
 			displayField: "nomType",
 			valueField: "idType",
 			editable: false,
-			store: App.store.create('gopro://types{nomType+,idType}',{autoLoad: false}),
+			store: App.store.create({fields:[],data:[]}),
 			itemId: "cboType"
 		}	
 		];
