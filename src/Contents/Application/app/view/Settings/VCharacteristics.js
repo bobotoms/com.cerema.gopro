@@ -45,6 +45,7 @@ App.view.define('Settings.VCharacteristics',{
 		{
 			xtype: "treepanel",
 			padding: 5,
+			border: true,
 			height: "100%",
 			title: "Catalogue",
 			border: false,
@@ -63,6 +64,8 @@ App.view.define('Settings.VCharacteristics',{
 		},
 		{
 			xtype: "grid",
+			padding: 5,
+			border: true,
 			tbar: [
 			'->',
 			{
