@@ -185,7 +185,7 @@ App.view.define('VSaisie', {
 										valueField: 'id'
 									},
 									renderer: function(v){
-										return store.findRecord("id", v).get("name");
+										return 1;
 									}
 								}
 							}
