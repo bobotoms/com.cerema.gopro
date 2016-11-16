@@ -137,7 +137,7 @@ App.view.define('VSaisie', {
 					items: [
 						{
 							xtype: "treepanel",
-							width: "100%",
+							flex: 2,
 							height: 200,
 							border: true,
 							rootVisible: false,
@@ -167,7 +167,11 @@ App.view.define('VSaisie', {
 							],
 							plugins : { ptype : 'cellediting' },
 							store: App.store.create({fields:["text","description","values"],data:[],type: "tree"})
-						}						
+						},
+						{
+							flex: 1,
+							html: "hyes"
+						}
 					]
 				}
 				]
