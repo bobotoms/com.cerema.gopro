@@ -84,12 +84,14 @@ App.controller.define('CMain', {
 	},
 	charact_cboFamille_select: function(me) {
 		App.get(me.up('window'),'combo#cboType').setValue('');
+		App.get(me.up('window'),'treepanel#T0').getRootNode().removeAll();
 		var store=App.store.create('gopro://types{nomType+,idType}?idFamille='+me.getValue());
 		App.get(me.up('window'),'combo#cboType').bindStore(store);
 		App.get(me.up('window'),'combo#cboType').getStore().load();
 	},	
 	charact_cbotype_select: function(me,store) {
 		console.log(store);	
+		App.get(me.up('window'),'treepanel#T0').getRootNode().removeAll();
 		App.get(me.up('window'),'treepanel#T0').getStore().getProxy().extraParams.type=store.data.idType;
 		App.get(me.up('window'),'treepanel#T0').getStore().load();
 		App.get(me.up('window'),'treepanel#T0').getStore().on('load',function(){
