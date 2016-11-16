@@ -61,19 +61,6 @@ App.view.define('Settings.VCharacteristics',{
 			store: App.store.create("App.Elements.getAllByType",{autoLoad: false,type:"tree"})
 		},
 		{
-			width: 5,
-			height: "100%",
-			bodyStyle: "background-color:#EEEEEE",
-			border: false,
-			layout: "vbox",
-			items: [
-			{
-				flex: 1,
-				border: false
-			}
-			]
-		},
-		{
 			xtype: "grid",
 			tbar: [
 			'->',
