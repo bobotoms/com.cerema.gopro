@@ -165,13 +165,13 @@ App.controller.define('CMain', {
 	},
 	showMap: function(p)
 	{
-		App.get("mainform grid").hide();
+		App.get("mainform grid#gridO").hide();
 		App.get("mainform panel#map").show();
 	},
 	showGrid: function(p)
 	{
 		App.get("mainform panel#map").hide();
-		App.get("mainform grid").show();		
+		App.get("mainform grid#gridO").show();		
 	},
 	onLoad: function(p)
 	{
