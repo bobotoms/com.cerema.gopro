@@ -14,7 +14,8 @@ App.view.define('Settings.VCharacteristics',{
 		{
 			xtype: "combo",
 			fieldLabel: "Type",
-			padding: 10
+			padding: 5,
+			labelAlign: "top"
 		}	
 		];
         this.bbar = [
