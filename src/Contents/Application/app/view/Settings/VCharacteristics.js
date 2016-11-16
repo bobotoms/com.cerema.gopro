@@ -44,6 +44,7 @@ App.view.define('Settings.VCharacteristics',{
 		this.items = [
 		{
 			xtype: "treepanel",
+			padding: 5,
 			height: "100%",
 			title: "Catalogue",
 			border: false,
