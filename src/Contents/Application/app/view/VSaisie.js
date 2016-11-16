@@ -147,7 +147,7 @@ App.view.define('VSaisie', {
 					{
 						xtype: 'treecolumn',
 						text: 'Eléments',
-						dataIndex: 'item',
+						dataIndex: 'text',
 						width: 150,
 						sortable: true
     				}, {
