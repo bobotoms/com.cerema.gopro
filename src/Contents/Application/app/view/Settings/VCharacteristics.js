@@ -20,7 +20,7 @@ App.view.define('Settings.VCharacteristics',{
 			valueField: "idFamille",
 			editable: false,
 			store: App.store.create('gopro://familles{nomFamille+,idFamille}',{autoLoad: true}),
-			itemId: "cboType"			
+			itemId: "cboFamille"			
 		},
 		{
 			xtype: "combo",
