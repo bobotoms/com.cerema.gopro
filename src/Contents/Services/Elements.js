@@ -1,8 +1,6 @@
 Elements={
 	getAllByType: function(o,cb) {
 		var db=Elements.using('db');
-		console.log('----');
-		console.log(o);
 		var ff=[];	
 			var sql="SELECT idElement,parent,elements.idType_element,elements.nomElement,modif FROM elements join types_elements on elements.idType_element=types_elements.idType where elements.idType="+o.type+" order by parent";
 			console.log(sql);
@@ -17,6 +15,7 @@ Elements={
 						id: id,
 						name: "c"+id,
 						text: r[i].nomElement,
+						type_element: idType_element,
 						leaf: true
 					};
 					if (parent==0) root.push(obj[id]); else {
