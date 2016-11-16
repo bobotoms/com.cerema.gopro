@@ -116,7 +116,7 @@ App.view.define('VMain', {
 					itemId: "grid",
 					columns: [
 						{
-							header: "Dpt"
+							text: "Dpt"
 						}
 					],
 					store: App.store.create({fields:[],data:[]})
