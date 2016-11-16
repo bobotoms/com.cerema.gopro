@@ -70,10 +70,6 @@ App.view.define('Settings.VCharacteristics',{
 			{
 				flex: 1,
 				border: false
-			},
-			{
-				flex: 1,
-				border: false
 			}
 			]
 		},
