@@ -165,8 +165,8 @@ App.controller.define('CMain', {
 	},
 	showMap: function(p)
 	{
-		App.get(p.up('window'),"grid").hide();
-		App.get(p.up('window'),"panel#map").show();
+		App.get("mainform grid").hide();
+		App.get("mainform panel#map").show();
 	},
 	showGrid: function(p)
 	{
