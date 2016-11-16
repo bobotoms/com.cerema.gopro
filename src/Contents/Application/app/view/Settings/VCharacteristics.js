@@ -1,5 +1,5 @@
 App.view.define('Settings.VCharacteristics',{
-	extend: 'Ext.window.Window',
+	extend: 'Ext.panel',
 	alias: "widget.VCharacteristics",
 
 	initComponent: function()
