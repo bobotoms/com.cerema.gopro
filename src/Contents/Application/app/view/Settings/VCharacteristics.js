@@ -77,24 +77,29 @@ App.view.define('Settings.VCharacteristics',{
 			]
 		},
 		{
-			xtype: "treepanel",
+			xtype: "grid",
+			columns: [
+				{
+					text: "Nom"
+				},
+				{
+					text: "Type"
+				},
+				{
+					text: "Valeurs"
+				},
+				{
+					text: "Unité"
+				}
+			],
+			store: App.store.create({fields:[],data:[]}),
 			height: "100%",
 			border: false,
 			itemId: "T1",
+			title: "Catalogue",
 			flex: 1,
-			rootVisible: false,
-			useArrows: true,
 			height: "100%",
-			border: false,
-			viewConfig: {
-                plugins: {
-                   ptype: 'treeviewdragdrop',
-                   enableDrag: false,
-                   enableDrop: true,
-				   appendOnly: false
-                }
-            },			
-			store: App.store.create({fields:"",data:[],type:"tree"})
+			border: false
 		}
 		];
 		this.callParent();
