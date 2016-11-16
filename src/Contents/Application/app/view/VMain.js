@@ -113,7 +113,7 @@ App.view.define('VMain', {
 				{
 					xtype: "grid",
 					hidden: true,
-					itemId: "grid",
+					itemId: "gridO",
 					columns: [
 						{
 							text: "Dpt"
