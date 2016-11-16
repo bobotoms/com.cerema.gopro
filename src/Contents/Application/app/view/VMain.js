@@ -101,6 +101,7 @@ App.view.define('VMain', {
 			items: [
 				{
 					id: "MyGMapPanel",
+					itemId: "map",
 					html: '<div id="TMapPanel" style="width:100%;height:100%"></div>',
 					padding: 0,
 					flex: 1,
@@ -108,6 +109,17 @@ App.view.define('VMain', {
 					width: "100%",
 					border: false,
 					split: true
+				},
+				{
+					xtype: "grid",
+					hidden: true,
+					itemId: "grid",
+					columns: [
+						{
+							header: "Dpt"
+						}
+					],
+					store: App.store.create({fields:[],data:[]})
 				}
 			]
 		}
