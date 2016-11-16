@@ -86,7 +86,7 @@ App.controller.define('CMain', {
 		
 	},
 	treeT0_click: function(me,store) {
-		alert(store.data.id);
+		alert(store.data.type_element);
 		//console.log();
 	},
 	charact_cboFamille_select: function(me) {
