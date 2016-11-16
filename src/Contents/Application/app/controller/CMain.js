@@ -77,7 +77,7 @@ App.controller.define('CMain', {
 	},
 	treeSaisie_beforeedit: function(ed, obj, eo) {
 		// si c'est un container, on n'édite pas !
-		if (!obj.record.leaf) return false;
+		if (!obj.record.data.leaf) return false;
 		console.log(obj.record);
 	},
 	validate_catalog: function(me) {
