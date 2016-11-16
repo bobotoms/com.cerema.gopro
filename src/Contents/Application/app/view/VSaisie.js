@@ -191,7 +191,7 @@ App.view.define('VSaisie', {
 										xtype: 'combobox',
 										store: App.store.create({fields:["id","name"],data:[{id: "Plastique",name:"Plastique"},{id: "Métal",name:"Métal"}]}),
 										displayField: 'name',
-										valueField: 'id'
+										valueField: 'name'
 									},
 									renderer: function(v){
 										return 1;
