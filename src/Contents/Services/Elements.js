@@ -1,6 +1,8 @@
 Elements={
 	getAllByType: function(o,cb) {
 		var db=Elements.using('db');
+		console.log('----');
+		console.log(o);
 		var ff=[];	
 			var sql="SELECT idElement,parent,elements.idType_element,elements.nomElement,modif FROM elements join types_elements on elements.idType_element=types_elements.idType where elements.idType="+o.type+" order by parent";
 			console.log(sql);
