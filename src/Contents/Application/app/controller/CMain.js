@@ -86,7 +86,9 @@ App.controller.define('CMain', {
 		
 	},
 	treeT0_click: function(me,store) {
-		alert(store.data.type_element);
+		var store=App.store.create('gopro://caracteristiques?idType='+store.data.type_element);
+		App.get(me.up('window'),'grid#T1').bindStore(store);
+		store.load();
 		//console.log();
 	},
 	charact_cboFamille_select: function(me) {
