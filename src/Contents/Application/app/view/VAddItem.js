@@ -33,7 +33,7 @@ App.view.define('VAddItem',{
                    enableDrop: false
                 }
             },			
-			store: App.store.create({fields:"",data:[],type:"tree"})
+			store: App.store.create("App.Elements.getAllByType",{type:"tree"})
 		},
 		{
 			width: 70,
