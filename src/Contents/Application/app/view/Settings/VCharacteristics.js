@@ -85,6 +85,11 @@ App.view.define('Settings.VCharacteristics',{
 				text: "Ajouter"
 			}
 			],
+			plugins: [
+			{
+				ptype= "cellediting"
+			}
+			],
 			columns: [
 				{
 					text: "Nom"
