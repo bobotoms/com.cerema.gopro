@@ -167,20 +167,7 @@ App.view.define('VSaisie', {
     				}	
 					],
 					plugins : { ptype : 'cellediting' },
-					store: App.store.create({fields:["item","description","values"],data:[{
-									item: "new",
-									description: "ma description",
-									values: "mes values",
-						leaf: false,
-						children:[
-							{
-								item: "new",
-									description: "ma description",
-									values: "mes values",leaf: true
-							}
-						]
-						
-					}],type: "tree"})
+					store: App.store.create({fields:["item","description","values"],data:[],type: "tree"})
 				}
 				]
 			}
