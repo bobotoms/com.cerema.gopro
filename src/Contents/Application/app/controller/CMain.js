@@ -117,7 +117,7 @@ App.controller.define('CMain', {
 		
 	},
 	VAddItem_onShow: function(me) {
-		//alert(me.type_item);
+		alert(me.type_item);
 		App.get(me,'treepanel#T0').getStore().getProxy().extraParams.type=me.type_item;
 		App.get(me,'treepanel#T0').getStore().load();
 		App.get(me,'treepanel#T0').getStore().on('load',function(){
