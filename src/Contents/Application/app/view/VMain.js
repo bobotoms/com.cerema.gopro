@@ -122,6 +122,10 @@ App.view.define('VMain', {
 						}
 					],
 					store: App.store.create({fields:[],data:[]})
+				},
+				{
+					xtype: "VCharacteristics",
+					hidden: true
 				}
 			]
 		}
