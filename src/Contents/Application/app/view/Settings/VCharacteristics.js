@@ -13,13 +13,24 @@ App.view.define('Settings.VCharacteristics',{
 		this.tbar=[
 		{
 			xtype: "combo",
+			fieldLabel: "Famille",
+			padding: 5,
+			labelAlign: "top",
+			displayField: "nomFamille",
+			valueField: "idFamille",
+			editable: false,
+			store: App.store.create('gopro://familles{nomFamille+,idFamille}',{autoLoad: true}),
+			itemId: "cboType"			
+		},
+		{
+			xtype: "combo",
 			fieldLabel: "Type",
 			padding: 5,
 			labelAlign: "top",
 			displayField: "nomType",
 			valueField: "idType",
 			editable: false,
-			store: App.store.create('gopro://types{nomType+,idType}',{autoLoad: true}),
+			store: App.store.create('gopro://types{nomType+,idType}',{autoLoad: false}),
 			itemId: "cboType"
 		}	
 		];
