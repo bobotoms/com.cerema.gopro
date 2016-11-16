@@ -17,25 +17,26 @@ App.view.define('VMain', {
 			itemId: "MenuPanel",
 			menu: [
 				{
-					text: "Accueil",
+					text: "Général",
 					menu: [
 						{
-							text: "Saisie",
-							itemId: "mnu_saisie"
+							text: "Ouvrages",
+							menu: [
+								{
+									text: "Nouveau"
+								},
+								{
+									text: "Carte"
+								},
+								{
+									text: "Liste"
+								}
+							]
 						}
 					]
 				},
 				{
-					text: "Gestion"
-				},
-				{
-					text: "Requête"
-				},
-				{
-					text: "Documentation"
-				},
-				{
-					text: "Administration"
+					text: "Visites"
 				}
 			]		
 		},
