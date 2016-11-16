@@ -44,20 +44,8 @@ App.view.define('VMain', {
 			xtype: "ribbon"
 		},
 		{
-			region: "center",			
-			split:true,
-			layout:"vbox",
+			region: "south",
 			items: [
-				{
-					id: "MyGMapPanel",
-					html: '<div id="TMapPanel" style="width:100%;height:100%"></div>',
-					padding: 0,
-					flex: 1,
-					border: false,
-					width: "100%",
-					border: false,
-					split: true
-				},
 				{
 					xtype: "grid",
 					columns: [
@@ -100,6 +88,23 @@ App.view.define('VMain', {
 					}]}),
 					width: "100%",
 					height: 100
+				}				
+			]
+		},
+		{
+			region: "center",			
+			split:true,
+			layout:"vbox",
+			items: [
+				{
+					id: "MyGMapPanel",
+					html: '<div id="TMapPanel" style="width:100%;height:100%"></div>',
+					padding: 0,
+					flex: 1,
+					border: false,
+					width: "100%",
+					border: false,
+					split: true
 				}
 			]
 		}
