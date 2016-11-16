@@ -196,7 +196,8 @@ App.controller.define('CMain', {
 	},
 	showGrid: function(p)
 	{
-		App.get('mainform').items.removeAll();
+		var form=App.get('mainform');
+		for (var i=0;i<form.items.length;i++) form.items[i].hide();
 		App.get("mainform grid#gridO").show();		
 	},
 	showSettingsCharacteristics: function(p) {
