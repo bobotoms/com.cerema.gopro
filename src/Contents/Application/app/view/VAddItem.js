@@ -105,15 +105,7 @@ App.view.define('VAddItem',{
 				   appendOnly: false
                 }
             },			
-			store: Ext.create('Ext.data.TreeStore', {
-				autoLoad: true,
-				proxy: {
-					type: 'memory',
-					reader: {
-						type: 'json',
-					}
-				}
-			})
+			store: App.store.create({fields:"",data:[],type:"tree"})
 		}
 		];
 		this.callParent();
