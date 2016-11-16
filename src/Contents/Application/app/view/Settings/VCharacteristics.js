@@ -73,7 +73,10 @@ App.view.define('Settings.VCharacteristics',{
 			columns: [
 				{
 					text: "Nom",
-					dataIndex: "nomCaracteristique"
+					dataIndex: "nomCaracteristique",
+					editor: {
+						xtype: "textfield"
+					}
 				},
 				{
 					text: "Type",
@@ -101,11 +104,18 @@ App.view.define('Settings.VCharacteristics',{
 				},
 				{
 					text: "Valeurs",
-					dataIndex: "valeursCaracteristique"
+					dataIndex: "valeursCaracteristique",
+					flex: 1,
+					editor: {
+						xtype: "textfield"
+					}
 				},
 				{
 					text: "Unité",
-					dataIndex: "uniteCaracteristique"
+					dataIndex: "uniteCaracteristique",
+					editor: {
+						xtype: "textfield"
+					}
 				}
 			],
 			store: App.store.create({fields:[],data:[]}),
