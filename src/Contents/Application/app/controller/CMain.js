@@ -73,10 +73,20 @@ App.controller.define('CMain', {
 		
 	},
 	validate_catalog: function(me) {
+		var clone = function(node) {
+  			var result = node.copy(),
+      		len = node.childNodes ? node.childNodes.length : 0,
+      		i;
+  			// Move child nodes across to the copy if required
+  			for (i = 0; i < len; i++) result.appendChild(clone(node.childNodes[i]));
+  			return result;
+		};
 		var CStore=App.get(me.up('window'),"treepanel#T1").getStore();
-		console.log(CStore.data);
-		App.get('VSaisie treepanel').getStore().loadData(CStore.data);
-		var store=App.store.create({root:Root,type: "tree"});
+		var oldRoot = CStore.getRootNode(),
+    	newRoot = clone(oldRoot);
+
+		App.get('VSaisie treepanel').getStore()..setRootNode(newRoot);
+
 	},
 	AddItem_click: function(me) {
 		var tree = App.get(me.up('window'),"treepanel#T0");
