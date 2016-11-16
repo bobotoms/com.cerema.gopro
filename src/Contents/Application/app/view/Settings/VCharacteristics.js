@@ -7,7 +7,7 @@ App.view.define('Settings.VCharacteristics',{
 		this.title="Caractéristiques";
 		this.layout="hbox";
 		this.border=false;
-		this.width = 800;
+		this.width = 820;
         this.height = 430;
 		this.bodyStyle="background-color: white";
 		this.tbar=[
