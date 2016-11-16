@@ -189,7 +189,7 @@ App.view.define('VSaisie', {
 									displayName: 'Matière',
 									editor: {
 										xtype: 'combobox',
-										store: App.store.create({fields:[],data:[]}),
+										store: App.store.create({fields:["id","name"],data:[{id: 1,name:"Plastique"},{id: 2,name:"Métal"}]}),
 										displayField: 'name',
 										valueField: 'id'
 									},
