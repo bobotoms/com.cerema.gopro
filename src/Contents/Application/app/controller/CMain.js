@@ -117,37 +117,11 @@ App.controller.define('CMain', {
 		
 	},
 	VAddItem_onShow: function(me) {
-		App.get(me,'treepanel#T0').getStore().getProxy().extraParams._type=me.type_item;
-		//App.get(me,'treepanel#T0').getStore().load();
-		console.log(App.get(me,'treepanel#T0').getStore().getProxy());
-		/*App.get(me,'treepanel#T0').getStore().on('load',function(){
+		App.get(me,'treepanel#T0').getStore().getProxy().extraParams.type=me.type_item;
+		App.get(me,'treepanel#T0').getStore().load();
+		App.get(me,'treepanel#T0').getStore().on('load',function(){
 			App.get(me,'treepanel#T0').expandAll();
-		});*/
-		/*App.Elements.getTree({},function(response){
-
-			/*var json = response;
-			var json = [
-			{
-				text: "test",
-				leaf: false,
-				children: [
-					{
-						text: "toto"
-					}
-				]
-			},
-			{
-				text: "test 2",
-				leaf: false
-			}			
-			];
-
-            var reader = App.get(me,'treepanel').getStore().getProxy().getReader();
-          	var reader_data = reader.read(json);
-
-            App.get(me,'treepanel').getStore().loadData(reader_data.records,true);	
-			
-		})*/
+		});
 	},
 	add_item_click: function(me) {
 		App.view.create('VAddItem',{modal: true,type_item: App.get(me.up('window'),'combo#type').getValue()}).show().center();	
