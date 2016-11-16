@@ -81,6 +81,9 @@ App.controller.define('CMain', {
 	},
 	charact_cboFamille_select: function(me,store) {
 		App.get(me.up('window'),'combo#cboType').setValue('');
+		var store=App.store.create('gopro://types?idFamille='+me.getValue());
+		App.get('VSaisie combo#type').bindStore(store);
+		App.get('VSaisie combo#type').getStore().load();		
 		App.get(me.up('window'),'combo#cboType').getStore().getProxy().extraParams.idFamille=store.data.idFamille;
 		App.get(me.up('window'),'combo#cboType').getStore().load();	
 	},	
