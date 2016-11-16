@@ -131,43 +131,44 @@ App.view.define('VSaisie', {
 					}
 				},
 				{
-					xtype: "treepanel",
+					layout: "hbox",
 					width: "100%",
 					height: 200,
-					border: true,
-					rootVisible: false,
-					tbar:[
-					'->',
-					{
-						text: "Ajouter",
-						itemId: "add_item"
-					}
-					],
-					columns: [
-					{
-						xtype: 'treecolumn',
-						text: 'Eléments',
-						dataIndex: 'text',
-						width: 150,
-						sortable: true
-    				}, {
-						text: 'Description',
-						dataIndex: 'description',
-						flex: 1,
-						sortable: true,
-						editor: {
-							xtype: "textfield"
-						}
-    				}, {
-						text: 'Valeurs',
-						dataIndex: 'values',
-						flex: 1,
-						width: 150,
-						sortable: true
-    				}	
-					],
-					plugins : { ptype : 'cellediting' },
-					store: App.store.create({fields:["text","description","values"],data:[],type: "tree"})
+					items: [
+						{
+							xtype: "treepanel",
+							width: "100%",
+							height: 200,
+							border: true,
+							rootVisible: false,
+							tbar:[
+							'->',
+							{
+								text: "Ajouter",
+								itemId: "add_item"
+							}
+							],
+							columns: [
+							{
+								xtype: 'treecolumn',
+								text: 'Eléments',
+								dataIndex: 'text',
+								width: 150,
+								sortable: true
+							}, {
+								text: 'Description',
+								dataIndex: 'description',
+								flex: 1,
+								sortable: true,
+								editor: {
+									xtype: "textfield"
+								}
+							}
+							],
+							plugins : { ptype : 'cellediting' },
+							store: App.store.create({fields:["text","description","values"],data:[],type: "tree"})
+						}						
+					]
 				}
 				]
 			}
