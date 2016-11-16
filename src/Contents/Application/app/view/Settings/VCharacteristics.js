@@ -118,8 +118,7 @@ App.view.define('Settings.VCharacteristics',{
 			itemId: "T1",
 			title: "Caractéristiques",
 			flex: 1,
-			height: "100%",
-			border: false
+			height: "100%"
 		}
 		];
 		this.callParent();
