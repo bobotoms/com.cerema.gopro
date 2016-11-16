@@ -1,5 +1,9 @@
 var TMap={};
 
+function hideForms() {
+	var form=App.get('mainform panel#CPanel');
+	for (var i=0;i<form.items.length;i++) form.items.items[i].hide();	
+};
 
 function GMap(l,m)
 {
@@ -191,17 +195,16 @@ App.controller.define('CMain', {
 	},
 	showMap: function(p)
 	{
-		p.hideForms();
+		hideForms();
 		App.get("mainform panel#map").show();
 	},
 	showGrid: function(p)
 	{
-		var form=App.get('mainform panel#CPanel');
-		for (var i=0;i<form.items.length;i++) form.items.items[i].hide();
+		hideForms();
 		App.get("mainform grid#gridO").show();		
 	},
 	showSettingsCharacteristics: function(p) {
-		p.hideForms();
+		hideForms();
 		App.get("mainform panel#setup_characteristics").show();
 		//App.view.create("Settings.VCharacteristics",{modal: true}).show().center();	
 	},
