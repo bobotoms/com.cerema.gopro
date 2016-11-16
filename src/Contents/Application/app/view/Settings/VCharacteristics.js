@@ -105,7 +105,6 @@ App.view.define('Settings.VCharacteristics',{
 				}
 			],
 			store: App.store.create({fields:[],data:[]}),
-			height: "100%",
 			border: false,
 			itemId: "T1",
 			title: "Caractéristiques",
