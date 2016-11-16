@@ -51,14 +51,7 @@ App.view.define('Settings.VCharacteristics',{
 			flex: 1,
 			rootVisible: false,
 			useArrows: true,
-			itemId: "T0",
-			viewConfig: {
-                plugins: {
-                   ptype: 'treeviewdragdrop',
-                   enableDrag: true,
-                   enableDrop: false
-                }
-            },			
+			itemId: "T0",			
 			store: App.store.create("App.Elements.getAllByType",{autoLoad: false,type:"tree"})
 		},
 		{
@@ -89,6 +82,7 @@ App.view.define('Settings.VCharacteristics',{
 						xtype: "combo",
 						displayField: "value",
 						valueField: "value",
+						editable: false,
 						store: App.store.create({fields:["value"],data:[
 						{
 							value: "BOOL"
