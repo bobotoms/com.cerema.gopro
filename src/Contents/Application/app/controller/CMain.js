@@ -81,7 +81,7 @@ App.controller.define('CMain', {
 	},
 	charact_cboFamille_select: function(me,store) {
 		App.get(me.up('window'),'combo#cboType').setValue('');
-		App.get(me.up('window'),'combo#cboType').getStore().getProxy().extraParams.type=store.data.idFamille;
+		App.get(me.up('window'),'combo#cboType').getStore().getProxy().extraParams.idFamille=store.data.idFamille;
 		App.get(me.up('window'),'combo#cboType').getStore().load();	
 	},	
 	charact_cbotype_select: function(me,store) {
