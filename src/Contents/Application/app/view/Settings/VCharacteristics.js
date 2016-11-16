@@ -19,6 +19,10 @@ App.view.define('Settings.VCharacteristics',{
         ];	
 		this.items = [
 		{
+			xtype: "combo",
+			fieldLabel: "Type"
+		},
+		{
 			xtype: "treepanel",
 			height: "100%",
 			border: false,
@@ -44,34 +48,13 @@ App.view.define('Settings.VCharacteristics',{
 			items: [
 			{
 				flex: 1,
-				border: false
-			},
-			{
-				xtype: "button",
-				text: ">>",
-				itemId: "AddItem",
-				width: "100%",
-				height: 24,
-				margin: {
-					left:10,
-					right: 10,
-					bottom: 10
-				}
-			},
-			{
-				xtype: "button",
-				text: "<<",
-				itemId: "RemoveItem",
-				width: "100%",
-				height: 24,
-				margin: {
-					left:10,
-					right: 10
-				}
+				border: false,
+				width: 5
 			},
 			{
 				flex: 1,
-				border: false
+				border: false,
+				width: 5
 			}
 			]
 		},
