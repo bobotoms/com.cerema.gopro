@@ -98,7 +98,7 @@ App.view.define('VMain', {
 		{
 			region: "center",			
 			split:true,
-			layout:"vbox",
+			layout:"fit",
 			items: [
 				{
 					id: "MyGMapPanel",
