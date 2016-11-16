@@ -60,7 +60,7 @@ App.view.define('Settings.VCharacteristics',{
 			store: App.store.create("App.Elements.getAllByType",{autoLoad: false,type:"tree"})
 		},
 		{
-			width: 70,
+			width: 5,
 			height: "100%",
 			bodyStyle: "background-color:#EEEEEE",
 			border: false,
@@ -68,13 +68,11 @@ App.view.define('Settings.VCharacteristics',{
 			items: [
 			{
 				flex: 1,
-				border: false,
-				width: 5
+				border: false
 			},
 			{
 				flex: 1,
-				border: false,
-				width: 5
+				border: false
 			}
 			]
 		},
