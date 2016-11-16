@@ -74,6 +74,9 @@ App.controller.define('CMain', {
 			},
 			"VCharacteristics combo#cboFamille": {
 				select: "charact_cboFamille_select"
+			},
+			"VCharacteristics treepanel#T0": {
+				itemclick: "treeT0_click"
 			}
 		});
 		
@@ -81,6 +84,10 @@ App.controller.define('CMain', {
 			p.onLoad(p);
 		});
 		
+	},
+	treeT0_click: function(me,store) {
+		alert('x');
+		console.log(store);
 	},
 	charact_cboFamille_select: function(me) {
 		App.get(me.up('window'),'combo#cboType').setValue('');
