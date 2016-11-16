@@ -138,7 +138,7 @@ App.view.define('VSaisie', {
 						{
 							xtype: "treepanel",
 							flex: 2,
-							height: 200,
+							height: "100%",
 							border: false,
 							rootVisible: false,
 							tbar:[
@@ -171,6 +171,7 @@ App.view.define('VSaisie', {
 						{
 							xtype: 'propertygrid',
 							flex: 1,
+							height: "100%",
 							layout: 'fit',
 							source: {
 								ali: 3
