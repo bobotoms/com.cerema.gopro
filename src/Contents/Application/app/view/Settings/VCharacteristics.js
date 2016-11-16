@@ -18,7 +18,9 @@ App.view.define('Settings.VCharacteristics',{
 			labelAlign: "top",
 			displayField: "nomType",
 			valueField: "idType",
-			store: App.store.create('gopro://types{nomType+,idType}',{autoLoad: true})
+			editable: false,
+			store: App.store.create('gopro://types{nomType+,idType}',{autoLoad: true}),
+			itemId: "cboType"
 		}	
 		];
         this.bbar = [
