@@ -77,22 +77,7 @@ App.controller.define('CMain', {
 		var Root={
 			
 		};
-		App.get('VSaisie treepanel').getStore().loadData([
-			{
-									item: "new",
-									description: "ma description",
-									values: "mes values",
-						leaf: false,
-						children:[
-							{
-								item: "new",
-									description: "ma description",
-									values: "mes values",leaf: true
-							}
-						]
-						
-					}
-		]);
+		App.get('VSaisie treepanel').getStore().loadData(CStore.data);
 		var store=App.store.create({root:Root,type: "tree"});
 	},
 	AddItem_click: function(me) {
