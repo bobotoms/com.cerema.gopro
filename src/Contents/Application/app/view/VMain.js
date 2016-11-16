@@ -48,6 +48,8 @@ App.view.define('VMain', {
 			title: "Actualités",
 			height: 200,
 			layout: "fit",
+			animCollapse: true,
+			collapsible: true,
 			items: [
 				{
 					xtype: "grid",
@@ -88,9 +90,7 @@ App.view.define('VMain', {
 						x: "N",
 						y: "JG",
 						evt: "Rappel: faire remonter vos inscriptions pour la journée thématique"
-					}]}),
-					width: "100%",
-					height: 100
+					}]})
 				}				
 			]
 		},
