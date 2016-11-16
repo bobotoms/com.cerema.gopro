@@ -221,10 +221,50 @@ App.controller.define('CMain', {
 			
 			]
 	  	});
+		
+		var tab3=Ext.create("Ext.ux.ribbon.Tab", {
+			title: 'Synchronisation',
+        	closable: false,
+			layout: {
+				type: 'hbox',
+				align: 'stretch'
+			}, 
+		  	items: [
+			
+			]
+	  	});
+		
+		var tab4=Ext.create("Ext.ux.ribbon.Tab", {
+			title: 'Administration',
+        	closable: false,
+			layout: {
+				type: 'hbox',
+				align: 'stretch'
+			}, 
+		  	items: [
+			{
+				title: 'Paramètres',
+				iconAlign: 'top',
+				layout: {
+					type: 'table', 
+					columns: 4
+				},
+				items: [{
+						text: 'Caractéristiques',
+						iconCls: "new",
+						scale: 'large',
+						iconAlign: 'top',
+						rowspan: 3,
+						handler: p.showSaisie
+				}]
+			}
+			]
+	  	});		
 			
 		App.get('mainform ribbon').addTab(tab1, true);
 		App.get('mainform ribbon').addTab(tab2, false);
-		
+		App.get('mainform ribbon').addTab(tab3, true);
+		App.get('mainform ribbon').addTab(tab4, false);		
 	}
 	
 	
