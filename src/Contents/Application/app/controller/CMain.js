@@ -77,7 +77,7 @@ App.controller.define('CMain', {
 		var Root={
 			
 		};
-		App.get(me.up('window'),'treepanel').getStore().loadData([
+		App.get('VSaisie treepanel').getStore().loadData([
 			{
 									item: "new",
 									description: "ma description",
