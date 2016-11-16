@@ -87,7 +87,7 @@ App.view.define('Settings.VCharacteristics',{
 			],
 			plugins: [
 			{
-				ptype= "cellediting"
+				ptype: "cellediting"
 			}
 			],
 			columns: [
