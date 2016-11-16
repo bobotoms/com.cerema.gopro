@@ -117,7 +117,8 @@ App.view.define('VMain', {
 					itemId: "gridO",
 					columns: [
 						{
-							text: "Dpt"
+							text: "Dpt",
+							flex: 1
 						}
 					],
 					store: App.store.create({fields:[],data:[]})
