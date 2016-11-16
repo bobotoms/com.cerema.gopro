@@ -4,7 +4,7 @@ App.view.define('Settings.VCharacteristics',{
 
 	initComponent: function()
 	{
-		this.title="Catalogue";
+		this.title="Caractéristiques";
 		this.layout="hbox";
 		this.border=false;
 		this.width = 700;
@@ -15,7 +15,10 @@ App.view.define('Settings.VCharacteristics',{
 			xtype: "combo",
 			fieldLabel: "Type",
 			padding: 5,
-			labelAlign: "top"
+			labelAlign: "top",
+			displayField: "idType",
+			valueField: "nomType",
+			store: App.store.create('gopro://types',{autoLoad: true})
 		}	
 		];
         this.bbar = [
