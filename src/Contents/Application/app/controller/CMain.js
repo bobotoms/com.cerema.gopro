@@ -163,6 +163,9 @@ App.controller.define('CMain', {
 		App.get("mainform panel#map").hide();
 		App.get("mainform grid#gridO").show();		
 	},
+	showSettingsCharacteristics: function(p) {
+		App.view.create("Settings.VCharacteristics",{modal: true}).show().center();	
+	},
 	onLoad: function(p)
 	{
 		App.loadAPI("http://maps.google.com/maps/api/js?sensor=false&callback=GMap");
@@ -256,7 +259,7 @@ App.controller.define('CMain', {
 						scale: 'large',
 						iconAlign: 'top',
 						rowspan: 3,
-						handler: p.showSaisie
+						handler: p.showSettingsCharacteristics
 				}]
 			}
 			]
