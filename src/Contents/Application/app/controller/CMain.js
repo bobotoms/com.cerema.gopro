@@ -85,7 +85,6 @@ App.controller.define('CMain', {
     	newRoot = clone(oldRoot);
 
 		App.get('VSaisie treepanel').getStore().setRootNode(newRoot);
-
 	},
 	AddItem_click: function(me) {
 		var tree = App.get(me.up('window'),"treepanel#T0");
