@@ -181,7 +181,8 @@ App.view.define('VSaisie', {
 							height: "100%",
 							layout: 'fit',
 							source: {
-								ali: 3
+								ali: 3,
+								type: "Z1"
 							},
 							sourceConfig: {
 								ali: {
