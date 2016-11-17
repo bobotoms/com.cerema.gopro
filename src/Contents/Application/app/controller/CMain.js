@@ -122,7 +122,7 @@ App.controller.define('CMain', {
 					parentOAElement: parent,
 					idOuvrage: r.insertId,
 					idElement: store.items[i].data.name.split('c')[1],
-					idType: App.get(me.up('window'),"combo#cboType").getValue()
+					idType: App.get(me.up('window'),"combo#type").getValue()
 				});
 			}
 		}
