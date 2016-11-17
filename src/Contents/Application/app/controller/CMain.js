@@ -108,6 +108,7 @@ App.controller.define('CMain', {
 					if (r.data[i].typeCaracteristique=="STRING") source[r.data[i].nomCaracteristique]="-";
 					if (r.data[i].typeCaracteristique=="NUMBER") source[r.data[i].nomCaracteristique]=.0;
 					if (r.data[i].typeCaracteristique=="SELECT") {
+						source[r.data[i].nomCaracteristique]="";
 						var items=r.data[i].valeursCaracteristique.split(',');
 						if (items.length>0) {
 							var Item=[];
