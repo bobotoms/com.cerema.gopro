@@ -209,16 +209,11 @@ App.controller.define('CMain', {
   			for (i = 0; i < len; i++) result.appendChild(clone(node.childNodes[i]));
   			return result;
 		};
-		try {
-			var CStore=App.get("VSaisie treepanel").getStore();
-			var oldRoot = CStore.getRootNode(),
-			newRoot = clone(oldRoot);
-			App.get(me.up('window'),'treepanel#T1').getStore().setRootNode(newRoot);
-			App.get(me.up('window'),'treepanel#T1').expandAll();
-		} catch(e) {
-			console.log(App.get("VSaisie treepanel").getStore());
-			console.log(e);	
-		};
+		var CStore=App.get("VSaisie treepanel").getStore();
+		var oldRoot = CStore.getRootNode(),
+		newRoot = clone(oldRoot);
+		App.get(me,'treepanel#T1').getStore().setRootNode(newRoot);
+		App.get(me,'treepanel#T1').expandAll();
 		App.get(me,'treepanel#T0').getStore().getProxy().extraParams.type=me.type_item;
 		App.get(me,'treepanel#T0').getStore().load();
 		App.get(me,'treepanel#T0').getStore().on('load',function(){
