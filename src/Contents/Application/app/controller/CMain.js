@@ -101,6 +101,8 @@ App.controller.define('CMain', {
 	},
 	new_ouvrage_record: function(me) {
 		var store=App.get(me.up('window'),"treepanel").getStore().data;
+		console.log(store);
+		return;
 		App.DB.post('gopro://ouvrages',me.up('window'),function(r){
 			if (!r.insertId) {
 				App.notify("Impossible d'enregistrer la fiche");
