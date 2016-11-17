@@ -59,7 +59,7 @@ App.controller.define('CMain', {
 				click: "add_item_click"
 			},
 			"VSaisie treepanel": {
-				beforeedit: "treeSaisie_beforeedit"	
+				beforeedit: "treeSaisie_beforeedit"
 			},
 			"VAddItem": {
 				show: "VAddItem_onShow"
@@ -81,6 +81,9 @@ App.controller.define('CMain', {
 			},
 			"VCharacteristics treepanel#T0": {
 				itemclick: "treeT0_click"
+			},
+			"VCharacteristics grid#T1": {
+				edit: "charact_grid_edit"
 			}
 		});
 		
@@ -88,6 +91,9 @@ App.controller.define('CMain', {
 			p.onLoad(p);
 		});
 		
+	},
+	charact_grid_edit: function(me,store) {
+		console.log(store);	
 	},
 	treeT0_click: function(me,store) {
 		var store=App.store.create('gopro://caracteristiques?idType='+store.data.type_element);
