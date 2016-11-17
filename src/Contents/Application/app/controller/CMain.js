@@ -99,7 +99,7 @@ App.controller.define('CMain', {
 	treeSaisie_click: function(me,o) {
 		console.log(me);
 		console.log(o);
-		alert('x');
+		alert(o.data.name);
 	},
 	charact_validate_click: function(me) {
 		App.DB.get('gopro://@caracteristiques',function(r) {
