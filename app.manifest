@@ -59,7 +59,8 @@
     "plugins": [],
     "api": [
         "MyService",
-        "Elements"
+        "Elements",
+        "Ouvrages"
     ],
     "db": [
         "gopro"
