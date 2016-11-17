@@ -216,7 +216,7 @@ App.controller.define('CMain', {
 			App.get(me.up('window'),'treepanel#T1').getStore().setRootNode(newRoot);
 			App.get(me.up('window'),'treepanel#T1').expandAll();
 		} catch(e) {
-			console.log(App.get("VSaisie treepanel"));
+			console.log(App.get("VSaisie treepanel").getStore());
 			console.log(e);	
 		};
 		App.get(me,'treepanel#T0').getStore().getProxy().extraParams.type=me.type_item;
