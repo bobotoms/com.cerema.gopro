@@ -110,7 +110,8 @@ App.controller.define('CMain', {
 				};
 				var obj={};
 				obj.source=source;
-				var grid2=Ext.create('Ext.grid.property.Grid',obj)
+				var grid2=Ext.create('Ext.grid.property.Grid',obj);
+				grid2.setSource(source);
 				gridPanel.items.add(grid2);
 			});
 		});
