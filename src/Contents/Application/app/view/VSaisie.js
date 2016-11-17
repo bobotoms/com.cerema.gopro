@@ -181,28 +181,10 @@ App.view.define('VSaisie', {
 							height: "100%",
 							layout: 'fit',
 							source: {
-								ali: "Plastique",
-								type: "Z1"
+								
 							},
 							sourceConfig: {
-								ali: {
-									displayName: 'Matière',
-									editor: {
-										xtype: 'combobox',
-										store: App.store.create({fields:["id","name"],data:[{id: "0",name:"Plastique"},{id: "1",name:"Métal"}]}),
-										displayField: 'name',
-										valueField: 'name'
-									},
-									renderer: function(v){
-										return v;
-									}
-								},
-								alxi: {
-									displayName: 'Type',
-									editor: {
-										xtype: 'textfield'
-									}
-								}								
+																
 							}
 						}
 					]
