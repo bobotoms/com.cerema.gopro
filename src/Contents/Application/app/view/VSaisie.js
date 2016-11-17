@@ -82,7 +82,7 @@ App.view.define('VSaisie', {
 						fieldLabel: "Famille",
 						itemId: "famille",
 						editable: false,
-						store: App.store.create('gopro://familles',{autoLoad:true}),
+						store: App.store.create('gopro://familles{nomFamille+,idFamille}',{autoLoad:true}),
 						displayField: "nomFamille",
 						valueField: "idFamille",
 						labelAlign: "top"
