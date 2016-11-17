@@ -39,7 +39,11 @@ App.view.define('Settings.VCharacteristics',{
             {
 				xtype: "button",
 				text: "Valider",
-				itemId: "validate"
+				itemId: "valid",
+				handler: function(me) {
+					alert('z');
+					console.log(me);
+				}
 			}
         ];	
 		this.items = [
