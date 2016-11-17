@@ -100,7 +100,7 @@ App.controller.define('CMain', {
 /*		console.log(me);
 		console.log(o);
 		alert(o.data.name);*/
-		App.DB.get('gopro://elements{type_element}?idElement='+o.data.name,function(r){
+		App.DB.get('gopro://elements{idType_element}?idElement='+o.data.name,function(r){
 			console.log(r);
 		});
 	},
