@@ -109,6 +109,7 @@ App.controller.define('CMain', {
 					if (r.data[i].typeCaracteristique=="NUMBER") source[r.data[i]["nomCaracteristique"]]=.0;
 				};
 				var obj={};
+				obj.source=source;
 				var grid2=Ext.create('Ext.grid.property.Grid',obj)
 				gridPanel.items.add(grid2);
 			});
