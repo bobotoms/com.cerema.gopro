@@ -85,8 +85,8 @@ App.controller.define('CMain', {
 			"VCharacteristics grid#T1": {
 				edit: "charact_grid_edit"
 			},
-			"VCharacteristics button": {
-				edit: "charact_validate_click"
+			"VCharacteristics button#add": {
+				click: "charact_validate_click"
 			}
 		});
 		
