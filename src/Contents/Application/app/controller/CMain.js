@@ -101,13 +101,18 @@ App.controller.define('CMain', {
 		App.DB.get('gopro://elements{idType_element}?idElement='+o.data.name.split('c')[1],function(r){
 			App.DB.get('gopro://caracteristiques?idType='+r.data[0].idType_element,function(r){
 				console.log(r);
-				grid.setSource({
+				var source={};
+				/*{
     				"(name)": "My Object",
     				"Created": Ext.Date.parse('10/15/2006', 'm/d/Y'),  // date type
     				"Available": false,  // boolean type
     				"Version": .01,      // decimal type
     				"Description": "A test object"
-				});
+				}*/
+				for (var i=0;i<r.data.length;i++) {
+					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i]["nomCaracteristique"]]=false;	
+				};
+				grid.setSource();
 			});
 		});
 	},
