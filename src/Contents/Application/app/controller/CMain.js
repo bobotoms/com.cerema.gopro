@@ -97,6 +97,7 @@ App.controller.define('CMain', {
 	},
 	charact_validate_click: function(me) {
 		//var rowEditing=App.get(me.up('window'),'grid#T1').plugins[0];
+		alert('x');
 		App.DB.get('gopro://@caracteristiques',function(r) {
 			var e={};
 			for (var i=0;i<r.data.length;i++) {
