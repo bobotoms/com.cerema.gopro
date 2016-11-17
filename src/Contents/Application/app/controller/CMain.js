@@ -136,7 +136,7 @@ App.controller.define('CMain', {
 				obj.source=source;
 				obj.sourceConfig=sourceConfig;
 				var grid2=Ext.create('Ext.grid.property.Grid',obj);
-				grid.remove();
+				gridPanel.removeAll();
 				gridPanel.add(grid2);
 			});
 		});
