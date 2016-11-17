@@ -120,6 +120,7 @@ App.controller.define('CMain', {
 				gridPanel.remove(grid);
 				//grid2.setSource(source);
 				gridPanel.items.add(grid2);
+				gridPanel.doLayout();
 			});
 		});
 	},
