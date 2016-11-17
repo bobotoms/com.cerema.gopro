@@ -92,12 +92,12 @@ App.controller.define('CMain', {
 		});
 		
 	},
-	charact_grid_edit: function(me,store) {
-		var data=store.record.data;
+	charact_grid_edit: function(ed,o) {
+		var data=o.store.record.data;
 		delete data.creation;
 		delete data.modif;
 		App.DB.post("gopro://caracteristiques",data,function(r){
-			me.up('grid').getStore().load();
+			o.grid.getStore().load();
 		});
 	},
 	treeT0_click: function(me,store) {
