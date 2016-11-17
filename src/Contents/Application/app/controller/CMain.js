@@ -103,7 +103,7 @@ App.controller.define('CMain', {
 				e[r.data[i].COLUMN_NAME]='';
 			};
 			console.log(e);
-			e.idType=me.up('panel').type;
+			e.idType=App.get(me.up('panel').type,"combo#cboType").getValue();
 			alert(e.idType);
 			App.get('VCharacteristics grid#T1').getStore().insert(0, e);
 		});	
