@@ -103,7 +103,10 @@ App.controller.define('CMain', {
 				console.log(r);
 				var source={};
 				for (var i=0;i<r.data.length;i++) {
-					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i]["nomCaracteristique"]]=false;	
+					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i]["nomCaracteristique"]]=Ext.create('Ext.form.field.ComboBox',{
+						value: "test",
+						editable: true
+					});	
 					if (r.data[i].typeCaracteristique=="STRING") source[r.data[i]["nomCaracteristique"]]="-";
 					if (r.data[i].typeCaracteristique=="NUMBER") source[r.data[i]["nomCaracteristique"]]=.0;
 				};
