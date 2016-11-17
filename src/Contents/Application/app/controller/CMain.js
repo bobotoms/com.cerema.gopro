@@ -93,7 +93,7 @@ App.controller.define('CMain', {
 		
 	},
 	charact_grid_edit: function(ed,o) {
-		var data=o.store.record.data;
+		var data=o.record.data;
 		delete data.creation;
 		delete data.modif;
 		App.DB.post("gopro://caracteristiques",data,function(r){
