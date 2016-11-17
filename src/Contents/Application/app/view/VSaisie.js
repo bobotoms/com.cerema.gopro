@@ -174,18 +174,24 @@ App.view.define('VSaisie', {
 							height: "100%"
 						},
 						{
-							xtype: 'propertygrid',
-							flex: 1,
 							border: false,
-							labelAlign: "top",
+							flex: 1,
 							height: "100%",
-							layout: 'fit',
-							source: {
-								
-							},
-							sourceConfig: {
-																
-							}
+							layout: "fit",
+							items: [
+							{
+								xtype: 'propertygrid',
+								flex: 1,
+								border: false,
+								height: "100%",
+								source: {
+
+								},
+								sourceConfig: {
+
+								}
+							}								
+							]
 						}
 					]
 				}
