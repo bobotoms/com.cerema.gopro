@@ -8,7 +8,7 @@ App.view.define('VSaisie', {
 		this.title="Saisie";
 		this.layout="vbox";
 		this.border=false;
-		this.width = 900;
+		this.width = 950;
         this.height = 630;
 		this.bodyStyle="background-color: white";
         this.bbar = [
