@@ -101,7 +101,7 @@ App.controller.define('CMain', {
 		console.log(o);
 		alert(o.data.name);*/
 		App.DB.get('gopro://elements{idType_element}?idElement='+o.data.name.split('c')[1],function(r){
-			App.DB.get('gopro://caracteristiques?idType='+r[0].idType_element,function(r){
+			App.DB.get('gopro://caracteristiques?idType='+r.data[0].idType_element,function(r){
 				console.log(r);
 			});
 		});
