@@ -103,7 +103,9 @@ App.controller.define('CMain', {
 				e[r.data[i].COLUMN_NAME]='';
 			};
 			console.log(e);
-			App.get(me.up('panel'),'grid#T1').getStore().insert(0, e);
+			e.idType=me.up('panel').type;
+			alert(e.idType);
+			App.get('VCharacteristics grid#T1').getStore().insert(0, e);
 		});	
 	},
 	charact_grid_edit: function(ed,o) {
