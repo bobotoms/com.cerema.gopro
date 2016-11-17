@@ -122,7 +122,7 @@ App.view.define('VMain', {
 							flex: 1
 						}
 					],
-					store: App.store.create({fields:[],data:[]})
+					store: App.store.create("App.Ouvrages.getAll",{autoLoad: true})
 				},
 				{
 					xtype: "VCharacteristics",
