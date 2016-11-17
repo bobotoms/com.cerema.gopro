@@ -62,6 +62,7 @@ App.view.define('Settings.VCharacteristics',{
 			tbar: [
 			'->',
 			{
+				xtype: "button",
 				text: "Ajouter",
 				itemId: "add"
 			}
