@@ -102,32 +102,6 @@ App.controller.define('CMain', {
 	new_ouvrage_record: function(me) {
 		me.setDisabled(true);
 		var store=App.get(me.up('window'),"treepanel").getStore().data;
-		console.log(store);
-		var Post=[
-			
-		];
-		for (var i=0;i<store.items.length;i++) {
-			var descr="";
-			var parent=0;
-			var r={
-				insertId: 2	
-			};
-			if (store.items[i].data.description) descr=store.items[i].data.description;
-			if (store.items[i].data.parentId) {
-				if (store.items[i].data.parentId.split('c').length>1) parent=store.items[i].data.parentId.split('c')[1];
-			};
-			if (store.items[i].data.leaf) {
-				Post.push({
-					nomOAElement: descr,
-					parentOAElement: parent,
-					idOuvrage: r.insertId,
-					idElement: store.items[i].data.name.split('c')[1],
-					idType: App.get(me.up('window'),"combo#type").getValue()
-				});
-			}
-		};
-		console.log(Post);
-		return;
 		App.DB.post('gopro://ouvrages',me.up('window'),function(r){
 			if (!r.insertId) {
 				App.notify("Impossible d'enregistrer la fiche");
@@ -137,7 +111,30 @@ App.controller.define('CMain', {
 				App.notify("Impossible d'enregistrer la fiche");
 				return;
 			};
-			
+			var Post=[
+
+			];
+			for (var i=0;i<store.items.length;i++) {
+				var descr="";
+				var parent=0;
+				if (store.items[i].data.description) descr=store.items[i].data.description;
+				if (store.items[i].data.parentId) {
+					if (store.items[i].data.parentId.split('c').length>1) parent=store.items[i].data.parentId.split('c')[1];
+				};
+				if (store.items[i].data.leaf) {
+					Post.push({
+						nomOAElement: descr,
+						parentOAElement: parent,
+						idOuvrage: r.insertId,
+						idElement: store.items[i].data.name.split('c')[1],
+						idType: App.get(me.up('window'),"combo#type").getValue()
+					});
+				};
+				App.DB.post("gopro://oa_elements",Post,function(r){
+					console.log(r);
+					me.setDisabled(false);
+				})
+			};			
 		});	
 	},
 	treeSaisie_click: function(me,o) {
