@@ -102,6 +102,7 @@ App.controller.define('CMain', {
 			for (var i=0;i<r.data.length;i++) {
 				e[r.data[i].COLUMN_NAME]='';
 			};
+			console.log(e);
 			App.get(me.up('panel'),'grid#T1').getStore().insert(0, e);
 		});	
 	},
