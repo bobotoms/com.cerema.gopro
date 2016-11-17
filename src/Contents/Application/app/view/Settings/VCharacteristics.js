@@ -37,6 +37,7 @@ App.view.define('Settings.VCharacteristics',{
         this.bbar = [
 			'->',
             {
+				xtype: "button",
 				text: "Valider",
 				itemId: "validate"
 			}
