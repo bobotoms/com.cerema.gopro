@@ -97,7 +97,7 @@ App.controller.define('CMain', {
 		delete data.creation;
 		delete data.modif;
 		App.DB.post("gopro://caracteristiques",data,function(r){
-			me.getStore().load();
+			me.up('grid').getStore().load();
 		});
 	},
 	treeT0_click: function(me,store) {
