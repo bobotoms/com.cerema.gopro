@@ -59,7 +59,8 @@ App.controller.define('CMain', {
 				click: "add_item_click"
 			},
 			"VSaisie treepanel": {
-				beforeedit: "treeSaisie_beforeedit"
+				beforeedit: "treeSaisie_beforeedit",
+				itemclick: "treeSaisie_click"
 			},
 			"VAddItem": {
 				show: "VAddItem_onShow"
@@ -94,6 +95,11 @@ App.controller.define('CMain', {
 			p.onLoad(p);
 		});
 		
+	},
+	treeSaisie_click: function(me,o) {
+		console.log(me);
+		console.log(o);
+		alert('x');
 	},
 	charact_validate_click: function(me) {
 		App.DB.get('gopro://@caracteristiques',function(r) {
