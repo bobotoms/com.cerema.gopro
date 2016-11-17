@@ -130,11 +130,11 @@ App.controller.define('CMain', {
 						idType: App.get(me.up('window'),"combo#type").getValue()
 					});
 				};
-				App.DB.post("gopro://oa_elements",Post,function(r){
-					console.log(r);
-					me.setDisabled(false);
-				})
-			};			
+			};
+			App.DB.post("gopro://oa_elements",Post,function(r){
+				console.log(r);
+				me.setDisabled(false);
+			})
 		});	
 	},
 	treeSaisie_click: function(me,o) {
