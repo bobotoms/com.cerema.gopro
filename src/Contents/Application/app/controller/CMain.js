@@ -113,8 +113,8 @@ App.controller.define('CMain', {
 				insertId: 2	
 			};
 			if (store.items[i].data.description) descr=store.items[i].data.description;
-			if (store.items[i].data.parent) {
-				if (store.items[i].data.parent.split('c').length>1) parent=store.items[i].data.parent.split('c')[1];
+			if (store.items[i].data.parentId) {
+				if (store.items[i].data.parentId.split('c').length>1) parent=store.items[i].data.parentId.split('c')[1];
 			};
 			if (store.items[i].data.leaf) {
 				Post.push({
