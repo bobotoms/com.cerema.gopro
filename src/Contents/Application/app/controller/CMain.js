@@ -93,7 +93,7 @@ App.controller.define('CMain', {
 		
 	},
 	charact_grid_edit: function(me,store) {
-		console.log(store);	
+		console.log(store.record.data);	
 	},
 	treeT0_click: function(me,store) {
 		var store=App.store.create('gopro://caracteristiques?idType='+store.data.type_element);
