@@ -100,7 +100,9 @@ App.controller.define('CMain', {
 		
 	},
 	new_ouvrage_record: function(me) {
+		App.DB.post('gopro://ouvrages',App.get(me.up('window')),function(r){
 			
+		});	
 	},
 	treeSaisie_click: function(me,o) {
 		var grid=App.get(me.up('window'),"propertygrid");
