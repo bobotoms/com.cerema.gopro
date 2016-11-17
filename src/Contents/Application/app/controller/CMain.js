@@ -111,6 +111,8 @@ App.controller.define('CMain', {
 				}*/
 				for (var i=0;i<r.data.length;i++) {
 					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i]["nomCaracteristique"]]=false;	
+					if (r.data[i].typeCaracteristique=="STRING") source[r.data[i]["nomCaracteristique"]]="-";
+					if (r.data[i].typeCaracteristique=="NUMBER") source[r.data[i]["nomCaracteristique"]]=.0;
 				};
 				grid.setSource(source);
 			});
