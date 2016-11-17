@@ -112,14 +112,16 @@ App.controller.define('CMain', {
 						if (items.length>0) {
 							var Item=[];
 							for (var i=0;i<items.length;i++) Item.push({value:items[i]});
-							sourceConfig[r.data[i].nomCaracteristique]={
+							/*sourceConfig[r.data[i].nomCaracteristique]={
 								editor: {
 									xtype: "combo",
+									queryMode: 'local',
+									editable: false,
 									displayField: "value",
 									valueField: "value",
-									store: App.store.create({fields:["value"],data:[],autoLoad: true})
+									store: App.store.create({fields:["value"],data:Item,autoLoad: true})
 								}
-							}
+							}*/
 						}
 					};
 				};
