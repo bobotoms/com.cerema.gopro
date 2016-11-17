@@ -37,13 +37,9 @@ App.view.define('Settings.VCharacteristics',{
         this.bbar = [
 			'->',
             {
-				/*xtype: "button",
+				xtype: "button",
 				text: "Valider",
-				itemId: "valid",
-				handler: function(me) {
-					alert('z');
-					console.log(me);
-				}*/
+				itemId: "validate"
 			}
         ];	
 		this.items = [
@@ -66,7 +62,8 @@ App.view.define('Settings.VCharacteristics',{
 			tbar: [
 			'->',
 			{
-				text: "Ajouter"
+				text: "Ajouter",
+				itemId: "add"
 			}
 			],
 			plugins: [
