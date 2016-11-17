@@ -102,6 +102,20 @@ App.controller.define('CMain', {
 	new_ouvrage_record: function(me) {
 		var store=App.get(me.up('window'),"treepanel").getStore().data;
 		console.log(store);
+		/*var Post=[
+			
+		];
+		for (var i=0;i<store.items.length;i++) {
+			if (store.items[i].data.leaf) {
+				Post.push({
+					nomOAElement:
+					parentOAElement:
+					idOuvrage:
+					idElement:
+					idType:
+				});
+			}
+		}*/
 		return;
 		App.DB.post('gopro://ouvrages',me.up('window'),function(r){
 			if (!r.insertId) {
