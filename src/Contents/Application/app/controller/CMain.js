@@ -104,7 +104,10 @@ App.controller.define('CMain', {
 			};
 			console.log(e);
 			var sm = App.get(me.up('panel').up('panel'),"treepanel#T0").getSelectionModel().getSelection();
-			console.log(sm);
+			if (sm.length==0) {
+				Ext.Msg.alert('GOPRO',"Vous devez sélectionner un élement du catalogue.");
+				return;	
+			};
 			e.idType=sm[0].data.type_element;
 			e.actif=1;
 			console.log(e);
