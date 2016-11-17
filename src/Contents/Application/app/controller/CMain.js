@@ -62,6 +62,9 @@ App.controller.define('CMain', {
 				beforeedit: "treeSaisie_beforeedit",
 				itemclick: "treeSaisie_click"
 			},
+			"VSaisie button#Record": {
+				click: "new_ouvrage_record"	
+			},
 			"VAddItem": {
 				show: "VAddItem_onShow"
 			},
@@ -95,6 +98,9 @@ App.controller.define('CMain', {
 			p.onLoad(p);
 		});
 		
+	},
+	new_ouvrage_record: function(me) {
+			
 	},
 	treeSaisie_click: function(me,o) {
 		var grid=App.get(me.up('window'),"propertygrid");
