@@ -125,7 +125,8 @@ App.controller.define('CMain', {
 					idType: App.get(me.up('window'),"combo#type").getValue()
 				});
 			}
-		}
+		};
+		console.log(Post);
 		return;
 		App.DB.post('gopro://ouvrages',me.up('window'),function(r){
 			if (!r.insertId) {
