@@ -64,11 +64,7 @@ App.view.define('Settings.VCharacteristics',{
 			{
 				xtype: "button",
 				text: "Ajouter",
-				itemId: "add",
-				handler: function(me) {
-					alert('x');
-					console.log(me);
-				}
+				itemId: "add"
 			}
 			],
 			plugins: [
