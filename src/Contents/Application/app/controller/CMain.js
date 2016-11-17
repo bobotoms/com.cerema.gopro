@@ -103,7 +103,7 @@ App.controller.define('CMain', {
 				e[r.data[i].COLUMN_NAME]='';
 			};
 			console.log(e);
-			var sm = App.get(me.up('panel').up('panel')."treepanel#T0").g.getSelectionModel();
+			var sm = App.get(me.up('panel').up('panel')."treepanel#T0").getSelectionModel();
         	var sel = sm.getSelection();
 			console.log(sel);
 			//e.idType=App.get("VCharacteristics treepanel#T0").getValue();
