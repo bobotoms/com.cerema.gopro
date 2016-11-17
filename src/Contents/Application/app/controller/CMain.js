@@ -112,7 +112,7 @@ App.controller.define('CMain', {
 				for (var i=0;i<r.data.length;i++) {
 					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i]["nomCaracteristique"]]=false;	
 				};
-				grid.setSource();
+				grid.setSource(source);
 			});
 		});
 	},
