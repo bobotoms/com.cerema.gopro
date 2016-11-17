@@ -100,6 +100,7 @@ App.controller.define('CMain', {
 		
 	},
 	new_ouvrage_record: function(me) {
+		alert(App.get(me.up('window')));
 		App.DB.post('gopro://ouvrages',App.get(me.up('window')),function(r){
 			console.log(r);
 		});	
