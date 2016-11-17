@@ -108,7 +108,18 @@ App.controller.define('CMain', {
 					if (r.data[i].typeCaracteristique=="NUMBER") source[r.data[i]["nomCaracteristique"]]=.0;
 				};
 				grid.setSource(source);
-				console.log(grid.sourceConfig)
+				grid.sourceConfig["X1"]={xtype: 'combo',
+											store: {
+												fields: ['display', 'value'],
+												data: [
+													{ 'display': 'négatif', 'value': 'négatif' },
+													{ 'display': 'positif', 'value': 'positif' }
+												]
+											},
+											queryMode: 'local',
+											displayField: 'display',
+											valueField: 'value',
+											editable: false}
 			});
 		});
 	},
