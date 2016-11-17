@@ -45,13 +45,13 @@ Elements={
 				var parent=r[i].parent;
 				if (!obj[id]) obj[id]={
 					id: id,
-					//name: "c"+id,
+					name: "c"+id,
 					text: r[i].nomElement,
 					leaf: true
 				};
 				O[id]={
 					id: id,
-					//name: "c"+id,
+					name: "c"+id,
 					text: r[i].nomElement,
 					parent: parent
 				};
