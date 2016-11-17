@@ -15,7 +15,6 @@ function GMap(l,m)
 		mapTypeId: google.maps.MapTypeId.MAP	
 	});
 	google.maps.event.trigger(map, 'resize');
-	//google.maps.event.addDomListener(window, 'load', initialize);
 	TMap.markers=[];
 	TMap.setMarker=function(l,m) {
 		var marker=new google.maps.Marker({
