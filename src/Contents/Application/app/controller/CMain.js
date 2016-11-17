@@ -84,6 +84,9 @@ App.controller.define('CMain', {
 			},
 			"VCharacteristics grid#T1": {
 				edit: "charact_grid_edit"
+			},
+			"VCharacteristics button#validate": {
+				edit: "charact_validate_click"
 			}
 		});
 		
@@ -91,6 +94,16 @@ App.controller.define('CMain', {
 			p.onLoad(p);
 		});
 		
+	},
+	charact_validate_click: function(me) {
+		//var rowEditing=App.get(me.up('window'),'grid#T1').plugins[0];
+		App.DB.get('gopro://@caracteristiques',function(r) {
+			var e={};
+			for (var i=0;i<r.data.length;i++) {
+				e[r.data[i].COLUMN_NAME]='';
+			};
+			App.get(me.up('window'),'grid#T1').getStore().insert(0, e);
+		});	
 	},
 	charact_grid_edit: function(ed,o) {
 		var data=o.record.data;
