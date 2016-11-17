@@ -103,7 +103,7 @@ App.controller.define('CMain', {
 				console.log(r);
 				var source={};
 				for (var i=0;i<r.data.length;i++) {
-					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i]["nomCaracteristique"]]={xtype: 'combo',
+					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i]["nomCaracteristique"]]={displayName: "toto",xtype: 'combo',
 											store: {
 												fields: ['display', 'value'],
 												data: [
