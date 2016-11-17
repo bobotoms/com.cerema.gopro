@@ -96,13 +96,11 @@ App.controller.define('CMain', {
 		
 	},
 	charact_validate_click: function(me) {
-		//var rowEditing=App.get(me.up('window'),'grid#T1').plugins[0];
 		App.DB.get('gopro://@caracteristiques',function(r) {
 			var e={};
 			for (var i=0;i<r.data.length;i++) {
 				e[r.data[i].COLUMN_NAME]='';
 			};
-			console.log(e);
 			var sm = App.get(me.up('panel').up('panel'),"treepanel#T0").getSelectionModel().getSelection();
 			if (sm.length==0) {
 				Ext.Msg.alert('GOPRO',"Vous devez sélectionner un élement du catalogue.");
@@ -130,6 +128,7 @@ App.controller.define('CMain', {
 	},
 	charact_cboFamille_select: function(me) {
 		App.get(me.up('panel'),'combo#cboType').setValue('');
+		App.get(me.up('panel'),'grid#T1').getStore().removeAll();
 		App.get(me.up('panel'),'treepanel#T0').getRootNode().removeAll();
 		var store=App.store.create('gopro://types{nomType+,idType}?idFamille='+me.getValue());
 		App.get(me.up('panel'),'combo#cboType').bindStore(store);
@@ -138,6 +137,7 @@ App.controller.define('CMain', {
 	charact_cbotype_select: function(me,store) {
 		console.log(store);	
 		App.get(me.up('panel'),'treepanel#T0').getRootNode().removeAll();
+		App.get(me.up('panel'),'grid#T1').getStore().removeAll();
 		App.get(me.up('panel'),'treepanel#T0').getStore().getProxy().extraParams.type=store.data.idType;
 		App.get(me.up('panel'),'treepanel#T0').getStore().load();
 		App.get(me.up('panel'),'treepanel#T0').getStore().on('load',function(){
