@@ -100,8 +100,17 @@ App.controller.define('CMain', {
 		
 	},
 	new_ouvrage_record: function(me) {
+		var store=App.get(me.up('window'),"treepanel").getStore().data;
 		App.DB.post('gopro://ouvrages',me.up('window'),function(r){
-			console.log(r);
+			if (!r.insertId) {
+				App.notify("Impossible d'enregistrer la fiche");
+				return;
+			};
+			if (r.insertId==0) {
+				App.notify("Impossible d'enregistrer la fiche");
+				return;
+			};
+			
 		});	
 	},
 	treeSaisie_click: function(me,o) {
