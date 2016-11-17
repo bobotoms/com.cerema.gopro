@@ -48,6 +48,7 @@ App.view.define('VSaisie', {
 				{
 					xtype: "textfield",
 					fieldLabel: "Latitude",
+					bindTo: "oa_y",
 					width: 250,
 					margin: {
 						left: 10,
@@ -57,6 +58,7 @@ App.view.define('VSaisie', {
 				{
 					xtype: "textfield",
 					fieldLabel: "Longitude",
+					bindTo: "oa_x",
 					width: 250,
 					margin: {
 						left: 10,
@@ -80,6 +82,7 @@ App.view.define('VSaisie', {
 					{
 						xtype: "combo",
 						fieldLabel: "Famille",
+						bindTo: "idFamille",
 						itemId: "famille",
 						editable: false,
 						store: App.store.create('gopro://familles{nomFamille+,idFamille}',{autoLoad:true}),
@@ -90,6 +93,7 @@ App.view.define('VSaisie', {
 					{
 						xtype: "combo",
 						fieldLabel: "Type",
+						bindTo: "idType",
 						itemId: "type",
 						editable: false,
 						width: 150,
@@ -108,6 +112,7 @@ App.view.define('VSaisie', {
 							left: 5 	
 						},
 						fieldLabel: "Département",
+						bindTo: "idDepartement",
 						store: App.store.create("gopro://departements"),
 						editable: false,
 						displayField: "nomDepartement",
@@ -121,8 +126,17 @@ App.view.define('VSaisie', {
 					width: "100%",
 					border: false,
 					fieldLabel: "Nom de l'ouvrage",
+					bindTo: "nomOuvrage",
 					labelAlign: "top"
 				},
+				{
+					xtype: "textfield",
+					width: "100%",
+					border: false,
+					fieldLabel: "Etiquette",
+					bindTo: "etiquetteOuvrage",
+					labelAlign: "top"
+				},					
 				{
 					html: "Eléments:",
 					border: false,
