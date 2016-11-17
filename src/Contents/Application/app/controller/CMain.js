@@ -101,12 +101,27 @@ App.controller.define('CMain', {
 		var gridPanel=grid.up('panel');
 		App.DB.get('gopro://elements{idType_element}?idElement='+o.data.name.split('c')[1],function(r){
 			App.DB.get('gopro://caracteristiques?idType='+r.data[0].idType_element,function(r){
-				console.log(r);
 				var source={};
+				var sourceConfig={};
 				for (var i=0;i<r.data.length;i++) {
-					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i]["nomCaracteristique"]]=false;	
-					if (r.data[i].typeCaracteristique=="STRING") source[r.data[i]["nomCaracteristique"]]="-";
-					if (r.data[i].typeCaracteristique=="NUMBER") source[r.data[i]["nomCaracteristique"]]=.0;
+					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i].nomCaracteristique]=false;	
+					if (r.data[i].typeCaracteristique=="STRING") source[r.data[i].nomCaracteristique]="-";
+					if (r.data[i].typeCaracteristique=="NUMBER") source[r.data[i].nomCaracteristique]=.0;
+					if (r.data[i].typeCaracteristique=="SELECT") {
+						var items=r.data[i].valeursCaracteristique.split(',');
+						if (items.length>0) {
+							var Item=[];
+							for (var i=0;i<items.length;i++) Item.push({value:items[i]});
+							sourceConfig[r.data[i].nomCaracteristique]={
+								editor: {
+									xtype: "combo",
+									displayField: "value",
+									valueField: "value",
+									store: App.store.create({fields:["value"],data:[],autoLoad: true})
+								}
+							}
+						}
+					};
 				};
 				var obj={
 					flex: 1,
@@ -116,9 +131,9 @@ App.controller.define('CMain', {
 					layout: 'fit'
 				};
 				obj.source=source;
+				obj.sourceConfig=sourceConfig;
 				var grid2=Ext.create('Ext.grid.property.Grid',obj);
 				gridPanel.remove(grid);
-				//grid2.setSource(source);
 				gridPanel.add(grid2);
 			});
 		});
