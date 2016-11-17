@@ -97,9 +97,8 @@ App.controller.define('CMain', {
 		
 	},
 	treeSaisie_click: function(me,o) {
-/*		console.log(me);
-		console.log(o);
-		alert(o.data.name);*/
+		var list=App.get(me.up('window'),"propertygrid");
+		console.log(list);
 		App.DB.get('gopro://elements{idType_element}?idElement='+o.data.name.split('c')[1],function(r){
 			App.DB.get('gopro://caracteristiques?idType='+r.data[0].idType_element,function(r){
 				console.log(r);
