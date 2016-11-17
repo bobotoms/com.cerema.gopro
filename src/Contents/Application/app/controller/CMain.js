@@ -100,22 +100,32 @@ App.controller.define('CMain', {
 		
 	},
 	new_ouvrage_record: function(me) {
+		me.setDisabled(true);
 		var store=App.get(me.up('window'),"treepanel").getStore().data;
 		console.log(store);
-		/*var Post=[
+		var Post=[
 			
 		];
 		for (var i=0;i<store.items.length;i++) {
+			var descr="";
+			var parent=0;
+			var r={
+				insertId: 2	
+			};
+			if (store.items[i].data.description) descr=store.items[i].data.description;
+			if (store.items[i].data.parent) {
+				if (store.items[i].data.parent.split('c').length>1) parent=store.items[i].data.parent.split('c')[1];
+			};
 			if (store.items[i].data.leaf) {
 				Post.push({
-					nomOAElement:
-					parentOAElement:
-					idOuvrage:
-					idElement:
-					idType:
+					nomOAElement: descr,
+					parentOAElement: parent,
+					idOuvrage: r.insertId,
+					idElement: store.items[i].data.name.split('c')[1],
+					idType: App.get(me.up('window'),"combo#cboType").getValue()
 				});
 			}
-		}*/
+		}
 		return;
 		App.DB.post('gopro://ouvrages',me.up('window'),function(r){
 			if (!r.insertId) {
