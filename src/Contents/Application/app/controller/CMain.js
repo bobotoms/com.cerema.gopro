@@ -103,7 +103,8 @@ App.controller.define('CMain', {
 				e[r.data[i].COLUMN_NAME]='';
 			};
 			console.log(e);
-			e.idType=App.get(me.up('panel').up('panel'),"treepanel#T0").getValue();
+			e.idType=App.get("VCharacteristics treepanel#T0").getValue();
+			e.actif=1;
 			console.log(e);
 			App.get(me.up('panel'),'grid#T1').getStore().insert(0, e);
 		});	
