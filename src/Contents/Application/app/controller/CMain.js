@@ -113,7 +113,7 @@ App.controller.define('CMain', {
 						if (items.length>0) {
 							var Item=[];
 							for (var j=0;j<items.length;j++) Item.push({value:items[j]});
-							/*sourceConfig[r.data[i].nomCaracteristique]={
+							sourceConfig[r.data[i].nomCaracteristique]={
 								editor: {
 									xtype: "combo",
 									queryMode: 'local',
@@ -122,7 +122,7 @@ App.controller.define('CMain', {
 									valueField: "value",
 									store: App.store.create({fields:["value"],data:Item,autoLoad: true})
 								}
-							}*/
+							}
 						}
 					};
 				};
