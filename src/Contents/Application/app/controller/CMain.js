@@ -108,7 +108,13 @@ App.controller.define('CMain', {
 					if (r.data[i].typeCaracteristique=="STRING") source[r.data[i]["nomCaracteristique"]]="-";
 					if (r.data[i].typeCaracteristique=="NUMBER") source[r.data[i]["nomCaracteristique"]]=.0;
 				};
-				var obj={};
+				var obj={
+					flex: 1,
+					border: false,
+					labelAlign: "top",
+					height: "100%",
+					layout: 'fit'
+				};
 				obj.source=source;
 				var grid2=Ext.create('Ext.grid.property.Grid',obj);
 				gridPanel.remove(grid);
