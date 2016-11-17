@@ -102,13 +102,6 @@ App.controller.define('CMain', {
 			App.DB.get('gopro://caracteristiques?idType='+r.data[0].idType_element,function(r){
 				console.log(r);
 				var source={};
-				/*{
-    				"(name)": "My Object",
-    				"Created": Ext.Date.parse('10/15/2006', 'm/d/Y'),  // date type
-    				"Available": false,  // boolean type
-    				"Version": .01,      // decimal type
-    				"Description": "A test object"
-				}*/
 				for (var i=0;i<r.data.length;i++) {
 					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i]["nomCaracteristique"]]=false;	
 					if (r.data[i].typeCaracteristique=="STRING") source[r.data[i]["nomCaracteristique"]]="-";
@@ -209,6 +202,19 @@ App.controller.define('CMain', {
 		
 	},
 	VAddItem_onShow: function(me) {
+		var clone = function(node) {
+  			var result = node.copy(),
+      		len = node.childNodes ? node.childNodes.length : 0,
+      		i;
+  			for (i = 0; i < len; i++) result.appendChild(clone(node.childNodes[i]));
+  			return result;
+		};
+		var CStore=App.get("VSaisie treepanel").getStore();
+		var oldRoot = CStore.getRootNode(),
+    	newRoot = clone(oldRoot);
+		App.get(me.up('window'),'treepanel#T1').getStore().setRootNode(newRoot);
+		App.get(me.up('window'),'treepanel#T1').expandAll();
+		
 		App.get(me,'treepanel#T0').getStore().getProxy().extraParams.type=me.type_item;
 		App.get(me,'treepanel#T0').getStore().load();
 		App.get(me,'treepanel#T0').getStore().on('load',function(){
