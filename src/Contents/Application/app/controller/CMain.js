@@ -104,7 +104,7 @@ App.controller.define('CMain', {
 			};
 			console.log(e);
 			e.idType=App.get(me.up('panel').up('panel'),"combo#cboType").getValue();
-			alert(e.idType);
+			console.log(e);
 			App.get('VCharacteristics grid#T1').getStore().insert(0, e);
 		});	
 	},
