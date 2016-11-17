@@ -37,13 +37,13 @@ App.view.define('Settings.VCharacteristics',{
         this.bbar = [
 			'->',
             {
-				xtype: "button",
+				/*xtype: "button",
 				text: "Valider",
 				itemId: "valid",
 				handler: function(me) {
 					alert('z');
 					console.log(me);
-				}
+				}*/
 			}
         ];	
 		this.items = [
