@@ -103,12 +103,7 @@ App.controller.define('CMain', {
 				console.log(r);
 				var source={};
 				for (var i=0;i<r.data.length;i++) {
-					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i]["nomCaracteristique"]]=false;	
-					if (r.data[i].typeCaracteristique=="STRING") source[r.data[i]["nomCaracteristique"]]="-";
-					if (r.data[i].typeCaracteristique=="NUMBER") source[r.data[i]["nomCaracteristique"]]=.0;
-				};
-				grid.setSource(source);
-				grid.sourceConfig["X1"]={xtype: 'combo',
+					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i]["nomCaracteristique"]]={xtype: 'combo',
 											store: {
 												fields: ['display', 'value'],
 												data: [
@@ -119,7 +114,11 @@ App.controller.define('CMain', {
 											queryMode: 'local',
 											displayField: 'display',
 											valueField: 'value',
-											editable: false}
+											editable: false};	
+					if (r.data[i].typeCaracteristique=="STRING") source[r.data[i]["nomCaracteristique"]]="-";
+					if (r.data[i].typeCaracteristique=="NUMBER") source[r.data[i]["nomCaracteristique"]]=.0;
+				};
+				grid.setSource(source);
 			});
 		});
 	},
