@@ -97,9 +97,12 @@ App.controller.define('CMain', {
 		
 	},
 	treeSaisie_click: function(me,o) {
-		console.log(me);
+/*		console.log(me);
 		console.log(o);
-		alert(o.data.name);
+		alert(o.data.name);*/
+		App.DB.get('gopro://elements{type_element}?idElement='+o.data.name,function(r){
+			console.log(r);
+		});
 	},
 	charact_validate_click: function(me) {
 		App.DB.get('gopro://@caracteristiques',function(r) {
