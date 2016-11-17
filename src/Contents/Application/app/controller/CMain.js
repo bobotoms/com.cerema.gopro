@@ -108,7 +108,7 @@ App.controller.define('CMain', {
 					if (r.data[i].typeCaracteristique=="NUMBER") source[r.data[i]["nomCaracteristique"]]=.0;
 				};
 				grid.setSource(source);
-				grid.down('gridcolumn[dataIndex=X1]').setEditor({
+				grid.down('gridcolumn[dataIndex="X1"]').setEditor({
 					xtype: "combo",
 					editable: true
 				});
