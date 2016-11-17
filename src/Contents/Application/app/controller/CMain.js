@@ -98,19 +98,18 @@ App.controller.define('CMain', {
 	},
 	treeSaisie_click: function(me,o) {
 		var grid=App.get(me.up('window'),"propertygrid");
+		var gridPanel=grid.up('panel');
 		App.DB.get('gopro://elements{idType_element}?idElement='+o.data.name.split('c')[1],function(r){
 			App.DB.get('gopro://caracteristiques?idType='+r.data[0].idType_element,function(r){
 				console.log(r);
 				var source={};
 				for (var i=0;i<r.data.length;i++) {
-					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i]["nomCaracteristique"]]=Ext.create('Ext.form.field.ComboBox',{
-						value: "test",
-						editable: true
-					});	
+					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i]["nomCaracteristique"]]=false;	
 					if (r.data[i].typeCaracteristique=="STRING") source[r.data[i]["nomCaracteristique"]]="-";
 					if (r.data[i].typeCaracteristique=="NUMBER") source[r.data[i]["nomCaracteristique"]]=.0;
 				};
-				grid.setSource(source);
+				var grid2=Ext.create('Ext.grid.property.Grid',obj)
+				gridPanel.items.add(grid2);
 			});
 		});
 	},
