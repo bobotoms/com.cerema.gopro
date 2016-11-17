@@ -112,7 +112,7 @@ App.controller.define('CMain', {
 						var items=r.data[i].valeursCaracteristique.split(',');
 						if (items.length>0) {
 							var Item=[];
-							for (var i=0;i<items.length;i++) Item.push({value:items[i]});
+							for (var j=0;j<items.length;j++) Item.push({value:items[j]});
 							/*sourceConfig[r.data[i].nomCaracteristique]={
 								editor: {
 									xtype: "combo",
