@@ -118,8 +118,14 @@ App.view.define('VMain', {
 					itemId: "gridO",
 					columns: [
 						{
+							text: "Ouvrage",
+							flex: 1,
+							dataIndex: "nomOuvrage"
+						},
+						{
 							text: "Dpt",
-							flex: 1
+							width: 150,
+							dataIndex: "nomDepartement"
 						}
 					],
 					store: App.store.create("App.Ouvrages.getAll",{autoLoad: true})

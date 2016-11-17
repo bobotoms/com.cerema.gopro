@@ -4,3 +4,4 @@ SELECT * FROM ouvrages
     left join geologies on geologies.idGeologie=ouvrages.idGeologie
     left join situations on situations.idSituation=ouvrages.idSituation
     left join acces on acces.idAcces=ouvrages.idAcces
+    left join departements on departements.idDepartement=ouvrages.idDepartement
