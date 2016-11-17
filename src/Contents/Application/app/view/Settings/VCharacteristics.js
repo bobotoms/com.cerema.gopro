@@ -34,14 +34,6 @@ App.view.define('Settings.VCharacteristics',{
 			itemId: "cboType"
 		}	
 		];
-        this.bbar = [
-			'->',
-            {
-				xtype: "button",
-				text: "Valider",
-				itemId: "validate"
-			}
-        ];	
 		this.items = [
 		{
 			xtype: "treepanel",
