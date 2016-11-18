@@ -109,6 +109,7 @@ App.controller.define('CMain', {
 		console.log(o);
 	},
 	VSaisie_onShow: function(me) {
+		me.element={};
 		if (me.idOuvrage) {
 			function getElements(PARAM,ndx,cb) {
 				App.Elements.getSelect(PARAM[ndx],App.get(me,"combo#type").getValue(),function(r){
@@ -199,6 +200,7 @@ App.controller.define('CMain', {
 		var grid=App.get(me.up('window'),"propertygrid");
 		var gridPanel=grid.up('panel');
 		me.up('window').element[o.data.name.split('c')[1]]=[];
+		me.up('window').curElement=o.data.name.split('c')[1];
 		App.DB.get('gopro://elements{idType_element}?idElement='+o.data.name.split('c')[1],function(r){
 			App.DB.get('gopro://caracteristiques?idType='+r.data[0].idType_element,function(r){
 				var source={};
