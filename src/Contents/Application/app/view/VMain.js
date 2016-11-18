@@ -45,13 +45,29 @@ App.view.define('VMain', {
 			xtype: "ribbon"
 		},
 		{
-			region: "south",
-			title: "Actualités",
-			itemId: "timeline",
-			height: 200,
-			layout: "fit",
-			animCollapse: true,
-			collapsible: true
+			title: "Actualités"
+			, region: 'south'
+			, itemId: "southpanel"
+			, border: false
+			, collapsible: true
+			, height: 195
+			, layout: "vbox"
+			, tbar: [
+			{
+				itemId: "ecrire"
+				, text: "Ecrire"
+			}
+			]
+			, items: [
+				{
+					width: "100%"
+					, itemId: "timeline"
+					, border: false
+					, autoScroll: true
+					, html: '<ul class="timeline"></ul>'
+					, flex: 1
+				}
+			]
 		},
 		{
 			region: "center",			
