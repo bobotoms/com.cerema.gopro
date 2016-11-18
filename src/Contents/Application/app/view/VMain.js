@@ -56,6 +56,7 @@ App.view.define('VMain', {
 			{
 				itemId: "ecrire"
 				, text: "Ecrire"
+				, iconCls: "pencil"
 			}
 			]
 			, items: [
