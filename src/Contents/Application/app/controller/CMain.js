@@ -133,6 +133,7 @@ App.controller.define('CMain', {
 						for (var i=0;i<r.data.length;i++) {
 							PARAM.push(r.data[i].idElement);
 						};
+						console.log(PARAM);
 						getElements(PARAM,0,function(){
 							console.log('all done.')
 						});
