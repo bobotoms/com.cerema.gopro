@@ -29,7 +29,7 @@ Elements={
 				cb(root);
 			});				
 	},
-	getSelect: function(itemId,idType,cb) {
+	getSelect: function(items,idType,cb) {
 		var db=Elements.using('db');
 		var ff=[];	
 		var O={};
@@ -68,24 +68,30 @@ Elements={
 			if (!obj[itemId].leaf) O[itemId].text="<b>"+O[itemId].text+"</b>";
 			
 			var objs=[];
-			while (itemId!=0) {
-				objs.push(O[itemId]);
-				itemId=O[itemId].parent;
-			};
-
-			for (var i=objs.length-1;i>=0;i--) {
-				if (objs[i-1]) {
-					objs[i].leaf=false;
-					objs[i].children=[];
-					objs[i].id="c"+objs[i].id;
-				} else {
-					objs[i].leaf=true;
-					objs[i].id=Elements.using('shortid').generate();
+			if (!items.isArray()) items=[
+				item: items	
+			];
+			for (var z=0;z<items.length;z++) {
+				var itemId=items[z];
+				while (itemId!=0) {
+					objs.push(O[itemId]);
+					itemId=O[itemId].parent;
 				};
+
+				for (var i=objs.length-1;i>=0;i--) {
+					if (objs[i-1]) {
+						objs[i].leaf=false;
+						objs[i].children=[];
+						objs[i].id="c"+objs[i].id;
+					} else {
+						objs[i].leaf=true;
+						objs[i].id=Elements.using('shortid').generate();
+					};
+				};
+
+
+				for (var i=objs.length-1;i>=0;i--) Obj.push(objs[i]); 
 			};
-			
-			
-			for (var i=objs.length-1;i>=0;i--) Obj.push(objs[i]); 
 			
 			cb(Obj);
 			
