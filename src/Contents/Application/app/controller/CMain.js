@@ -105,7 +105,7 @@ App.controller.define('CMain', {
 		
 	},
 	propertygrid_edit: function(ed,o) {
-		var store=App.get(me.up('window'),"treepanel").getStore().data;
+		var store=App.get(o.grid.up('window'à,"treepanel").getStore().data;
 		console.log(store);
 		console.log('------');
 		console.log(o);
