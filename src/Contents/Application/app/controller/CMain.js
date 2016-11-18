@@ -103,7 +103,9 @@ App.controller.define('CMain', {
 	},
 	VSaisie_onShow: function(me) {
 		if (me.idOuvrage) {
-			alert(me.idOuvrage);	
+			App.DB.get('gopro://ouvrages?idOuvrage='+me.idOuvrage,me,function(r){
+				
+			});
 		};
 	},
 	gridO_select: function(me,store) {
