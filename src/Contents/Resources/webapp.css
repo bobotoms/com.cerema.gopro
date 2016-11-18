@@ -56,6 +56,10 @@
 	background-image: url(webapp/characteristics.png)
 }
 
+.items {
+	background-image: url(webapp/items.png)
+}
+
 .timeline {
   list-style: none;
 }
