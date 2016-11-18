@@ -112,7 +112,7 @@ App.controller.define('CMain', {
 		console.log(idx);
 		console.log(store);
 		console.log('------');
-		console.log(o);
+		console.log(o.store.data.items);
 	},
 	VSaisie_onShow: function(me) {
 		me.element={};
