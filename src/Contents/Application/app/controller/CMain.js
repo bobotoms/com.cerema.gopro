@@ -99,7 +99,7 @@ App.controller.define('CMain', {
 		
 	},
 	gridO_select: function(me,store) {
-		alert(store.data.idOuvrage);	
+		App.view.create('VSaisie',{idOuvrage:store.data.idOuvrage,modal: true}).show().center();
 	},
 	new_ouvrage_record: function(me) {
 		me.setDisabled(true);
