@@ -99,7 +99,7 @@ App.controller.define('CMain', {
 		
 	},
 	gridO_select: function(me,store) {
-		console.log(store);	
+		//console.log(store.data);	
 	},
 	new_ouvrage_record: function(me) {
 		me.setDisabled(true);
@@ -213,7 +213,6 @@ App.controller.define('CMain', {
 		var store=App.store.create('gopro://caracteristiques?idType='+store.data.type_element);
 		App.get('VCharacteristics grid#T1').bindStore(store);
 		store.load();
-		//console.log();
 	},
 	charact_cboFamille_select: function(me) {
 		App.get(me.up('panel'),'combo#cboType').setValue('');
@@ -339,8 +338,7 @@ App.controller.define('CMain', {
 	},
 	showSettingsCharacteristics: function(p) {
 		hideForms();
-		App.get("mainform panel#setup_characteristics").show();
-		//App.view.create("Settings.VCharacteristics",{modal: true}).show().center();	
+		App.get("mainform panel#setup_characteristics").show();	
 	},
 	onLoad: function(p)
 	{
@@ -465,7 +463,8 @@ App.controller.define('CMain', {
 		App.get('mainform ribbon').addTab(tab1, true);
 		App.get('mainform ribbon').addTab(tab2, false);
 		App.get('mainform ribbon').addTab(tab3, false);
-		App.get('mainform ribbon').addTab(tab4, false);		
+		App.get('mainform ribbon').addTab(tab4, false);	
+		
 	}
 	
 	
