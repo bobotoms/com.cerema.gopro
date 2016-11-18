@@ -65,14 +65,15 @@ Elements={
 			var i=1;
 			
 			var Obj=[];
-			if (!obj[itemId].leaf) O[itemId].text="<b>"+O[itemId].text+"</b>";
 			
-			var objs=[];
+			
 			if (!items.isArray()) items=[
 				items	
 			];
 			for (var z=0;z<items.length;z++) {
 				var itemId=items[z];
+				var objs=[];
+				if (!obj[itemId].leaf) O[itemId].text="<b>"+O[itemId].text+"</b>";
 				while (itemId!=0) {
 					objs.push(O[itemId]);
 					itemId=O[itemId].parent;
