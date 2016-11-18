@@ -51,6 +51,9 @@ App.controller.define('CMain', {
 			"mainform grid#gridO": {
 				itemdblclick: "gridO_select"	
 			},
+			"VSaisie": {
+				show: "VSaisie_onShow"	
+			},
 			"VSaisie combo#famille": {
 				select: "famille_select"
 			},
@@ -97,6 +100,9 @@ App.controller.define('CMain', {
 			p.onLoad(p);
 		});
 		
+	},
+	VSaisie_onShow: function(me) {
+		alert(me.idOuvrage);
 	},
 	gridO_select: function(me,store) {
 		App.view.create('VSaisie',{idOuvrage:store.data.idOuvrage,modal: true}).show().center();
