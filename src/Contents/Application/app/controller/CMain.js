@@ -108,7 +108,9 @@ App.controller.define('CMain', {
 			App.get(me,'combo#type').getStore().load();
 			App.get(me,'combo#famille').setDisabled(true);
 			App.get(me,'combo#type').setDisabled(true);
+			// On charge les premiers éléments
 			App.DB.get('gopro://ouvrages?idOuvrage='+me.idOuvrage,me,function(r){
+				// On continue par les éléments
 				
 			});
 		};
