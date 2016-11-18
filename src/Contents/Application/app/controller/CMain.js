@@ -107,8 +107,8 @@ App.controller.define('CMain', {
 	propertygrid_edit: function(ed,o) {
 		var store=App.get(o.grid.up('window'),"treepanel").getStore().data;
 		var selectedNode = App.get(o.grid.up('window'),"treepanel").getSelectionModel().getSelection();
-		//var idx = store.indexOf(selectedNode);
-		//alert(idx);
+		var idx = App.get(o.grid.up('window'),"treepanel").getStore().indexOf(selectedNode);
+		alert(idx);
 		console.log(selectedNode);
 		console.log(store);
 		for (var i=0;i<store.items.length;i++) {
