@@ -99,7 +99,7 @@ App.controller.define('CMain', {
 		
 	},
 	gridO_select: function(me,store) {
-		//console.log(store.data);	
+		alert(store.data.idOuvrage);	
 	},
 	new_ouvrage_record: function(me) {
 		me.setDisabled(true);
