@@ -124,7 +124,7 @@ App.controller.define('CMain', {
 			App.get(me,'combo#type').getStore().load();
 			App.get(me,'combo#famille').setDisabled(true);
 			App.get(me,'combo#type').setDisabled(true);
-			// On charge les premiers éléments
+			// On charge les premiers items
 			App.DB.get('gopro://ouvrages?idOuvrage='+me.idOuvrage,me,function(r){
 				console.log(r);
 				// On continue par les éléments
@@ -134,7 +134,6 @@ App.controller.define('CMain', {
 						for (var i=0;i<r.data.length;i++) {
 							PARAM.push(r.data[i].idElement);
 						};
-						console.log(PARAM);
 						getElements(PARAM,0,function(){
 							console.log('all done.')
 						});
