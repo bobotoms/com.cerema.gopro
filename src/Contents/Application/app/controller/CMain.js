@@ -112,6 +112,7 @@ App.controller.define('CMain', {
 			App.DB.get('gopro://ouvrages?idOuvrage='+me.idOuvrage,me,function(r){
 				// On continue par les éléments
 				App.DB.get('gopro://oa_elements?idOuvrage='+me.idOuvrage,function(r){
+					console.log(r);
 					if (r.length>0) {
 						for (var i=0;i<r.length;i++) {
 							alert(r[i].idElement);
