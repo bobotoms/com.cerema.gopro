@@ -346,6 +346,7 @@ App.controller.define('CMain', {
 		var html='<li><p class="timeline-date">%DATE%</p><div class="timeline-content"><h3>%POSTER%</h3><p>%COMMENT%</p></div></li>';
         var tpl=[];
 		App.DB.get('App.Notes.getAll',function(e,r){
+			console.log(r);
 			for (var i=0;i<r.result.data.length;i++) {
 				var results=html;
 				results=results.replace('%DATE%',r.result.data[i].date.toDate().toString('dd/MM/yyyy hh:mm'));
