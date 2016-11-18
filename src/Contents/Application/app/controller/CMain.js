@@ -435,6 +435,13 @@ App.controller.define('CMain', {
 						iconAlign: 'top',
 						rowspan: 3,
 						handler: p.showSettingsCharacteristics
+				},{
+						text: 'Eléments',
+						iconCls: "characteristics",
+						scale: 'medium',
+						iconAlign: 'top',
+						rowspan: 1,
+						handler: p.showSettingsCharacteristics					
 				}]
 			}
 			]
