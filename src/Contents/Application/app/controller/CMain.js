@@ -108,8 +108,8 @@ App.controller.define('CMain', {
 		var store=App.get(o.grid.up('window'),"treepanel").getStore().data;
 		var selectedNode = App.get(o.grid.up('window'),"treepanel").getSelectionModel().getSelection()[0];
 		var idx = App.get(o.grid.up('window'),"treepanel").getStore().indexOf(selectedNode);
+		store.items[idx].properties=[];
 		console.log(idx);
-		console.log(selectedNode);
 		console.log(store);
 		for (var i=0;i<store.items.length;i++) {
 			var item=store.items[i];
