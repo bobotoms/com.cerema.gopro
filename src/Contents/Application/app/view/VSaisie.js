@@ -31,6 +31,10 @@ App.view.define('VSaisie', {
 			border: false,
 			items: [
 			{
+				xtype: "textfield",
+				bindTo: "idOuvrage"
+			},
+			{
 				border: true,
 				layout: "vbox",
 				border: false,
