@@ -105,7 +105,9 @@ App.controller.define('CMain', {
 		
 	},
 	propertygrid_edit: function(ed,o) {
-		console.log(ed);
+		var store=App.get(me.up('window'),"treepanel").getStore().data;
+		console.log(store);
+		console.log('------');
 		console.log(o);
 	},
 	VSaisie_onShow: function(me) {
