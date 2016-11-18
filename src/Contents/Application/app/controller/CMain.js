@@ -103,6 +103,8 @@ App.controller.define('CMain', {
 	},
 	VSaisie_onShow: function(me) {
 		if (me.idOuvrage) {
+			var store=App.store.create('gopro://types',{autoLoad:true});
+			App.get(me,'combo#type').bindStore(store);
 			App.get(me,'combo#type').getStore().load();
 			App.DB.get('gopro://ouvrages?idOuvrage='+me.idOuvrage,me,function(r){
 				
