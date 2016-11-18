@@ -3,7 +3,6 @@ Elements={
 		var db=Elements.using('db');
 		var ff=[];	
 			var sql="SELECT idElement,parent,elements.idType_element,elements.nomElement,modif FROM elements join types_elements on elements.idType_element=types_elements.idType where elements.idType="+o.type+" order by parent";
-			console.log(sql);
 			var db=Elements.using('db');
 			db.query("gopro",sql,function(e,r){
 				var root=[];
@@ -64,13 +63,16 @@ Elements={
 				}
 			};
 			var i=1;
-			var objs=[];
+			
+			var Obj=[];
 			if (!obj[itemId].leaf) O[itemId].text="<b>"+O[itemId].text+"</b>";
+			
+			var objs=[];
 			while (itemId!=0) {
 				objs.push(O[itemId]);
 				itemId=O[itemId].parent;
 			};
-			var Obj=-1;
+
 			for (var i=objs.length-1;i>=0;i--) {
 				if (objs[i-1]) {
 					objs[i].leaf=false;
@@ -81,7 +83,7 @@ Elements={
 					objs[i].id=Elements.using('shortid').generate();
 				};
 			};
-			var Obj=[];
+			
 			
 			for (var i=objs.length-1;i>=0;i--) Obj.push(objs[i]); 
 			
