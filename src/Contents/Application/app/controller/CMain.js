@@ -68,7 +68,7 @@ App.controller.define('CMain', {
 				click: "new_ouvrage_record"	
 			},
 			"VSaisie propertygrid": {
-				edit: "propertygrid"
+				edit: "propertygrid_edit"
 			},
 			"VAddItem": {
 				show: "VAddItem_onShow"
@@ -103,6 +103,10 @@ App.controller.define('CMain', {
 			p.onLoad(p);
 		});
 		
+	},
+	propertygrid_edit: function(ed,o) {
+		console.log(ed);
+		console.log(o);
 	},
 	VSaisie_onShow: function(me) {
 		if (me.idOuvrage) {
