@@ -154,7 +154,7 @@ App.controller.define('CMain', {
 			};
 			App.DB.post("gopro://oa_elements",Post,function(r){
 				App.get('mainform grid#gridO').getStore().load();
-				me.close();
+				me.up('window').close();
 				me.setDisabled(false);
 			})
 		});	
