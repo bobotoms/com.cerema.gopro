@@ -115,8 +115,8 @@ App.controller.define('CMain', {
 							if (!App.get(me,"treepanel").getRootNode().store.getNodeById(r[i].id)) xnode.appendChild(r[i]);
 						};
 						App.get(me,"treepanel").expandAll();
-						if (ndx+1<PARAM.length) getElements(PARAM,ndx+1,cb); else cb();
 					}
+					if (ndx+1<PARAM.length) getElements(PARAM,ndx+1,cb); else cb();
 				});					
 			};
 			var store=App.store.create('gopro://types',{autoLoad:true});
