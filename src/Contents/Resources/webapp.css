@@ -60,6 +60,10 @@
 	background-image: url(webapp/items.png)
 }
 
+.table {
+	background-image: url(webapp/tables.png)	
+}
+
 .timeline {
   list-style: none;
 }
