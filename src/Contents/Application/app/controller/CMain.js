@@ -102,7 +102,9 @@ App.controller.define('CMain', {
 		
 	},
 	VSaisie_onShow: function(me) {
-		alert(me.idOuvrage);
+		if (me.idOuvrage) {
+			alert(me.idOuvrage);	
+		};
 	},
 	gridO_select: function(me,store) {
 		App.view.create('VSaisie',{idOuvrage:store.data.idOuvrage,modal: true}).show().center();
