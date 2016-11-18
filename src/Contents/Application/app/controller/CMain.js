@@ -357,18 +357,13 @@ App.controller.define('CMain', {
 	{
 		if (p.itemId) {
 			if (p.itemId=="mnu_saisie") {
-				/*TMap.setMarker('43.299999','5.4');
-				TMap.setMarker('43.299999','5.5');
-				TMap.markers[0].addListener('click',function(){
-					alert(this.getPosition());
-				})*/
 				
 			}
 		};			
 	},
 	clickme_onclick: function()
 	{
-		Ext.Msg.alert('Omneedia','hello world!');
+		
 	},
 	hideForms: function()
 	{
