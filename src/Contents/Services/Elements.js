@@ -67,7 +67,7 @@ Elements={
 			var Obj=[];
 			
 			
-			if (!items.isArray()) items=[
+			if (!Array.isArray(items)) items=[
 				items	
 			];
 			for (var z=0;z<items.length;z++) {
