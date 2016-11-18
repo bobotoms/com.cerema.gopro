@@ -69,7 +69,7 @@ Elements={
 			
 			var objs=[];
 			if (!items.isArray()) items=[
-				item: items	
+				items	
 			];
 			for (var z=0;z<items.length;z++) {
 				var itemId=items[z];
