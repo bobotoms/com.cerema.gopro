@@ -118,7 +118,7 @@ App.view.define('VSaisie', {
 						},
 						fieldLabel: "Département",
 						bindTo: "idDepartement",
-						store: App.store.create("gopro://departements"),
+						store: App.store.create("gopro://departements",{autoLoad:true}),
 						editable: false,
 						displayField: "nomDepartement",
 						valueField: "idDepartement",
