@@ -120,16 +120,18 @@ App.controller.define('CMain', {
 		me.setDisabled(true);
 		var store=App.get(me.up('window'),"treepanel").getStore().data;
 		App.DB.post('gopro://ouvrages',me.up('window'),function(r){
-			if (!r.insertId) {
-				App.notify("Impossible d'enregistrer la fiche");
-				me.setDisabled(false);
-				return;
-			};
-			if (r.insertId==0) {
-				App.notify("Impossible d'enregistrer la fiche");
-				me.setDisabled(false);
-				return;
-			};
+			if (!me.up('window').idOuvrage) {
+				if (!r.insertId) {
+					App.notify("Impossible d'enregistrer la fiche");
+					me.setDisabled(false);
+					return;
+				};
+				if (r.insertId==0) {
+					App.notify("Impossible d'enregistrer la fiche");
+					me.setDisabled(false);
+					return;
+				};
+			} else r.insertId=me.up('window').idOuvrage; 
 			var Post=[
 
 			];
