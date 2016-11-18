@@ -48,11 +48,11 @@ App.controller.define('CMain', {
 			"button#clickme": {
 				click: "clickme_onclick"
 			},
+			"mainform grid#gridO": {
+				itemdblclick: "gridO_select"	
+			},
 			"VSaisie combo#famille": {
 				select: "famille_select"
-			},
-			"VSaisie combo#type": {
-				
 			},
 			"VSaisie button#add_item": {
 				click: "add_item_click"
@@ -97,6 +97,9 @@ App.controller.define('CMain', {
 			p.onLoad(p);
 		});
 		
+	},
+	gridO_select: function(me,store) {
+		console.log(store);	
 	},
 	new_ouvrage_record: function(me) {
 		me.setDisabled(true);
