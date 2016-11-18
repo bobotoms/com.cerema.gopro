@@ -47,53 +47,11 @@ App.view.define('VMain', {
 		{
 			region: "south",
 			title: "Actualités",
+			itemId: "wiki",
 			height: 200,
 			layout: "fit",
 			animCollapse: true,
-			collapsible: true,
-			items: [
-				{
-					xtype: "grid",
-					columns: [
-					{
-						header: "Date",
-						width: 100,
-						dataIndex: "dat"
-					},
-					{
-						header: "",
-						width: 50,
-						dataIndex: "x"
-					},
-					{
-						header: "",
-						width: 50,
-						dataIndex: "y"
-					},
-					{
-						header: "Evènement",
-						flex: 1,
-						dataIndex: "evt"
-					}						
-					],
-					store: App.store.create({fields:["dat","x","y","evt"],data:[{
-						dat: "17/05/2016",
-						x: "N",
-						y: "JG",
-						evt: "Réunion des inspecteurs - Visioconférence - Lyon 14h"
-					},{
-						dat: "21/05/2016",
-						x: "L",
-						y: "RH",
-						evt: "Inspection RN 122 - Jean-Claude. Faire visite détaillée du filet en présence éboulis signalé"
-					},{
-						dat: "25/06/2016",
-						x: "N",
-						y: "JG",
-						evt: "Rappel: faire remonter vos inscriptions pour la journée thématique"
-					}]})
-				}				
-			]
+			collapsible: true
 		},
 		{
 			region: "center",			
