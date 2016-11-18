@@ -179,11 +179,13 @@ App.controller.define('CMain', {
 					});
 				};
 			};
-			App.DB.post("gopro://oa_elements",Post,function(r){
-				App.get('mainform grid#gridO').getStore().load();
-				me.up('window').close();
-				me.setDisabled(false);
-			})
+			App.DB.del("gopro://oa_elements?idOuvrage="+r.insertId,function(e) {
+				App.DB.post("gopro://oa_elements",Post,function(r){
+					App.get('mainform grid#gridO').getStore().load();
+					me.up('window').close();
+					me.setDisabled(false);
+				});				
+			});
 		});	
 	},
 	treeSaisie_click: function(me,o) {
