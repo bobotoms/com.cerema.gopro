@@ -108,7 +108,7 @@ App.controller.define('CMain', {
 		var store=App.get(o.grid.up('window'),"treepanel").getStore().data;
 		var selectedNode = App.get(o.grid.up('window'),"treepanel").getSelectionModel().getSelection();
 		var idx = App.get(o.grid.up('window'),"treepanel").getSelectionModel().getCurrentPosition();
-		alert(idx);
+		console.log(idx);
 		console.log(selectedNode);
 		console.log(store);
 		for (var i=0;i<store.items.length;i++) {
