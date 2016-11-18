@@ -117,7 +117,7 @@ App.controller.define('CMain', {
 						for (var i=0;i<r.data.length;i++) {
 							PARAM.push(r.data[i].idElement);
 						}
-						App.Elements.getSelect(PARAM,App.get(me,"combo#type").getValue(),function(r){
+						App.Elements.getSelect(PARAM[0],App.get(me,"combo#type").getValue(),function(r){
 							if (!r[r.length-1].leaf) r[r.length-1].text="<b>"+r[r.length-1].text+"</b>";
 							console.log(r);
 							for (var i=0;i<r.length;i++) {	
