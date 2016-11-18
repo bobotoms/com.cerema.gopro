@@ -112,10 +112,24 @@ App.controller.define('CMain', {
 			App.DB.get('gopro://ouvrages?idOuvrage='+me.idOuvrage,me,function(r){
 				// On continue par les éléments
 				App.DB.get('gopro://oa_elements?idOuvrage='+me.idOuvrage,function(r){
+					var PARAM=[];
 					if (r.data.length>0) {
 						for (var i=0;i<r.data.length;i++) {
-							alert(r.data[i].idElement);
+							PARAM.push(r.data[i].idElement);
 						}
+						App.Elements.getSelect(PARAM,App.get(me,"combo#type").getValue(),function(r){
+							if (!r[r.length-1].leaf) r[r.length-1].text="<b>"+r[r.length-1].text+"</b>";
+							console.log(r);
+							for (var i=0;i<r.length;i++) {	
+								var xnode=App.get(me,"treepanel").getRootNode().store.getNodeById('c'+r[i].parent);
+								if (!xnode) {
+									if (!App.get(me,"treepanel").getRootNode().store.getNodeById(r[i].id)) App.get(me,"treepanel").getRootNode().appendChild(r[i]); 
+								} else {
+									if (!App.get(me,"treepanel").getRootNode().store.getNodeById(r[i].id)) xnode.appendChild(r[i]);
+								};
+								App.get(me,"treepanel").expandAll();
+							}
+						});						
 					}
 				});
 			});
