@@ -112,7 +112,13 @@ App.controller.define('CMain', {
 		console.log(idx);
 		console.log(store);
 		console.log('------');
-		console.log(o.store.data.items);
+		for (var i=0;i<o.store.data.items.length;i++) {
+			store.items[idx].properties.push({
+				name: o.store.data.items[i].name,
+				value: o.store.data.items[i].value
+			});
+		};
+		//console.log(o.store.data.items);
 	},
 	VSaisie_onShow: function(me) {
 		me.element={};
