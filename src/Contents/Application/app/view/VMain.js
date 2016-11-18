@@ -47,7 +47,7 @@ App.view.define('VMain', {
 		{
 			region: "south",
 			title: "Actualités",
-			itemId: "wiki",
+			itemId: "timeline",
 			height: 200,
 			layout: "fit",
 			animCollapse: true,
