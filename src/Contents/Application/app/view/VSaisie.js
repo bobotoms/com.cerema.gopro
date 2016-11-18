@@ -32,7 +32,8 @@ App.view.define('VSaisie', {
 			items: [
 			{
 				xtype: "textfield",
-				bindTo: "idOuvrage"
+				bindTo: "idOuvrage",
+				hidden: true
 			},
 			{
 				border: true,
