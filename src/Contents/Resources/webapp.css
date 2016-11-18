@@ -64,6 +64,10 @@
 	background-image: url(webapp/tables.png)	
 }
 
+.pencil {
+	background-image: url(webapp/pencil.png)	
+}
+
 .timeline {
   list-style: none;
 }
