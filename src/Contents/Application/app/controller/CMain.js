@@ -106,7 +106,13 @@ App.controller.define('CMain', {
 	},
 	propertygrid_edit: function(ed,o) {
 		var store=App.get(o.grid.up('window'),"treepanel").getStore().data;
+		var selectedNode = App.get(o.grid.up('window'),"treepanel").getSelectionModel().getSelection();
+		console.log(selectedNode);
 		console.log(store);
+		for (var i=0;i<store.items.length;i++) {
+			var item=store.items[i];
+			
+		};
 		console.log('------');
 		console.log(o);
 	},
