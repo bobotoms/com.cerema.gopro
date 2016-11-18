@@ -351,7 +351,7 @@ App.controller.define('CMain', {
 				var results=html;
 				results=results.replace('%DATE%',r.result.data[i].dateNote.toDate().toString('dd/MM/yyyy hh:mm'));
 				results=results.replace('%POSTER%',r.result.data[i].nomprenom);
-				results=results.replace('%COMMENT%',r.result.data[i].blog);
+				results=results.replace('%COMMENT%',r.result.data[i].texteNote);
 				tpl.push(results);
 			};
 			results='<ul class="timeline">'+tpl.join('')+'</ul>';
