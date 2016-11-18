@@ -198,11 +198,13 @@ App.controller.define('CMain', {
 	treeSaisie_click: function(me,o) {
 		var grid=App.get(me.up('window'),"propertygrid");
 		var gridPanel=grid.up('panel');
+		me.up('window').element[o.data.name.split('c')[1]]=[];
 		App.DB.get('gopro://elements{idType_element}?idElement='+o.data.name.split('c')[1],function(r){
 			App.DB.get('gopro://caracteristiques?idType='+r.data[0].idType_element,function(r){
 				var source={};
 				var sourceConfig={};
 				for (var i=0;i<r.data.length;i++) {
+					me.up('window').element[o.data.name.split('c')[1]].push(r.data[i]);
 					if (r.data[i].typeCaracteristique=="BOOL") source[r.data[i].nomCaracteristique]=false;	
 					if (r.data[i].typeCaracteristique=="STRING") source[r.data[i].nomCaracteristique]="-";
 					if (r.data[i].typeCaracteristique=="NUMBER") source[r.data[i].nomCaracteristique]=.0;
