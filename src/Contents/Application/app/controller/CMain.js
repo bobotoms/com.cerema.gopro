@@ -111,10 +111,6 @@ App.controller.define('CMain', {
 		store.items[idx].properties=[];
 		console.log(idx);
 		console.log(store);
-		for (var i=0;i<store.items.length;i++) {
-			var item=store.items[i];
-			
-		};
 		console.log('------');
 		console.log(o);
 	},
