@@ -122,10 +122,12 @@ App.controller.define('CMain', {
 		App.DB.post('gopro://ouvrages',me.up('window'),function(r){
 			if (!r.insertId) {
 				App.notify("Impossible d'enregistrer la fiche");
+				me.setDisabled(false);
 				return;
 			};
 			if (r.insertId==0) {
 				App.notify("Impossible d'enregistrer la fiche");
+				me.setDisabled(false);
 				return;
 			};
 			var Post=[
