@@ -67,6 +67,11 @@ App.controller.define('CMain', {
 			"VSaisie button#Record": {
 				click: "new_ouvrage_record"	
 			},
+			"VSaisie propertygrid": {
+				edit: function() {
+					alert('dddd');
+				}	
+			},
 			"VAddItem": {
 				show: "VAddItem_onShow"
 			},
