@@ -111,7 +111,9 @@ App.controller.define('CMain', {
 			// On charge les premiers éléments
 			App.DB.get('gopro://ouvrages?idOuvrage='+me.idOuvrage,me,function(r){
 				// On continue par les éléments
-				
+				App.DB.get('gopro://oa_elements?idOuvrage='+me.idOuvrage,function(r){
+					console.log(r);
+				});
 			});
 		};
 	},
