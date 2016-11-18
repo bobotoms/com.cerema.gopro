@@ -342,7 +342,20 @@ App.controller.define('CMain', {
 	onLoad: function(p)
 	{
 		App.loadAPI("http://maps.google.com/maps/api/js?sensor=false&callback=GMap");
-
+		// load wiki
+		var html='<li><p class="timeline-date">%DATE%</p><div class="timeline-content"><h3>%POSTER%</h3><p>%COMMENT%</p></div></li>';
+        var tpl=[];
+		App.DB.get('App.Notes.getAll',function(e,r){
+			for (var i=0;i<r.result.data.length;i++) {
+				var results=html;
+				results=results.replace('%DATE%',r.result.data[i].date.toDate().toString('dd/MM/yyyy hh:mm'));
+				results=results.replace('%POSTER%',r.result.data[i].nomprenom);
+				results=results.replace('%COMMENT%',r.result.data[i].blog);
+				tpl.push(results);
+			};
+			results='<ul class="timeline">'+tpl.join('')+'</ul>';
+			App.get('mainform panel#timeline').update(results);					
+		});
       	var tab1=Ext.create("Ext.ux.ribbon.Tab", {
 			title: 'Général',
         	closable: false,
