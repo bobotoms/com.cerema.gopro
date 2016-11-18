@@ -134,9 +134,7 @@ App.controller.define('CMain', {
 					return;
 				};
 			} else r.insertId=me.up('window').idOuvrage; 
-			var Post=[
-
-			];
+			var Post=[];
 			for (var i=0;i<store.items.length;i++) {
 				var descr="";
 				var parent=0;
@@ -155,7 +153,8 @@ App.controller.define('CMain', {
 				};
 			};
 			App.DB.post("gopro://oa_elements",Post,function(r){
-				console.log(r);
+				App.get('mainform grid#gridO').getStore().load();
+				me.close();
 				me.setDisabled(false);
 			})
 		});	
