@@ -437,10 +437,10 @@ App.controller.define('CMain', {
 						handler: p.showSettingsCharacteristics
 				},{
 						text: 'Eléments',
-						iconCls: "characteristics",
-						scale: 'medium',
+						iconCls: "items",
+						scale: 'large',
 						iconAlign: 'top',
-						rowspan: 1,
+						rowspan: 3,
 						handler: p.showSettingsCharacteristics					
 				}]
 			}
