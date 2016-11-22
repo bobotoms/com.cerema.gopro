@@ -369,12 +369,10 @@ App.controller.define('CMain', {
 	RemoveItem_click: function(me) {
 		var tree=App.get(me.up('window'),"treepanel#T1");
 		var record = tree.getSelectionModel().getSelection()[0];
+		var xnode=tree.getRootNode().store.getNodeById('c'+record.data.parent);	
+		console.log(xnode);
 		if (record.data.isLast) {
 			console.log(record.data);
-			if (record.data.parent) {
-				var xnode=tree.getRootNode().store.getNodeById('c'+record.data.parent);	
-				xnode.remove(true);
-			}
 		};
     	record.remove(true);
     	tree.getStore().sync();	
