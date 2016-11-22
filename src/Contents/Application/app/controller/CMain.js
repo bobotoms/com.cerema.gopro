@@ -370,10 +370,7 @@ App.controller.define('CMain', {
 		var tree=App.get(me.up('window'),"treepanel#T1");
 		var record = tree.getSelectionModel().getSelection()[0];
 		var xnode=tree.getRootNode().store.getNodeById('c'+record.data.parent);	
-		console.log(xnode);
-		if (record.data.isLast) {
-			console.log(record.data);
-		};
+		if (xnode.childNodes.length<=0) xnode.remove(true); 
     	record.remove(true);
     	tree.getStore().sync();	
 	},
