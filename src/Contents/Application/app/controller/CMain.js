@@ -371,7 +371,7 @@ App.controller.define('CMain', {
 		var record = tree.getSelectionModel().getSelection()[0];
 		if (record.data.isLast) {
 			console.log(record.data);
-			alert(record.data.lastParentId);
+			alert(record.data.parent);
 			var xnode=tree.getRootNode().store.getNodeById(record.data.lastParentId);	
 			console.log('--------------');
 			console.log(xnode);
