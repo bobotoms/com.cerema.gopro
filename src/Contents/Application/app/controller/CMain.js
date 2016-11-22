@@ -119,7 +119,7 @@ App.controller.define('CMain', {
 	VSaisie_onShow: function(me) {
 		me.element={};
 		if (me.idOuvrage) {
-			function getElements(PARAM,PARAMX,ndx,cb) {
+			function getElements(PARAM,PARAMX,PARAMZ,ndx,cb) {
 				App.Elements.getSelect(PARAM[ndx],App.get(me,"combo#type").getValue(),function(r){
 					if (!r[r.length-1].leaf) r[r.length-1].text="<b>"+r[r.length-1].text+"</b>";
 					if (PARAMX[ndx]) r[r.length-1].description=PARAMX[ndx];
@@ -132,7 +132,7 @@ App.controller.define('CMain', {
 						};
 						App.get(me,"treepanel").expandAll();
 					}
-					if (ndx+1<PARAM.length) getElements(PARAM,PARAMX,ndx+1,cb); else cb();
+					if (ndx+1<PARAM.length) getElements(PARAM,PARAMX,PARAMZ,ndx+1,cb); else cb();
 				});					
 			};
 			var store=App.store.create('gopro://types',{autoLoad:true});
@@ -143,16 +143,20 @@ App.controller.define('CMain', {
 			// On charge les premiers items
 			App.DB.get('gopro://ouvrages?idOuvrage='+me.idOuvrage,me,function(r){
 				// On continue par les éléments
-				App.DB.get('gopro://oa_elements{idElement,nomOAElement}?idOuvrage='+me.idOuvrage,function(r){
+				App.DB.get('gopro://oa_elements{idElement,nomOAElement,caracteristiques}?idOuvrage='+me.idOuvrage,function(r){
 					var PARAM=[];
 					var PARAMX=[];
+					var PARAMZ=[];
 					if (r.data.length>0) {
 						for (var i=0;i<r.data.length;i++) {
 							PARAM.push(r.data[i].idElement);
 							PARAMX.push(r.data[i].nomOAElement);
+							PARAMZ.push(r.data[i].caracteristiques);
 						};
-						getElements(PARAM,PARAMX,0,function(){
+						getElements(PARAM,PARAMX,PARAMZ,0,function(){
+							var store=App.get(me,"treepanel").getStore().data;
 							console.log('all done.')
+							console.log(store);
 						});
 					}
 				});
@@ -250,6 +254,7 @@ App.controller.define('CMain', {
 				obj.source=source;
 				obj.sourceConfig=sourceConfig;
 				var grid2=Ext.create('Ext.grid.property.Grid',obj);
+				//App.DB.get("gopro://oa_elements{caracteristiques}?idOAElement=")
 				gridPanel.removeAll();
 				gridPanel.add(grid2);
 			});
