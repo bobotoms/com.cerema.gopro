@@ -442,6 +442,7 @@ App.controller.define('CMain', {
 			results='<ul class="timeline">'+tpl.join('')+'</ul>';
 			App.get('mainform panel#timeline').update(results);					
 		});
+		
       	var tab1=Ext.create("Ext.ux.ribbon.Tab", {
 			title: 'Général',
         	closable: false,
@@ -543,7 +544,9 @@ App.controller.define('CMain', {
 			}
 			]
 	  	});		
-			
+		
+		TMap.setMarker("43.299999","5.4");
+		
 		App.get('mainform ribbon').addTab(tab1, true);
 		App.get('mainform ribbon').addTab(tab2, false);
 		App.get('mainform ribbon').addTab(tab3, false);
