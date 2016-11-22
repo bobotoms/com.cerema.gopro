@@ -119,9 +119,10 @@ App.controller.define('CMain', {
 	VSaisie_onShow: function(me) {
 		me.element={};
 		if (me.idOuvrage) {
-			function getElements(PARAM,ndx,cb) {
+			function getElements(PARAM,PARAMX,ndx,cb) {
 				App.Elements.getSelect(PARAM[ndx],App.get(me,"combo#type").getValue(),function(r){
 					if (!r[r.length-1].leaf) r[r.length-1].text="<b>"+r[r.length-1].text+"</b>";
+					if (PARAMX[ndx]) r[r.length-1].description=PARAMX[ndx];
 					console.log(r);
 					for (var i=0;i<r.length;i++) {	
 						var xnode=App.get(me,"treepanel").getRootNode().store.getNodeById('c'+r[i].parent);
@@ -146,11 +147,13 @@ App.controller.define('CMain', {
 				// On continue par les éléments
 				App.DB.get('gopro://oa_elements?idOuvrage='+me.idOuvrage,function(r){
 					var PARAM=[];
+					var PARAMX=[];
 					if (r.data.length>0) {
 						for (var i=0;i<r.data.length;i++) {
 							PARAM.push(r.data[i].idElement);
+							PARAMX.push(r.data[i].nomOAElement);
 						};
-						getElements(PARAM,0,function(){
+						getElements(PARAM,PARAMX,0,function(){
 							console.log('all done.')
 						});
 					}
