@@ -24,7 +24,7 @@ function GMap(l,m)
 		return marker;
 	};
 	App.DB.get("gopro://ouvrages{idOuvrage,oa_x,oa_y}",function(r) {
-		for (var i=0;i<r.length;i++) TMap.setMarker(r[i].oa_x,r[i].oa_y);	
+		for (var i=0;i<r.data.length;i++) TMap.setMarker(r.data.[i].oa_x,r.data[i].oa_y);	
 	});
 };
 
