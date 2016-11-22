@@ -372,7 +372,7 @@ App.controller.define('CMain', {
 		if (record.data.isLast) {
 			console.log(record.data);
 			alert(record.data.parent);
-			var xnode=tree.getRootNode().store.getNodeById(record.data.parent);	
+			var xnode=tree.getRootNode().store.getNodeById('c'+record.data.parent);	
 			console.log('--------------');
 			console.log(xnode);
 		};
