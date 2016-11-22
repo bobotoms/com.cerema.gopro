@@ -371,10 +371,10 @@ App.controller.define('CMain', {
 		var record = tree.getSelectionModel().getSelection()[0];
 		if (record.data.isLast) {
 			console.log(record.data);
-			alert(record.data.parent);
-			var xnode=tree.getRootNode().store.getNodeById('c'+record.data.parent);	
-			console.log('--------------');
-			console.log(xnode);
+			if (record.data.parent) {
+				var xnode=tree.getRootNode().store.getNodeById('c'+record.data.parent);	
+				xnode.remove(true);
+			}
 		};
     	record.remove(true);
     	tree.getStore().sync();	
