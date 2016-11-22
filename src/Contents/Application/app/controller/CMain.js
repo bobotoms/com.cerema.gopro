@@ -186,7 +186,7 @@ App.controller.define('CMain', {
 					if (store.items[i].data.parentId.split('c').length>1) parent=store.items[i].data.parentId.split('c')[1];
 				};
 				console.log('--------');
-				console.log(JSON.stringify(store.items[i].properties));
+				if (store.items[i].properties) console.log(JSON.stringify(store.items[i].properties));
 				console.log('--------');
 				if (store.items[i].data.leaf) {
 					Post.push({
