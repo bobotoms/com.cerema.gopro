@@ -69,6 +69,26 @@ App.view.define('VSaisie', {
 						left: 10,
 						top: 10
 					}
+				},
+				{
+					xtype: "textfield",
+					fieldLabel: "PR Début",
+					bindTo: "PRDebut",
+					width: 250,
+					margin: {
+						left: 10,
+						top: 10
+					}
+				},
+				{
+					xtype: "textfield",
+					fieldLabel: "PR Fin",
+					bindTo: "PRFin",
+					width: 250,
+					margin: {
+						left: 10,
+						top: 10
+					}
 				}					
 				]
 			},
