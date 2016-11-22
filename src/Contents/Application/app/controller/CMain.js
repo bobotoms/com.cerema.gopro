@@ -145,6 +145,7 @@ App.controller.define('CMain', {
 			// On charge les premiers items
 			App.DB.get('gopro://ouvrages?idOuvrage='+me.idOuvrage,me,function(r){
 				console.log(r);
+				return;
 				// On continue par les éléments
 				App.DB.get('gopro://oa_elements{idElement,nomOAElement}?idOuvrage='+me.idOuvrage,function(r){
 					var PARAM=[];
