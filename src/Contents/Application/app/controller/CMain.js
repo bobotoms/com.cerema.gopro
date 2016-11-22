@@ -370,7 +370,7 @@ App.controller.define('CMain', {
 		var tree=App.get(me.up('window'),"treepanel#T1");
 		var record = tree.getSelectionModel().getSelection()[0];
 		if (record.data.isLast) {
-			console.log(record);
+			console.log(record.data);
 			alert(record.data.lastParentId);
 			var xnode=tree.getRootNode().store.getNodeById(record.data.lastParentId);	
 			console.log('--------------');
