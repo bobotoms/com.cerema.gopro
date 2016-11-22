@@ -123,6 +123,20 @@ App.view.define('VSaisie', {
 						displayField: "nomDepartement",
 						valueField: "idDepartement",
 						labelAlign: "top"						
+					},
+					{
+						xtype: "combo",
+						flex: 1,
+						margin: {
+							left: 5 	
+						},
+						fieldLabel: "Géologie",
+						bindTo: "idGeologie",
+						store: App.store.create("gopro://geologies",{autoLoad:true}),
+						editable: false,
+						displayField: "nomGeologie",
+						valueField: "idGeologie",
+						labelAlign: "top"						
 					}
 					]
 				},
