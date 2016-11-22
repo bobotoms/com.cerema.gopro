@@ -367,7 +367,9 @@ App.controller.define('CMain', {
 		});
 	},
 	RemoveItem_click: function(me) {
-		
+		var record = App.get(me,"treepanel#T1").getSelectionModel().getSelection()[0];
+    	record.remove(true);
+    	App.get(me,"treepanel#T1").getStore().sync();	
 	},
 	VAddItem_onShow: function(me) {
 		var clone = function(node) {
