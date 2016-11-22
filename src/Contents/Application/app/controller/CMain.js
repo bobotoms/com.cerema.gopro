@@ -263,6 +263,7 @@ App.controller.define('CMain', {
 				console.log('-------');
 				if (o.properties) {
 					for (var i=0;i<o.properties;i++) {
+						console.log(o.properties[i]);
 						obj.setProperty(o.properties[i].name,o.properties[i].value)
 					}	
 				};
