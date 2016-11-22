@@ -52,8 +52,8 @@ App.view.define('VSaisie', {
 				},
 				{
 					xtype: "textfield",
-					fieldLabel: "Latitude",
-					bindTo: "oa_x",
+					fieldLabel: "Longitude",
+					bindTo: "oa_y",
 					width: 250,
 					margin: {
 						left: 10,
@@ -62,14 +62,14 @@ App.view.define('VSaisie', {
 				},
 				{
 					xtype: "textfield",
-					fieldLabel: "Longitude",
-					bindTo: "oa_y",
+					fieldLabel: "Latitude",
+					bindTo: "oa_x",
 					width: 250,
 					margin: {
 						left: 10,
 						top: 10
 					}
-				}
+				}					
 				]
 			},
 			{
