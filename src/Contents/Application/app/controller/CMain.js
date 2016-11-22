@@ -109,16 +109,12 @@ App.controller.define('CMain', {
 		var selectedNode = App.get(o.grid.up('window'),"treepanel").getSelectionModel().getSelection()[0];
 		var idx = App.get(o.grid.up('window'),"treepanel").getStore().indexOf(selectedNode);
 		store.items[idx].properties=[];
-		console.log(idx);
-		console.log(store);
-		console.log('------');
 		for (var i=0;i<o.store.data.items.length;i++) {
 			store.items[idx].properties.push({
-				name: o.store.data.items[i].name,
-				value: o.store.data.items[i].value
+				name: o.store.data.items[i].data.name,
+				value: o.store.data.items[i].data.value
 			});
 		};
-		//console.log(o.store.data.items);
 	},
 	VSaisie_onShow: function(me) {
 		me.element={};
