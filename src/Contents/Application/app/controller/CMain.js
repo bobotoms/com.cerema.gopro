@@ -149,6 +149,7 @@ App.controller.define('CMain', {
 				App.DB.get('gopro://oa_elements?idOuvrage='+me.idOuvrage,function(r){
 					var PARAM=[];
 					var PARAMX=[];
+					console.log(r);
 					if (r.data.length>0) {
 						for (var i=0;i<r.data.length;i++) {
 							PARAM.push(r.data[i].idElement);
