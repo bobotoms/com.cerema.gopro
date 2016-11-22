@@ -148,15 +148,20 @@ App.controller.define('CMain', {
 					var PARAM=[];
 					var PARAMX=[];
 					var PARAMZ=[];
+					var CARACT=[];
 					if (r.data.length>0) {
 						for (var i=0;i<r.data.length;i++) {
 							PARAM.push(r.data[i].idElement);
 							PARAMX.push(r.data[i].nomOAElement);
 							PARAMZ.push(r.data[i].idOAElement);
+							if (r.data[i].caracteristiques) CARACT[r.data[i].idOAElement]=JSON.parse(r.data[i].caracteristiques); else CARACT[r.data[i].idOAElement]=[];
 						};
 						getElements(PARAM,PARAMX,PARAMZ,0,function(){
 							var store=App.get(me,"treepanel").getStore().data;
-							console.log('all done.')
+							console.log('all done.');
+							for (var i=0;i<store.items.length;i++) {
+								if (CARACT[store.items[i].data.id]) store.items[i].properties=CARACT;
+							};
 							console.log(store);
 						});
 					}
