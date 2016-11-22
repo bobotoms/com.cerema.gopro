@@ -76,7 +76,6 @@ Elements={
 			for (var z=0;z<items.length;z++) {
 				var itemId=items[z];
 				var objs=[];
-				console.log(itemId);
 				if (!obj[itemId].leaf) O[itemId].text="<b>"+O[itemId].text+"</b>";
 				while (itemId!=0) {
 					objs.push(O[itemId]);
