@@ -27,7 +27,7 @@ function GMap(l,m)
 		for (var i=0;i<r.data.length;i++) {
 			console.log(r.data[i].oa_x);
 			console.log(r.data[i].oa_y);
-			TMap.setMarker(r.data[i].oa_x,r.data[i].oa_y);	
+			TMap.setMarker(r.data[i].oa_y,r.data[i].oa_x);	
 		}
 	});
 };
