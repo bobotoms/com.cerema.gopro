@@ -260,14 +260,14 @@ App.controller.define('CMain', {
 				obj.source=source;
 				obj.sourceConfig=sourceConfig;
 				
+				console.log('-------');
+				var grid2=Ext.create('Ext.grid.property.Grid',obj);
 				if (o.properties) {
 					for (var i=0;i<o.properties.length;i++) {
 						console.log(o.properties[i]);
-						obj.setProperty(o.properties[i].name,o.properties[i].value)
+						grid2.setProperty(o.properties[i].name,o.properties[i].value)
 					}	
 				};
-				console.log('-------');
-				var grid2=Ext.create('Ext.grid.property.Grid',obj);
 				//App.DB.get("gopro://oa_elements{caracteristiques}?idOAElement=")
 				gridPanel.removeAll();
 				gridPanel.add(grid2);
