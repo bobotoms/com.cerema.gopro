@@ -197,7 +197,7 @@ App.view.define('VSaisie', {
 							tbar:[
 							'->',
 							{
-								text: "Ajouter",
+								text: "Ajouter/Modifier",
 								itemId: "add_item"
 							}
 							],
