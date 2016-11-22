@@ -143,11 +143,11 @@ App.controller.define('CMain', {
 			App.get(me,'combo#famille').setDisabled(true);
 			App.get(me,'combo#type').setDisabled(true);
 			// On charge les premiers items
-			App.DB.get('gopro://ouvrages?idOuvrage='+me.idOuvrage,me,function(r){
-				console.log(r);
-				return;
+			//App.DB.get('gopro://ouvrages?idOuvrage='+me.idOuvrage,me,function(r){
 				// On continue par les éléments
 				App.DB.get('gopro://oa_elements{idElement,nomOAElement}?idOuvrage='+me.idOuvrage,function(r){
+									console.log(r);
+				return;
 					var PARAM=[];
 					var PARAMX=[];
 					if (r.data.length>0) {
@@ -160,7 +160,7 @@ App.controller.define('CMain', {
 						});
 					}
 				});
-			});
+			//});
 		};
 	},
 	gridO_select: function(me,store) {
