@@ -7,20 +7,20 @@
 {
 	background-image:url(startup/logo.png);
 	background-repeat:no-repeat;
-	background-position:center center;	
+	background-position:center center;
 	background-size: 128px 128px;
 	width: 128px;
-	height: 128px;	
+	height: 128px;
 }
 
 .qxIcon
 {
 	background-image:url(webapp/ico.png);
 	background-repeat:no-repeat;
-	background-position:center center;	
+	background-position:center center;
 	background-size: 16px 16px;
 	width: 16px;
-	height: 16px;	
+	height: 16px;
 }
 
 .mnu_preferences
@@ -38,7 +38,7 @@
 	background-image: url(webapp/bridge.jpg);
 	border: 1px solid black;
 	background-repeat:no-repeat;
-	background-position:center center;	
+	background-position:center center;
 	background-size: 250px 141px;
 }
 
@@ -61,11 +61,15 @@
 }
 
 .table {
-	background-image: url(webapp/tables.png)	
+	background-image: url(webapp/tables.png)
 }
 
 .pencil {
-	background-image: url(webapp/pencil.png)	
+	background-image: url(webapp/pencil.png)
+}
+
+.update {
+	background-image: url(webapp/update.png)	
 }
 
 .timeline {
@@ -104,4 +108,3 @@
     border-radius: 100%;
   }
 }
-
