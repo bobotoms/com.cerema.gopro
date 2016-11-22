@@ -186,16 +186,18 @@ App.controller.define('CMain', {
 					if (store.items[i].data.parentId.split('c').length>1) parent=store.items[i].data.parentId.split('c')[1];
 				};
 				console.log('--------');
-				if (store.items[i].properties) console.log(JSON.stringify(store.items[i].properties));
+				
 				console.log('--------');
 				if (store.items[i].data.leaf) {
-					Post.push({
+					var dta={
 						nomOAElement: descr,
 						parentOAElement: parent,
 						idOuvrage: r.insertId,
 						idElement: store.items[i].data.name.split('c')[1],
 						idType: App.get(me.up('window'),"combo#type").getValue()
-					});
+					};
+					if (store.items[i].properties) data.caracteristiques=JSON.stringify(store.items[i].properties);
+					Post.push(dta);
 				};
 			};
 			App.Elements.delOuvrage(r.insertId,function(e) {
