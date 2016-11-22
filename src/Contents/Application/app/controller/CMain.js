@@ -260,7 +260,7 @@ App.controller.define('CMain', {
 				obj.source=source;
 				obj.sourceConfig=sourceConfig;
 				
-				console.log('-------');
+				console.log(o);
 				if (o.properties) {
 					for (var i=0;i<o.properties;i++) {
 						console.log(o.properties[i]);
