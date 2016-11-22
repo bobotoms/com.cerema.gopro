@@ -368,6 +368,7 @@ App.controller.define('CMain', {
 	},
 	RemoveItem_click: function(me) {
 		var record = App.get(me.up('window'),"treepanel#T1").getSelectionModel().getSelection()[0];
+		console.log(record);
     	record.remove(true);
     	App.get(me.up('window'),"treepanel#T1").getStore().sync();	
 	},
