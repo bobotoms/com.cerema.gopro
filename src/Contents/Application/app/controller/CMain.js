@@ -369,8 +369,17 @@ App.controller.define('CMain', {
 	RemoveItem_click: function(me) {
 		var tree=App.get(me.up('window'),"treepanel#T1");
 		var record = tree.getSelectionModel().getSelection()[0];
-		var xnode=tree.getRootNode().store.getNodeById('c'+record.data.parent);	
-		if (xnode.childNodes.length<=1) xnode.remove(true); 
+		function recursedel(record,cb) {
+			var xnode=tree.getRootNode().store.getNodeById('c'+record.data.parent);	
+			if (xnode.childNodes.length<=1) {
+				if (xnode.data.parent) recursedel(xnode,cb);
+				xnode.remove(true);
+			}
+		};
+		recursedel(record,function() {
+			console.log('all done.')
+		});
+
     	record.remove(true);
     	tree.getStore().sync();	
 	},
