@@ -198,6 +198,7 @@ App.view.define('VSaisie', {
 							'->',
 							{
 								text: "Ajouter/Modifier",
+								baseCls: "update",
 								itemId: "add_item"
 							}
 							],
