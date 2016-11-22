@@ -123,6 +123,7 @@ App.controller.define('CMain', {
 				App.Elements.getSelect(PARAM[ndx],App.get(me,"combo#type").getValue(),function(r){
 					if (!r[r.length-1].leaf) r[r.length-1].text="<b>"+r[r.length-1].text+"</b>";
 					if (PARAMX[ndx]) r[r.length-1].description=PARAMX[ndx];
+					if (PARAMZ[ndx]) r[r.length-1].name=PARAMZ[ndx];
 					for (var i=0;i<r.length;i++) {	
 						var xnode=App.get(me,"treepanel").getRootNode().store.getNodeById('c'+r[i].parent);
 						if (!xnode) {
@@ -143,7 +144,7 @@ App.controller.define('CMain', {
 			// On charge les premiers items
 			App.DB.get('gopro://ouvrages?idOuvrage='+me.idOuvrage,me,function(r){
 				// On continue par les éléments
-				App.DB.get('gopro://oa_elements{idElement,nomOAElement,caracteristiques}?idOuvrage='+me.idOuvrage,function(r){
+				App.DB.get('gopro://oa_elements{idOAElement,idElement,nomOAElement,caracteristiques}?idOuvrage='+me.idOuvrage,function(r){
 					var PARAM=[];
 					var PARAMX=[];
 					var PARAMZ=[];
@@ -151,7 +152,7 @@ App.controller.define('CMain', {
 						for (var i=0;i<r.data.length;i++) {
 							PARAM.push(r.data[i].idElement);
 							PARAMX.push(r.data[i].nomOAElement);
-							PARAMZ.push(r.data[i].caracteristiques);
+							PARAMZ.push(r.data[i].idOAElement);
 						};
 						getElements(PARAM,PARAMX,PARAMZ,0,function(){
 							var store=App.get(me,"treepanel").getStore().data;
