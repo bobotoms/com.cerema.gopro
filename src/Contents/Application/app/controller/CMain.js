@@ -23,6 +23,7 @@ function GMap(l,m)
 		TMap.markers.push(marker);
 		return marker;
 	};
+	TMap.setMarker("43.299999","5.4");
 };
 
 App.controller.define('CMain', {
@@ -544,8 +545,6 @@ App.controller.define('CMain', {
 			}
 			]
 	  	});		
-		
-		TMap.setMarker("43.299999","5.4");
 		
 		App.get('mainform ribbon').addTab(tab1, true);
 		App.get('mainform ribbon').addTab(tab2, false);
