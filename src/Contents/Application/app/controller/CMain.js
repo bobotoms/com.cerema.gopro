@@ -160,7 +160,7 @@ App.controller.define('CMain', {
 							var store=App.get(me,"treepanel").getStore().data;
 							console.log('all done.');
 							for (var i=0;i<store.items.length;i++) {
-								if (CARACT[store.items[i].data.id]) store.items[i].properties=CARACT;
+								if (CARACT[store.items[i].data.id]) store.items[i].properties=CARACT[store.items[i].data.id];
 							};
 							console.log(store);
 						});
