@@ -23,10 +23,9 @@ function GMap(l,m)
 		TMap.markers.push(marker);
 		return marker;
 	};
-	App.DB.get("gopro://ouvrages{idOuvrage,oa_x,oa_y}",function() {
-		
+	App.DB.get("gopro://ouvrages{idOuvrage,oa_x,oa_y}",function(r) {
+		for (var i=0;i<r.length;i++) TMap.setMarker(r[i].oa_x,r[i].oa_y);	
 	});
-	TMap.setMarker("43.299999","5.4");
 };
 
 App.controller.define('CMain', {
