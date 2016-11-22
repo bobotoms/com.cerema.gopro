@@ -1,4 +1,7 @@
 Elements={
+	delOuvrage: function(o,cb) {
+		Elements.using('db').query("gopro","DELETE FROM oa_elements WHERE idOuvrage="+o,cb);	
+	},	
 	getAllByType: function(o,cb) {
 		var db=Elements.using('db');
 		var ff=[];	
