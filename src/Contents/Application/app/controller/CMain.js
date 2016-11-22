@@ -185,9 +185,6 @@ App.controller.define('CMain', {
 				if (store.items[i].data.parentId) {
 					if (store.items[i].data.parentId.split('c').length>1) parent=store.items[i].data.parentId.split('c')[1];
 				};
-				console.log('--------');
-				
-				console.log('--------');
 				if (store.items[i].data.leaf) {
 					var dta={
 						nomOAElement: descr,
@@ -196,7 +193,7 @@ App.controller.define('CMain', {
 						idElement: store.items[i].data.name.split('c')[1],
 						idType: App.get(me.up('window'),"combo#type").getValue()
 					};
-					if (store.items[i].properties) data.caracteristiques=JSON.stringify(store.items[i].properties);
+					if (store.items[i].properties) dta.caracteristiques=JSON.stringify(store.items[i].properties);
 					Post.push(dta);
 				};
 			};
