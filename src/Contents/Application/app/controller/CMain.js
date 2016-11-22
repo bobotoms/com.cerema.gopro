@@ -120,6 +120,7 @@ App.controller.define('CMain', {
 		me.element={};
 		if (me.idOuvrage) {
 			function getElements(PARAM,PARAMX,ndx,cb) {
+				alert(PARAM[ndx]);
 				App.Elements.getSelect(PARAM[ndx],App.get(me,"combo#type").getValue(),function(r){
 					if (!r[r.length-1].leaf) r[r.length-1].text="<b>"+r[r.length-1].text+"</b>";
 					if (PARAMX[ndx]) r[r.length-1].description=PARAMX[ndx];
