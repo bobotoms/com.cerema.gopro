@@ -261,7 +261,11 @@ App.controller.define('CMain', {
 				obj.sourceConfig=sourceConfig;
 				var grid2=Ext.create('Ext.grid.property.Grid',obj);
 				console.log('-------');
-				console.log(o);
+				if (o.properties) {
+					for (var i=0;i<o.properties;i++) {
+						obj.setProperty(o.properties[i].name,o.properties[i].value)
+					}	
+				};
 				console.log('-------');
 				//App.DB.get("gopro://oa_elements{caracteristiques}?idOAElement=")
 				gridPanel.removeAll();
