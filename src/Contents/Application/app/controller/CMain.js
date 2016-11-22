@@ -355,7 +355,6 @@ App.controller.define('CMain', {
 			if (!r[r.length-1].leaf) r[r.length-1].text="<b>"+r[r.length-1].text+"</b>";
 			console.log(r);
 			for (var i=0;i<r.length;i++) {	
-				
 				var xnode=App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById('c'+r[i].parent);			
 				if (!xnode) {
 					if (!App.get(me.up('window'),"treepanel#T1").getRootNode().store.getNodeById(r[i].id)) App.get(me.up('window'),"treepanel#T1").getRootNode().appendChild(r[i]); 
@@ -367,10 +366,10 @@ App.controller.define('CMain', {
 		});
 	},
 	RemoveItem_click: function(me) {
-		var record = App.get(me.up('window'),"treepanel#T1").getSelectionModel().getSelection()[0];
-		console.log(record);
-    	record.remove(true);
-    	App.get(me.up('window'),"treepanel#T1").getStore().sync();	
+		var tree = App.get(me.up('window'),"treepanel#T0");
+        var selModel = tree.getSelectionModel();
+        var node = selModel.getLastSelected(); 
+		node.remove(true);
 	},
 	VAddItem_onShow: function(me) {
 		var clone = function(node) {
